@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 284.0, 182.0, 640.0, 480.0 ],
+		"rect" : [ 509.0, 219.0, 385.0, 235.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -43,7 +43,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 151.0, 75.0, 72.0, 22.0 ],
+					"patching_rect" : [ 24.0, 28.0, 72.0, 22.0 ],
 					"style" : "",
 					"text" : "loadmess 1"
 				}
@@ -56,7 +56,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 151.0, 140.0, 181.0, 22.0 ],
+					"patching_rect" : [ 24.0, 90.0, 181.0, 22.0 ],
 					"style" : "",
 					"text" : "close, compile vr-projectmake.js"
 				}
@@ -69,23 +69,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 151.0, 106.0, 152.0, 22.0 ],
+					"patching_rect" : [ 24.0, 62.0, 152.0, 22.0 ],
 					"style" : "",
 					"text" : "filewatch vr-projectmake.js"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-2",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 210.0, 251.0, 69.0, 22.0 ],
-					"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
-					"style" : "",
-					"text" : "thispatcher"
 				}
 
 			}
@@ -96,7 +82,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 112.0, 199.0, 114.0, 22.0 ],
+					"patching_rect" : [ 29.0, 127.0, 114.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "vr-projectmake.js",
 						"parameter_enable" : 0
