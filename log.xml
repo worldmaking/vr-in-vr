@@ -106,3 +106,15 @@ Author: michaelpalumbo <emailmichaelpalumbo@gmail.com>
 Date:   Wed Nov 29 14:14:21 2017 -0500
 
     using jasch objects for xml, so added it as a dependency
+
+commit 914687ac1586beeac452515f1e3383ced33dcdc9
+Author: michaelpalumbo <emailmichaelpalumbo@gmail.com>
+Date:   Wed Nov 29 14:22:48 2017 -0500
+
+    testing the jasch xml object 'toxine'
+
+commit 4e7b643cab8eb43e9b0de1621a27aec3d052c10d
+Author: michaelpalumbo <emailmichaelpalumbo@gmail.com>
+Date:   Wed Nov 29 14:25:20 2017 -0500
+
+    the git log is adding an odd line to the end of its xml files '<Cb=YC'. not sure why, but i'm going to, for now, write something into max that ignores this.
