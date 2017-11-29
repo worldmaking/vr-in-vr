@@ -117,3 +117,9 @@ Author: michaelpalumbo <emailmichaelpalumbo@gmail.com>
 Date:   Wed Nov 29 14:31:00 2017 -0500
 
     I think that bug I described in last commit of the '<Cb=YC' being appended to log.xml might actually have been caused by a bad usage of 'toxine.mxo' on my part. we need to clear the 'idx.mxo' each time we load a new log.xml into the patch
+
+commit 389b27a5c02ed2ef0c019dbc53b0642269232393
+Author: michaelpalumbo <emailmichaelpalumbo@gmail.com>
+Date:   Wed Nov 29 14:55:15 2017 -0500
+
+    gixed xml parsing

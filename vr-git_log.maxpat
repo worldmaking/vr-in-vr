@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 721.0, 81.0, 537.0, 670.0 ],
+		"rect" : [ 721.0, 81.0, 751.0, 670.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,12 +38,49 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-89",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 517.0, 51.0, 150.0, 20.0 ],
+					"style" : "",
+					"text" : "View git project!"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-87",
+					"linecount" : 3,
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 517.0, 73.0, 275.0, 49.0 ],
+					"style" : "",
+					"text" : ";\rmax launchbrowser https://github.com/worldmaking/vr-in-vr/projects/1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-85",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 191.333344, 603.0, 150.0, 20.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-83",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 530.0, 486.0, 80.0, 22.0 ],
+					"patching_rect" : [ 304.0, 512.0, 80.0, 22.0 ],
 					"style" : "",
 					"text" : "route commit"
 				}
@@ -172,7 +209,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 530.0, 439.0, 169.0, 35.0 ],
+					"patching_rect" : [ 304.0, 465.0, 169.0, 35.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -192,7 +229,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 530.0, 518.0, 34.0, 22.0 ],
+					"patching_rect" : [ 304.0, 544.0, 34.0, 22.0 ],
 					"style" : "",
 					"text" : "print"
 				}
@@ -207,7 +244,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 530.0, 412.0, 71.0, 21.0 ],
+					"patching_rect" : [ 304.0, 438.0, 71.0, 21.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0
 					}
@@ -224,7 +261,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 530.0, 381.0, 29.5, 22.0 ],
+					"patching_rect" : [ 304.0, 407.0, 29.5, 22.0 ],
 					"style" : "",
 					"text" : "* 4"
 				}
@@ -373,7 +410,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 530.0, 278.0, 169.0, 35.0 ],
+					"patching_rect" : [ 304.0, 304.0, 169.0, 35.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -394,7 +431,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 530.0, 319.0, 98.0, 22.0 ],
+					"patching_rect" : [ 304.0, 345.0, 98.0, 22.0 ],
 					"style" : "",
 					"text" : "prepend append"
 				}
@@ -403,13 +440,15 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-62",
-					"items" : [ "first commit", ",", "Create README.md", ",", "ab sketches", ",", "for oculus", ",", "phys play", ",", "lab works", ",", "phys playground", ",", "phys", ",", "patcher scripting work", ",", "ontogenesis", ",", "comments", ",", "Update README.md", ",", "tidying", ",", "palumbo: added something to watch for updated git log files to provide user with versions of previous work from within vr.", ",", "Adam Siska's toxine object can be used for xml files. i'm going to give this a try towards parsing our git logs", ",", "sadam library doesn't initialize for 64-bit max so removing it from dependencies.", ",", "using jasch objects for xml so added it as a dependency", ",", "testing the jasch xml object 'toxine'", ",", "the git log is adding an odd line to the end of its xml files '<Cb=YC'. not sure why but i'm going to for now write something into max that ignores this.", ",", "I think that bug I described in last commit of the '<Cb=YC' being appended to log.xml might actually have been caused by a bad usage of 'toxine.mxo' on my part. we need to clear the 'idx.mxo' each time we load a new log.xml into the patch" ],
+					"items" : [ "first commit", ",", "Create README.md", ",", "ab sketches", ",", "for oculus", ",", "phys play", ",", "lab works", ",", "phys playground", ",", "phys", ",", "patcher scripting work", ",", "ontogenesis", ",", "comments", ",", "Update README.md", ",", "tidying", ",", "palumbo: added something to watch for updated git log files to provide user with versions of previous work from within vr.", ",", "Adam Siska's toxine object can be used for xml files. i'm going to give this a try towards parsing our git logs", ",", "sadam library doesn't initialize for 64-bit max so removing it from dependencies.", ",", "using jasch objects for xml so added it as a dependency", ",", "testing the jasch xml object 'toxine'", ",", "the git log is adding an odd line to the end of its xml files '<Cb=YC'. not sure why but i'm going to for now write something into max that ignores this.", ",", "I think that bug I described in last commit of the '<Cb=YC' being appended to log.xml might actually have been caused by a bad usage of 'toxine.mxo' on my part. we need to clear the 'idx.mxo' each time we load a new log.xml into the patch", ",", "gixed xml parsing" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 530.0, 351.0, 100.0, 22.0 ],
+					"patching_rect" : [ 304.0, 377.0, 100.0, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 636.0, 352.0, 100.0, 22.0 ],
 					"style" : ""
 				}
 
@@ -618,7 +657,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 377.333344, 331.0, 144.0, 22.0 ],
+					"patching_rect" : [ 45.333344, 375.0, 144.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -634,75 +673,13 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-49",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 553.0, 214.0, 158.0, 33.0 ],
-					"style" : "",
-					"text" : " -- maybe ignore merges in log commang for now?"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-37",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 179.0, 247.0, 43.0, 22.0 ],
-					"style" : "",
-					"text" : "git log"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-35",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 98.0, 327.0, 34.0, 22.0 ],
-					"style" : "",
-					"text" : "print"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-34",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 95.0, 243.0, 64.0, 22.0 ],
-					"style" : "",
-					"text" : "cd vr-in-vr"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-32",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "bang" ],
-					"patching_rect" : [ 95.0, 273.0, 35.0, 22.0 ],
-					"style" : "",
-					"text" : "shell"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-20",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 429.333313, 360.0, 57.0, 20.0 ],
+					"patching_rect" : [ 97.333313, 404.0, 57.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 429.333313, 379.0, 57.0, 20.0 ],
 					"style" : "",
 					"text" : "Commits"
 				}
@@ -716,7 +693,9 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 377.333344, 360.0, 50.0, 22.0 ],
+					"patching_rect" : [ 45.333344, 404.0, 50.0, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 377.333344, 379.0, 50.0, 22.0 ],
 					"style" : ""
 				}
 
@@ -728,7 +707,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "clear" ],
-					"patching_rect" : [ 366.0, 165.0, 53.0, 22.0 ],
+					"patching_rect" : [ 34.0, 189.0, 53.0, 22.0 ],
 					"style" : "",
 					"text" : "t s clear"
 				}
@@ -741,7 +720,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 690.0, 22.0, 150.0, 33.0 ],
+					"patching_rect" : [ 358.0, 47.0, 150.0, 33.0 ],
 					"style" : "",
 					"text" : "Make sure log file is read from local repo"
 				}
@@ -754,7 +733,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 366.0, 273.0, 82.0, 22.0 ],
+					"patching_rect" : [ 34.0, 317.0, 82.0, 22.0 ],
 					"style" : "",
 					"text" : "prepend read"
 				}
@@ -767,7 +746,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 366.0, 124.0, 302.0, 22.0 ],
+					"patching_rect" : [ 34.0, 149.0, 302.0, 22.0 ],
 					"style" : "",
 					"text" : "\"Macintosh HD:/Users/mp/vr-in-vr/log.xml\""
 				}
@@ -780,7 +759,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 649.0, 74.0, 143.0, 22.0 ],
+					"patching_rect" : [ 317.0, 99.0, 143.0, 22.0 ],
 					"style" : "",
 					"text" : "sprintf symout %slog.xml"
 				}
@@ -793,7 +772,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 599.0, -7.0, 24.0, 24.0 ],
+					"patching_rect" : [ 267.0, 18.0, 24.0, 24.0 ],
 					"style" : ""
 				}
 
@@ -805,7 +784,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 599.0, 22.0, 89.0, 22.0 ],
+					"patching_rect" : [ 267.0, 47.0, 89.0, 22.0 ],
 					"style" : "",
 					"text" : "loadmess path"
 				}
@@ -818,7 +797,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 599.0, 48.0, 69.0, 22.0 ],
+					"patching_rect" : [ 267.0, 73.0, 69.0, 22.0 ],
 					"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
 					"style" : "",
 					"text" : "thispatcher"
@@ -834,7 +813,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 433.0, 241.0, 71.0, 21.0 ],
+					"patching_rect" : [ 101.0, 266.0, 71.0, 21.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0
 					}
@@ -853,7 +832,7 @@
 					"numinlets" : 5,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "int", "int", "list" ],
-					"patching_rect" : [ 433.0, 205.0, 32.0, 21.0 ],
+					"patching_rect" : [ 101.0, 230.0, 32.0, 21.0 ],
 					"style" : "",
 					"text" : "idx"
 				}
@@ -868,7 +847,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "int", "int", "int" ],
-					"patching_rect" : [ 366.0, 303.0, 53.0, 21.0 ],
+					"patching_rect" : [ 34.0, 347.0, 53.0, 21.0 ],
 					"style" : "",
 					"text" : "toxine"
 				}
@@ -881,7 +860,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 19.0, 383.0, 121.0, 22.0 ],
+					"patching_rect" : [ 45.333344, 600.0, 121.0, 22.0 ],
 					"style" : "",
 					"text" : "git diff [diff_1] [diff_2]"
 				}
@@ -894,7 +873,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 366.0, 58.0, 72.0, 22.0 ],
+					"patching_rect" : [ 34.0, 83.0, 72.0, 22.0 ],
 					"style" : "",
 					"text" : "loadmess 1"
 				}
@@ -907,7 +886,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 366.0, 90.0, 99.0, 22.0 ],
+					"patching_rect" : [ 34.0, 115.0, 99.0, 22.0 ],
 					"style" : "",
 					"text" : "filewatch log.xml"
 				}
@@ -924,7 +903,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-11", 0 ],
-					"midpoints" : [ 375.5, 332.0, 351.0, 332.0, 351.0, 198.0, 441.0, 198.0 ],
+					"midpoints" : [ 43.5, 370.0, 23.0, 370.0, 23.0, 223.0, 109.0, 223.0 ],
 					"source" : [ "obj-12", 0 ]
 				}
 
@@ -939,6 +918,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-73", 0 ],
+					"midpoints" : [ 110.5, 298.0, 127.0, 298.0, 127.0, 298.0, 313.5, 298.0 ],
 					"source" : [ "obj-14", 0 ]
 				}
 
@@ -975,7 +955,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-9", 0 ],
-					"midpoints" : [ 658.5, 111.0, 678.0, 111.0, 678.0, 155.0, 420.0, 155.0, 420.0, 155.0, 375.5, 155.0 ],
+					"midpoints" : [ 326.5, 136.0, 346.0, 136.0, 346.0, 180.0, 88.0, 180.0, 88.0, 180.0, 43.5, 180.0 ],
 					"order" : 1,
 					"source" : [ "obj-25", 0 ]
 				}
@@ -997,27 +977,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-35", 0 ],
-					"source" : [ "obj-32", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-32", 0 ],
-					"source" : [ "obj-34", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-32", 0 ],
-					"source" : [ "obj-37", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
 					"source" : [ "obj-5", 0 ]
 				}
@@ -1026,6 +985,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-14", 0 ],
+					"midpoints" : [ 179.833344, 400.0, 199.0, 400.0, 199.0, 253.0, 110.5, 253.0 ],
 					"source" : [ "obj-61", 1 ]
 				}
 
@@ -1096,7 +1056,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-11", 0 ],
-					"midpoints" : [ 409.5, 199.0, 441.0, 199.0 ],
+					"midpoints" : [ 77.5, 224.0, 109.0, 224.0 ],
 					"order" : 2,
 					"source" : [ "obj-9", 1 ]
 				}
@@ -1105,7 +1065,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-14", 0 ],
-					"midpoints" : [ 409.5, 230.0, 442.5, 230.0 ],
+					"midpoints" : [ 77.5, 255.0, 110.5, 255.0 ],
 					"order" : 1,
 					"source" : [ "obj-9", 1 ]
 				}
@@ -1121,6 +1081,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-62", 0 ],
+					"midpoints" : [ 77.5, 217.0, 289.0, 217.0, 289.0, 373.0, 313.5, 373.0 ],
 					"order" : 0,
 					"source" : [ "obj-9", 1 ]
 				}
@@ -1133,10 +1094,6 @@
 			}
 , 			{
 				"name" : "idx.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "shell.mxo",
 				"type" : "iLaX"
 			}
  ],
