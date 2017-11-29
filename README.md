@@ -6,4 +6,4 @@ A sandbox space for Alice lab experiments in VR-authoring from within VR.
 
 Dependencies:
 
-Sadam Library (Max/MSP) for parsing XML. (Used for vr-git_log.maxpat)
+. (Used for vr-git_log.maxpat)
