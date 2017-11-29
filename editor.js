@@ -174,10 +174,8 @@ for (var i=0; i<2; i++) {
 
 // this gets called once per frame
 function bang() {
+	// create object using A button
 	if (hand.button1 == "press"){
-		
-		post("press ", hand.name, "\n");
-		
 		objects_create_shape_body(hand.position[0], hand.position[1], hand.position[2]);
 		hand.button1 == "down";
 	}
@@ -186,6 +184,7 @@ function bang() {
 	if (hand.selected_object) {
 		// are we are still holding (dragging)?
 		if (hand.trigger == "down" || hand.trigger == "press") {
+			// destroy objects with B button
 			if(hand.button2 == "press"){
 				//hand.selected_object.position += target.position * 2;
 				objects_remove_body(hand.selected_object);
@@ -230,10 +229,8 @@ function controller(hand, event, x, y, z, w) {
 			if(x != 0){
 				if(hand.button1 == "press"){
 					hand.button1 = "down";
-					post("button1", hand.name, hand.button1, "\n");
 				} else if (hand.button1 != "down") {
 					hand.button1 = "press";
-					post("button1", hand.name, hand.button1, "\n");
 				}
 			} else {
 				hand.button1 = "up";
