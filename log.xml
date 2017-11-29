@@ -1,0 +1,66 @@
+commit dcf474ebe4058aad2bd5f3aec1f7c0aad9b0b570
+Author: Graham Wakefield <grrrwaaa@gmail.com>
+Date:   Wed Nov 22 16:18:53 2017 -0500
+
+    ontogenesis
+
+commit d0f0e2115a4638a076b0fe75a0597e4fc67add57
+Author: Graham Wakefield <grrrwaaa@gmail.com>
+Date:   Wed Nov 22 15:01:24 2017 -0500
+
+    patcher scripting work
+
+commit 80a0e852f6d907bd24f177461660075e5d64ca44
+Author: Graham Wakefield <grrrwaaa@gmail.com>
+Date:   Tue Nov 21 16:19:40 2017 -0500
+
+    phys
+
+commit 6f5b436940f33de7e9e9a7549218fd7e727cfea3
+Author: Graham Wakefield <grrrwaaa@gmail.com>
+Date:   Tue Nov 21 15:39:51 2017 -0500
+
+    phys playground
+
+commit 1a46c59a58d967306abc31403daa8c8e509c947e
+Merge: 6d06e51 9bd565b
+Author: Graham Wakefield <grrrwaaa@gmail.com>
+Date:   Thu Nov 16 14:19:43 2017 -0500
+
+    Merge branch 'master' of github.com:worldmaking/vr-in-vr
+
+commit 6d06e5128b476083a88eed0309cfddc259c62d56
+Author: Graham Wakefield <grrrwaaa@gmail.com>
+Date:   Thu Nov 16 14:19:38 2017 -0500
+
+    lab  works
+
+commit 9bd565b2a7974a49972eba8992178cc0f9813a68
+Author: Graham Wakefield <grrrwaaa@gmail.com>
+Date:   Thu Nov 16 14:18:51 2017 -0500
+
+    phys play
+
+commit e8d2403470762d411d89da1e7f2fc2f0801ca7fd
+Author: Graham Wakefield <grrrwaaa@gmail.com>
+Date:   Thu Nov 9 14:44:00 2017 -0500
+
+    for oculus
+
+commit 9ef94c64713b7245bd8274738a9401b895381360
+Author: Graham Wakefield <grrrwaaa@gmail.com>
+Date:   Thu Nov 9 14:35:23 2017 -0500
+
+    ab sketches
+
+commit fb140079ad22100e4ec8d32f1db6d0de9b420fbb
+Author: Graham Wakefield <grrrwaaa@gmail.com>
+Date:   Wed Nov 8 13:57:55 2017 -0500
+
+    Create README.md
+
+commit 0f6fed29195fd0c4fdd9168165d7c20763949fd9
+Author: Graham Wakefield <grrrwaaa@gmail.com>
+Date:   Wed Nov 8 13:45:56 2017 -0500
+
+    first commit
