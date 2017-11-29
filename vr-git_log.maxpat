@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 175.0, 128.0, 804.0, 480.0 ],
+		"rect" : [ 175.0, 128.0, 898.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -37,6 +37,19 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 690.0, 43.0, 150.0, 33.0 ],
+					"style" : "",
+					"text" : "Make sure log file is read from local repo"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-34",
 					"maxclass" : "newobj",
@@ -68,7 +81,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 100.0, 483.0, 82.0, 22.0 ],
+					"patching_rect" : [ 366.0, 153.0, 82.0, 22.0 ],
 					"style" : "",
 					"text" : "prepend read"
 				}
@@ -81,7 +94,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 100.0, 454.0, 302.0, 22.0 ],
+					"patching_rect" : [ 366.0, 124.0, 302.0, 22.0 ],
 					"style" : "",
 					"text" : "\"Macintosh HD:/Users/mp/vr-in-vr/log.xml\""
 				}
@@ -94,7 +107,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 70.0, 395.0, 143.0, 22.0 ],
+					"patching_rect" : [ 649.0, 95.0, 143.0, 22.0 ],
 					"style" : "",
 					"text" : "sprintf symout %slog.xml"
 				}
@@ -107,22 +120,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 92.0, 26.0, 24.0, 24.0 ],
+					"patching_rect" : [ 599.0, 14.0, 24.0, 24.0 ],
 					"style" : ""
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-22",
-					"linecount" : 6,
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 53.0, 207.0, 50.0, 89.0 ],
-					"style" : "",
-					"text" : "\"Macintosh HD:/Users/mp/vr-in-vr/\""
 				}
 
 			}
@@ -133,7 +132,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 48.0, 70.0, 89.0, 22.0 ],
+					"patching_rect" : [ 599.0, 43.0, 89.0, 22.0 ],
 					"style" : "",
 					"text" : "loadmess path"
 				}
@@ -146,7 +145,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 48.0, 108.0, 69.0, 22.0 ],
+					"patching_rect" : [ 599.0, 69.0, 69.0, 22.0 ],
 					"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
 					"style" : "",
 					"text" : "thispatcher"
@@ -326,7 +325,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-11", 0 ],
-					"order" : 1,
+					"order" : 2,
 					"source" : [ "obj-12", 0 ]
 				}
 
@@ -350,6 +349,14 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-33", 0 ],
+					"order" : 1,
+					"source" : [ "obj-12", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-34", 0 ],
 					"order" : 0,
 					"source" : [ "obj-12", 0 ]
 				}
@@ -357,16 +364,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-22", 1 ],
-					"order" : 0,
-					"source" : [ "obj-15", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-25", 0 ],
-					"order" : 1,
 					"source" : [ "obj-15", 1 ]
 				}
 
