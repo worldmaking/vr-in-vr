@@ -34,13 +34,6 @@ Date:   Thu Nov 16 14:19:38 2017 -0500
 
     lab  works
 
-commit 1a46c59a58d967306abc31403daa8c8e509c947e
-Merge: 6d06e51 9bd565b
-Author: Graham Wakefield <grrrwaaa@gmail.com>
-Date:   Thu Nov 16 14:19:43 2017 -0500
-
-    Merge branch 'master' of github.com:worldmaking/vr-in-vr
-
 commit 6f5b436940f33de7e9e9a7549218fd7e727cfea3
 Author: Graham Wakefield <grrrwaaa@gmail.com>
 Date:   Tue Nov 21 15:39:51 2017 -0500
@@ -118,3 +111,9 @@ Author: michaelpalumbo <emailmichaelpalumbo@gmail.com>
 Date:   Wed Nov 29 14:25:20 2017 -0500
 
     the git log is adding an odd line to the end of its xml files '<Cb=YC'. not sure why, but i'm going to, for now, write something into max that ignores this.
+
+commit ea0eece1992d416c16c8e9da7a48429d0748722b
+Author: michaelpalumbo <emailmichaelpalumbo@gmail.com>
+Date:   Wed Nov 29 14:31:00 2017 -0500
+
+    I think that bug I described in last commit of the '<Cb=YC' being appended to log.xml might actually have been caused by a bad usage of 'toxine.mxo' on my part. we need to clear the 'idx.mxo' each time we load a new log.xml into the patch
