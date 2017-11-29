@@ -1,26 +1,38 @@
-commit dcf474ebe4058aad2bd5f3aec1f7c0aad9b0b570
+commit 0f6fed29195fd0c4fdd9168165d7c20763949fd9
 Author: Graham Wakefield <grrrwaaa@gmail.com>
-Date:   Wed Nov 22 16:18:53 2017 -0500
+Date:   Wed Nov 8 13:45:56 2017 -0500
 
-    ontogenesis
+    first commit
 
-commit d0f0e2115a4638a076b0fe75a0597e4fc67add57
+commit fb140079ad22100e4ec8d32f1db6d0de9b420fbb
 Author: Graham Wakefield <grrrwaaa@gmail.com>
-Date:   Wed Nov 22 15:01:24 2017 -0500
+Date:   Wed Nov 8 13:57:55 2017 -0500
 
-    patcher scripting work
+    Create README.md
 
-commit 80a0e852f6d907bd24f177461660075e5d64ca44
+commit 9ef94c64713b7245bd8274738a9401b895381360
 Author: Graham Wakefield <grrrwaaa@gmail.com>
-Date:   Tue Nov 21 16:19:40 2017 -0500
+Date:   Thu Nov 9 14:35:23 2017 -0500
 
-    phys
+    ab sketches
 
-commit 6f5b436940f33de7e9e9a7549218fd7e727cfea3
+commit e8d2403470762d411d89da1e7f2fc2f0801ca7fd
 Author: Graham Wakefield <grrrwaaa@gmail.com>
-Date:   Tue Nov 21 15:39:51 2017 -0500
+Date:   Thu Nov 9 14:44:00 2017 -0500
 
-    phys playground
+    for oculus
+
+commit 9bd565b2a7974a49972eba8992178cc0f9813a68
+Author: Graham Wakefield <grrrwaaa@gmail.com>
+Date:   Thu Nov 16 14:18:51 2017 -0500
+
+    phys play
+
+commit 6d06e5128b476083a88eed0309cfddc259c62d56
+Author: Graham Wakefield <grrrwaaa@gmail.com>
+Date:   Thu Nov 16 14:19:38 2017 -0500
+
+    lab  works
 
 commit 1a46c59a58d967306abc31403daa8c8e509c947e
 Merge: 6d06e51 9bd565b
@@ -29,38 +41,68 @@ Date:   Thu Nov 16 14:19:43 2017 -0500
 
     Merge branch 'master' of github.com:worldmaking/vr-in-vr
 
-commit 6d06e5128b476083a88eed0309cfddc259c62d56
+commit 6f5b436940f33de7e9e9a7549218fd7e727cfea3
 Author: Graham Wakefield <grrrwaaa@gmail.com>
-Date:   Thu Nov 16 14:19:38 2017 -0500
+Date:   Tue Nov 21 15:39:51 2017 -0500
 
-    lab  works
+    phys playground
 
-commit 9bd565b2a7974a49972eba8992178cc0f9813a68
+commit 80a0e852f6d907bd24f177461660075e5d64ca44
 Author: Graham Wakefield <grrrwaaa@gmail.com>
-Date:   Thu Nov 16 14:18:51 2017 -0500
+Date:   Tue Nov 21 16:19:40 2017 -0500
 
-    phys play
+    phys
 
-commit e8d2403470762d411d89da1e7f2fc2f0801ca7fd
+commit d0f0e2115a4638a076b0fe75a0597e4fc67add57
 Author: Graham Wakefield <grrrwaaa@gmail.com>
-Date:   Thu Nov 9 14:44:00 2017 -0500
+Date:   Wed Nov 22 15:01:24 2017 -0500
 
-    for oculus
+    patcher scripting work
 
-commit 9ef94c64713b7245bd8274738a9401b895381360
+commit dcf474ebe4058aad2bd5f3aec1f7c0aad9b0b570
 Author: Graham Wakefield <grrrwaaa@gmail.com>
-Date:   Thu Nov 9 14:35:23 2017 -0500
+Date:   Wed Nov 22 16:18:53 2017 -0500
 
-    ab sketches
+    ontogenesis
 
-commit fb140079ad22100e4ec8d32f1db6d0de9b420fbb
+commit 79b264aac4fc87baae4aade7afe8e6100eaf035a
 Author: Graham Wakefield <grrrwaaa@gmail.com>
-Date:   Wed Nov 8 13:57:55 2017 -0500
+Date:   Wed Nov 22 20:26:26 2017 -0500
 
-    Create README.md
+    comments
 
-commit 0f6fed29195fd0c4fdd9168165d7c20763949fd9
+commit 78a7c82419e277c90db1806c015b35f90e0064cb
 Author: Graham Wakefield <grrrwaaa@gmail.com>
-Date:   Wed Nov 8 13:45:56 2017 -0500
+Date:   Fri Nov 24 12:39:25 2017 -0500
 
-    first commit
+    Update README.md
+
+commit 10b617fcb7fdb8da29d3329b90111c2746360859
+Author: Graham Wakefield <grrrwaaa@gmail.com>
+Date:   Fri Nov 24 12:39:56 2017 -0500
+
+    tidying
+
+commit f6ed452d26c724ed9002ffcec59acd1db005c17d
+Author: michaelpalumbo <emailmichaelpalumbo@gmail.com>
+Date:   Wed Nov 29 13:32:59 2017 -0500
+
+    palumbo: added something to watch for updated git log files to provide user with versions of previous work, from within vr.
+
+commit 898fcb8b8f1ce1aac23a660ee4ee1f3f44b5e186
+Author: michaelpalumbo <emailmichaelpalumbo@gmail.com>
+Date:   Wed Nov 29 13:49:40 2017 -0500
+
+    Adam Siska's toxine object can be used for xml files. i'm going to give this a try towards parsing our git logs
+
+commit 90bef0bd410c1a63ba4ada6cd2a81de14448faf3
+Author: michaelpalumbo <emailmichaelpalumbo@gmail.com>
+Date:   Wed Nov 29 14:06:48 2017 -0500
+
+    sadam library doesn't initialize for 64-bit max, so removing it from dependencies.
+
+commit 974fae6f5ec7962ef0cf98ae9e7e0509aec1fee2
+Author: michaelpalumbo <emailmichaelpalumbo@gmail.com>
+Date:   Wed Nov 29 14:14:21 2017 -0500
+
+    using jasch objects for xml, so added it as a dependency
