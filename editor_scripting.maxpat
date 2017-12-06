@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 983.0, 85.0, 896.0, 783.0 ],
+		"rect" : [ 847.0, 96.0, 850.0, 783.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -37,6 +37,165 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-23",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "jit_gl_texture", "", "" ],
+					"patching_rect" : [ 18.5, 522.0, 205.0, 22.0 ],
+					"style" : "",
+					"text" : "jit.gl.node world @name editor-world"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-13",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 768.0, 528.0, 30.0, 22.0 ],
+					"style" : "",
+					"text" : "test"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-11",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patcher" : 					{
+						"fileversion" : 1,
+						"appversion" : 						{
+							"major" : 7,
+							"minor" : 3,
+							"revision" : 1,
+							"architecture" : "x64",
+							"modernui" : 1
+						}
+,
+						"rect" : [ 638.0, 526.0, 1261.0, 480.0 ],
+						"bglocked" : 0,
+						"openinpresentation" : 0,
+						"default_fontsize" : 12.0,
+						"default_fontface" : 0,
+						"default_fontname" : "Arial",
+						"gridonopen" : 1,
+						"gridsize" : [ 15.0, 15.0 ],
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
+						"statusbarvisible" : 2,
+						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
+						"boxanimatetime" : 200,
+						"enablehscroll" : 1,
+						"enablevscroll" : 1,
+						"devicewidth" : 0.0,
+						"description" : "",
+						"digest" : "",
+						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
+						"visible" : 1,
+						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-818",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 20.0, 10.0, 524.0, 22.0 ],
+									"style" : "",
+									"text" : "vr-box vrbox_1186 @name vrbox_1187 @position -0.382622 0.84818 -0.255217 text vrbox_1186",
+									"varname" : "vrbox_1186"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-819",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 20.0, 35.0, 520.0, 22.0 ],
+									"style" : "",
+									"text" : "vr-box vrbox_1190 @name vrbox_1191 @position 0.033362 0.740521 -1.88082 text vrbox_1190",
+									"varname" : "vrbox_1190"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-820",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 20.0, 60.0, 528.0, 22.0 ],
+									"style" : "",
+									"text" : "vr-box vrbox_1194 @name vrbox_1195 @position 0.012274 1.871908 -1.382485 text vrbox_1194",
+									"varname" : "vrbox_1194"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-821",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 20.0, 85.0, 532.0, 22.0 ],
+									"style" : "",
+									"text" : "vr-box vrbox_1198 @name vrbox_1199 @position -0.599084 1.074809 -2.334987 text vrbox_1198",
+									"varname" : "vrbox_1198"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-822",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 20.0, 110.0, 534.0, 22.0 ],
+									"style" : "",
+									"text" : "vr-box vrbox_1202 @name vrbox_1203 @position -1.679514 1.465152 -1.658384 text vrbox_1202",
+									"varname" : "vrbox_1202"
+								}
+
+							}
+ ],
+						"lines" : [  ]
+					}
+,
+					"patching_rect" : [ 209.0, 611.0, 53.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"description" : "",
+						"digest" : "",
+						"globalpatchername" : "",
+						"style" : "",
+						"tags" : ""
+					}
+,
+					"style" : "",
+					"text" : "p scene",
+					"varname" : "scene"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-49",
 					"maxclass" : "newobj",
@@ -2415,6 +2574,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-37", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-13", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-15", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -2741,6 +2909,12 @@
 				"name" : "editor_scripting.js",
 				"bootpath" : "E:/GitHub/vr-in-vr",
 				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "vr-box.maxpat",
+				"bootpath" : "E:/GitHub/vr-in-vr",
+				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
