@@ -134,8 +134,11 @@ function make_listener_cb(hand) {
 					if (!hand.selected_object && hand.trigger == "press") {
 						// we didn't have anything selected, so pick it up:
 						hand.selected_object = target;
-						hand.selected_object.position = hand.position;
-						hand.selected_object.quat = hand.quat;
+						hand.selected_offset[0] = target.position[0] - hand.position[0];
+						hand.selected_offset[1] = target.position[1] - hand.position[1];
+						hand.selected_offset[2] = target.position[2] - hand.position[2];
+						//hand.selected_object.position = hand.position;
+						//hand.selected_object.quat = hand.quat;
 						break;
 					}
 				}
@@ -157,6 +160,7 @@ for (var i=0; i<2; i++) {
 		button2: "up",
 		
 		selected_object: null,
+		selected_offset: [0, 0, 0],
 		
 		ghost: new JitterObject("jit.phys.ghost", "vr-phys"),
 	};
@@ -191,8 +195,14 @@ function bang() {
 				hand.selected_object = null;
 				hand.button2 == "down";
 			}else{
-				hand.selected_object.position = hand.position;
-				hand.selected_object.quat = hand.quat;
+				var p = [];
+				p[0] = hand.selected_offset[0] + hand.position[0];
+				p[1] = hand.selected_offset[1] + hand.position[1];
+				p[2] = hand.selected_offset[2] + hand.position[2];
+				
+				
+				hand.selected_object.position = p;
+				//hand.selected_object.quat = hand.quat;
 			}
 		} else {
 			// let it go:

@@ -78,7 +78,8 @@ for (var i=0; i<2; i++) {
 		button1: "up",
 		button2: "up",
 		
-		selected_object: null,
+		selected_body: null,
+		selected_position_offset: [0, 0, 0],
 	};
 }
 
@@ -95,28 +96,16 @@ function test() {
 }
 
 function objects_create_shape_body(x, y, z){
-	var body_name = uid("body");
-	var shape_name = uid("shape");
-	
-	/*
-	patcher_makeobject(shape_name, [
-		"jit.gl.gridshape", "editor-world", 
-		"@name", shape_name, 
-		"@shape", "cube",
-		"@material", "default_material",
-		"@position", x, y, z,
-		"@scale", 0.2,
-		"@color", 1, 1, 1
-	]);
-	*/
 	
 	var box_name = uid("vrbox")
 	var box = patcher_makeobject(box_name, [
-		"vr-box", box_name,
+		"vr-box", 
+		"@text", box_name,
 		"@name", box_name,
 		"@position", x, y, z,
-		"text", box_name
 	]);
+	
+	var body;
 	
 	// find the embedded body, rename it, and hook it up:
 	var box_patcher = box.subpatcher();
@@ -125,21 +114,11 @@ function objects_create_shape_body(x, y, z){
 			e.varname = box_name + "_body";
 			objects_add(e.varname, e);
 			scene_bodies[e.varname] = box_name;
+			body = e;
 		}
 	});
 	
-	/*
-	patcher_makeobject(body_name, [
-		"jit.phys.body", "vr-phys", 
-		"@name", body_name, 
-		"@shape", "cube",
-		"@position", x, y, z,
-		"@scale", 0.2,
-		"@kinematic", 1,
-		"@mass", 0,
-		"@targetname", box_name
-	]);
-	*/
+	return body;
 }
 
 
@@ -205,6 +184,8 @@ function collisions(hand, dictname) {
 			var body1 = collision.get("body1");
 			var body2 = collision.get("body2");
 			
+			
+			
 			// TODO: get this from patcher_objects intead???
 			
 			// pick whichever of these wasn't the ghost:
@@ -212,15 +193,20 @@ function collisions(hand, dictname) {
 			
 			post(body1, body2, target, "press\n");
 			if (target) {
-				post(body1, body2, target, hand.selected_object, hand.trigger, "\n");
+				post(body1, body2, target, hand.selected_body, hand.trigger, "\n");
 				// what happens now depends on the hand state
-				if (!hand.selected_object) {
+				if (!hand.selected_body) {
 					// we didn't have anything selected, so pick it up:
-					hand.selected_object = target;
+					hand.selected_body = target;
+					var p = collision.get("position");
 					
-					post("Picked up:", target.varname, "\n");
-					//hand.selected_object.position = hand.position;
-					//hand.selected_object.quat = hand.quat;
+					hand.selected_position_offset[0] = p[0] - hand.position[0];
+					hand.selected_position_offset[1] = p[1] - hand.position[1];
+					hand.selected_position_offset[2] = p[2] - hand.position[2];
+					
+					post(hand.selected_position_offset[0], hand.selected_position_offset[1], hand.selected_position_offset[2], "\n");
+					var p1 = target.message("getposition");
+					post("Picked up:", target.varname, p1, "\n");
 					
 					break;
 				}
@@ -292,29 +278,36 @@ function bang() {
 		
 		// create object using A button
 		if (hand.button1 == "press"){
-			objects_create_shape_body(hand.position[0], hand.position[1], hand.position[2]);
+			var body = objects_create_shape_body(hand.position[0], hand.position[1], hand.position[2]);
+			body.message("position", hand.position[0], hand.position[1], hand.position[2]);
+			body.message("quat", hand.quat[0], hand.quat[1], hand.quat[2], hand.quat[3]);
 			hand.button1 == "down";
 		}
 
 		// are we holding anything?
-		if (hand.selected_object) {
+		if (hand.selected_body) {
 			// are we are still holding (dragging)?
 			if (hand.trigger == "down" || hand.trigger == "press") {
 				// destroy objects with B button
 				if(hand.button2 == "press"){
 					// destroy object:
-					objects_remove_body(hand.selected_object);
-					hand.selected_object = null;
+					objects_remove_body(hand.selected_body);
+					hand.selected_body = null;
 					hand.button2 = "down";
-				}else{
+				} else {
 					// dragging around
-					//post("dragging", hand.selected_object.varname, "\n");
-					hand.selected_object.message("position", hand.position[0], hand.position[1], hand.position[2]);
-					hand.selected_object.message("quat", hand.quat[0], hand.quat[1], hand.quat[2], hand.quat[3]);
+					//post("dragging", hand.selected_body.varname, "\n");
+					
+					var x = hand.selected_position_offset[0] + hand.position[0];
+					var y = hand.selected_position_offset[1] + hand.position[1];
+					var z = hand.selected_position_offset[2] + hand.position[2];
+					
+					hand.selected_body.message("position", x, y, z);
+					hand.selected_body.message("quat", hand.quat[0], hand.quat[1], hand.quat[2], hand.quat[3]);
 				}
 			} else {
 				// let it go:
-				hand.selected_object = null;
+				hand.selected_body = null;
 			}
 		}
 	}
