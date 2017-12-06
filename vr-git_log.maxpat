@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 34.0, 215.0, 751.0, 670.0 ],
+		"rect" : [ 34.0, 215.0, 1035.0, 670.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -37,45 +37,6 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
-				"box" : 				{
-					"id" : "obj-13",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 684.0, 294.0, 35.0, 22.0 ],
-					"style" : "",
-					"text" : "read"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-7",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 512.0, 294.0, 44.0, 22.0 ],
-					"style" : "",
-					"text" : "import"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-4",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 563.0, 294.0, 105.0, 22.0 ],
-					"style" : "",
-					"text" : "import log.xml"
-				}
-
-			}
-, 			{
 				"box" : 				{
 					"id" : "obj-1",
 					"maxclass" : "newobj",
@@ -497,7 +458,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-62",
-					"items" : [ "Create README.md", ",", "ab sketches", ",", "for oculus", ",", "phys play", ",", "lab works", ",", "phys playground", ",", "phys", ",", "patcher scripting work", ",", "ontogenesis", ",", "comments", ",", "Update README.md", ",", "tidying", ",", "palumbo: added something to watch for updated git log files to provide user with versions of previous work from within vr.", ",", "Adam Siska's toxine object can be used for xml files. i'm going to give this a try towards parsing our git logs", ",", "sadam library doesn't initialize for 64-bit max so removing it from dependencies.", ",", "using jasch objects for xml so added it as a dependency", ",", "testing the jasch xml object 'toxine'", ",", "the git log is adding an odd line to the end of its xml files '<Cb=YC'. not sure why but i'm going to for now write something into max that ignores this.", ",", "I think that bug I described in last commit of the '<Cb=YC' being appended to log.xml might actually have been caused by a bad usage of 'toxine.mxo' on my part. we need to clear the 'idx.mxo' each time we load a new log.xml into the patch", ",", "gixed xml parsing", ",", "When the <o>filewatch</o> object is acti" ],
+					"items" : [ "Create README.md", ",", "ab sketches", ",", "for oculus", ",", "phys play", ",", "lab works", ",", "phys playground", ",", "phys", ",", "patcher scripting work", ",", "ontogenesis", ",", "comments", ",", "Update README.md", ",", "tidying", ",", "palumbo: added something to watch for updated git log files to provide user with versions of previous work from within vr.", ",", "Adam Siska's toxine object can be used for xml files. i'm going to give this a try towards parsing our git logs", ",", "sadam library doesn't initialize for 64-bit max so removing it from dependencies.", ",", "using jasch objects for xml so added it as a dependency", ",", "testing the jasch xml object 'toxine'", ",", "the git log is adding an odd line to the end of its xml files '<Cb=YC'. not sure why but i'm going to for now write something into max that ignores this.", ",", "I think that bug I described in last commit of the '<Cb=YC' being appended to log.xml might actually have been caused by a bad usage of 'toxine.mxo' on my part. we need to clear the 'idx.mxo' each time we load a new log.xml into the patch", ",", "gixed xml parsing", ",", "vr-git_log is working now as proof-of-concept for what I set out to do today. please see https://github.com/worldmaking/vr-in-vr/projects/1 to view progress and to-do list", ",", "added creating & deleting objects", ",", "cleanup & comment", ",", "first pass at a vr max objects", ",", "intiial work on a scripting-based editor. still need the reverse lookup from scripting name to the underlying jitter object" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -974,13 +935,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"source" : [ "obj-13", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-73", 0 ],
 					"midpoints" : [ 110.5, 298.0, 127.0, 298.0, 127.0, 298.0, 313.5, 298.0 ],
 					"source" : [ "obj-14", 0 ]
@@ -1041,13 +995,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"source" : [ "obj-4", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
 					"source" : [ "obj-5", 0 ]
 				}
@@ -1079,13 +1026,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-62", 0 ],
 					"source" : [ "obj-64", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"source" : [ "obj-7", 0 ]
 				}
 
 			}
