@@ -123,3 +123,33 @@ Author: michaelpalumbo <emailmichaelpalumbo@gmail.com>
 Date:   Wed Nov 29 14:55:15 2017 -0500
 
     gixed xml parsing
+
+commit 535c9f5c9222467b0de9016a9a761149e4a7b849
+Author: michaelpalumbo <emailmichaelpalumbo@gmail.com>
+Date:   Wed Nov 29 15:19:16 2017 -0500
+
+    vr-git_log is working now as proof-of-concept for what I set out to do today. please see https://github.com/worldmaking/vr-in-vr/projects/1 to view progress and to-do list
+
+commit 0f67a74db8051bb29345d5bbce8df825edbc6937
+Author: Graham Wakefield <grrrwaaa@gmail.com>
+Date:   Wed Nov 29 15:37:32 2017 -0500
+
+    added creating & deleting objects
+
+commit c432a9205bb03a6d7003e7dadc28ce91c9ea3574
+Author: Graham Wakefield <grrrwaaa@gmail.com>
+Date:   Wed Nov 29 15:38:51 2017 -0500
+
+    cleanup & comment
+
+commit a59ea41225fe4dac6288088807a367334296ac74
+Author: Graham Wakefield <grrrwaaa@gmail.com>
+Date:   Wed Nov 29 15:39:41 2017 -0500
+
+    first pass at a vr max objects
+
+commit 794b22ce209a017bc435e4fa3b928bdd89153c72
+Author: Graham Wakefield <grrrwaaa@gmail.com>
+Date:   Wed Nov 29 16:25:15 2017 -0500
+
+    intiial work on a scripting-based editor. still need the reverse lookup from scripting name to the underlying jitter object

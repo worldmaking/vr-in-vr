@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 721.0, 81.0, 751.0, 670.0 ],
+		"rect" : [ 34.0, 215.0, 918.0, 670.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -37,6 +37,175 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-48",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 744.0, 324.0, 37.0, 22.0 ],
+					"style" : "",
+					"text" : "clear"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 13.0,
+					"id" : "obj-90",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1091.0, 493.0, 85.0, 23.0 ],
+					"style" : "",
+					"text" : "print from_js"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 13.0,
+					"id" : "obj-45",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1091.0, 443.0, 99.0, 23.0 ],
+					"saved_object_attributes" : 					{
+						"filename" : "log_to_dict.js",
+						"parameter_enable" : 0
+					}
+,
+					"style" : "",
+					"text" : "js log_to_dict.js"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-46",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 1091.0, 393.0, 24.0, 24.0 ],
+					"presentation_rect" : [ 66.0, 140.0, 24.0, 24.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-44",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 863.0, 318.0, 73.0, 22.0 ],
+					"style" : "",
+					"text" : "fromsymbol"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-43",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 934.0, 493.0, 50.0, 22.0 ],
+					"style" : "",
+					"text" : "2"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-38",
+					"linecount" : 2,
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 863.0, 382.0, 32.0, 35.0 ],
+					"style" : "",
+					"text" : "zl.len"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-37",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 776.0, 336.0, 43.0, 22.0 ],
+					"style" : "",
+					"text" : "unjoin"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-36",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 678.0, 430.0, 100.0, 22.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-35",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 639.0, 292.0, 74.0, 22.0 ],
+					"style" : "",
+					"text" : "prepend set"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-29",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 639.0, 266.0, 51.0, 22.0 ],
+					"style" : "",
+					"text" : "group 4"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 4,
+					"outlettype" : [ "dictionary", "", "", "" ],
+					"patching_rect" : [ 639.0, 318.0, 68.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"embed" : 0,
+						"parameter_enable" : 0
+					}
+,
+					"style" : "",
+					"text" : "dict git_log"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-89",
 					"maxclass" : "comment",
@@ -440,7 +609,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-62",
-					"items" : [ "first commit", ",", "Create README.md", ",", "ab sketches", ",", "for oculus", ",", "phys play", ",", "lab works", ",", "phys playground", ",", "phys", ",", "patcher scripting work", ",", "ontogenesis", ",", "comments", ",", "Update README.md", ",", "tidying", ",", "palumbo: added something to watch for updated git log files to provide user with versions of previous work from within vr.", ",", "Adam Siska's toxine object can be used for xml files. i'm going to give this a try towards parsing our git logs", ",", "sadam library doesn't initialize for 64-bit max so removing it from dependencies.", ",", "using jasch objects for xml so added it as a dependency", ",", "testing the jasch xml object 'toxine'", ",", "the git log is adding an odd line to the end of its xml files '<Cb=YC'. not sure why but i'm going to for now write something into max that ignores this.", ",", "I think that bug I described in last commit of the '<Cb=YC' being appended to log.xml might actually have been caused by a bad usage of 'toxine.mxo' on my part. we need to clear the 'idx.mxo' each time we load a new log.xml into the patch", ",", "gixed xml parsing" ],
+					"items" : [ "first commit", ",", "Create README.md", ",", "ab sketches", ",", "for oculus", ",", "phys play", ",", "lab works", ",", "phys playground", ",", "phys", ",", "patcher scripting work", ",", "ontogenesis", ",", "comments", ",", "Update README.md", ",", "tidying", ",", "palumbo: added something to watch for updated git log files to provide user with versions of previous work from within vr.", ",", "Adam Siska's toxine object can be used for xml files. i'm going to give this a try towards parsing our git logs", ",", "sadam library doesn't initialize for 64-bit max so removing it from dependencies.", ",", "using jasch objects for xml so added it as a dependency", ",", "testing the jasch xml object 'toxine'", ",", "the git log is adding an odd line to the end of its xml files '<Cb=YC'. not sure why but i'm going to for now write something into max that ignores this.", ",", "I think that bug I described in last commit of the '<Cb=YC' being appended to log.xml might actually have been caused by a bad usage of 'toxine.mxo' on my part. we need to clear the 'idx.mxo' each time we load a new log.xml into the patch", ",", "gixed xml parsing", ",", "vr-git_log is working now as proof-of-concept for what I set out to do today. please see https://github.com/worldmaking/vr-in-vr/projects/1 to view progress and to-do list", ",", "added creating & deleting objects", ",", "cleanup & comment", ",", "first pass at a vr max objects", ",", "intiial work on a scripting-based editor. still need the reverse lookup from scripting name to the underlying jitter object" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -470,7 +639,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
+						"rect" : [ 59.0, 104.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -657,7 +826,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 45.333344, 375.0, 144.0, 22.0 ],
+					"patching_rect" : [ 48.333344, 375.0, 144.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -677,7 +846,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 97.333313, 404.0, 57.0, 20.0 ],
+					"patching_rect" : [ 100.333313, 404.0, 57.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 429.333313, 379.0, 57.0, 20.0 ],
 					"style" : "",
@@ -693,7 +862,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 45.333344, 404.0, 50.0, 22.0 ],
+					"patching_rect" : [ 48.333344, 404.0, 50.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 377.333344, 379.0, 50.0, 22.0 ],
 					"style" : ""
@@ -705,11 +874,11 @@
 					"id" : "obj-9",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "clear" ],
-					"patching_rect" : [ 34.0, 189.0, 53.0, 22.0 ],
+					"numoutlets" : 3,
+					"outlettype" : [ "", "clear", "int" ],
+					"patching_rect" : [ 34.0, 189.0, 63.0, 22.0 ],
 					"style" : "",
-					"text" : "t s clear"
+					"text" : "t s clear 4"
 				}
 
 			}
@@ -813,7 +982,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 101.0, 266.0, 71.0, 21.0 ],
+					"patching_rect" : [ 101.0, 271.0, 71.0, 21.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0
 					}
@@ -832,7 +1001,7 @@
 					"numinlets" : 5,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "int", "int", "list" ],
-					"patching_rect" : [ 101.0, 230.0, 32.0, 21.0 ],
+					"patching_rect" : [ 101.0, 237.0, 32.0, 21.0 ],
 					"style" : "",
 					"text" : "idx"
 				}
@@ -903,7 +1072,17 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-11", 0 ],
-					"midpoints" : [ 43.5, 370.0, 23.0, 370.0, 23.0, 223.0, 109.0, 223.0 ],
+					"midpoints" : [ 43.5, 370.0, 23.0, 370.0, 23.0, 231.0, 109.0, 231.0 ],
+					"order" : 1,
+					"source" : [ "obj-12", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-29", 0 ],
+					"midpoints" : [ 43.5, 573.0, 625.0, 573.0, 625.0, 297.0, 625.0, 297.0, 625.0, 261.0, 648.5, 261.0 ],
+					"order" : 0,
 					"source" : [ "obj-12", 0 ]
 				}
 
@@ -970,8 +1149,57 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-35", 0 ],
+					"source" : [ "obj-29", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-12", 0 ],
 					"source" : [ "obj-31", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-35", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-43", 1 ],
+					"source" : [ "obj-38", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-38", 0 ],
+					"source" : [ "obj-44", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-90", 0 ],
+					"source" : [ "obj-45", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-45", 0 ],
+					"source" : [ "obj-46", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-48", 0 ]
 				}
 
 			}
@@ -985,7 +1213,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-14", 0 ],
-					"midpoints" : [ 179.833344, 400.0, 199.0, 400.0, 199.0, 253.0, 110.5, 253.0 ],
+					"midpoints" : [ 182.833344, 400.0, 199.0, 400.0, 199.0, 262.0, 110.5, 262.0 ],
 					"source" : [ "obj-61", 1 ]
 				}
 
@@ -1056,7 +1284,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-11", 0 ],
-					"midpoints" : [ 77.5, 224.0, 109.0, 224.0 ],
+					"midpoints" : [ 65.5, 224.0, 109.0, 224.0 ],
 					"order" : 2,
 					"source" : [ "obj-9", 1 ]
 				}
@@ -1065,9 +1293,17 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-14", 0 ],
-					"midpoints" : [ 77.5, 255.0, 110.5, 255.0 ],
+					"midpoints" : [ 65.5, 265.0, 110.5, 265.0 ],
 					"order" : 1,
 					"source" : [ "obj-9", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-29", 1 ],
+					"midpoints" : [ 87.5, 213.0, 680.5, 213.0 ],
+					"source" : [ "obj-9", 2 ]
 				}
 
 			}
@@ -1081,7 +1317,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-62", 0 ],
-					"midpoints" : [ 77.5, 217.0, 289.0, 217.0, 289.0, 373.0, 313.5, 373.0 ],
+					"midpoints" : [ 65.5, 224.0, 289.0, 224.0, 289.0, 370.0, 313.5, 370.0 ],
 					"order" : 0,
 					"source" : [ "obj-9", 1 ]
 				}
@@ -1089,6 +1325,20 @@
 			}
  ],
 		"dependency_cache" : [ 			{
+				"name" : "group.maxpat",
+				"bootpath" : "~/Documents/Max 7/Packages/RTC-lib_71/patchers/lists/listobjects_mccartney",
+				"patcherrelativepath" : "../Documents/Max 7/Packages/RTC-lib_71/patchers/lists/listobjects_mccartney",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "log_to_dict.js",
+				"bootpath" : "~/vr-in-vr",
+				"patcherrelativepath" : ".",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "toxine.mxo",
 				"type" : "iLaX"
 			}
