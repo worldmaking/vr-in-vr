@@ -36,8 +36,99 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
-		"boxes" : [  ],
-		"lines" : [  ],
+		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 355.0, 207.0, 72.0, 22.0 ],
+					"style" : "",
+					"text" : "loadmess 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 0,
+					"patching_rect" : [ 355.0, 247.0, 37.0, 22.0 ],
+					"style" : "",
+					"text" : "dac~"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "live.gain~",
+					"numinlets" : 2,
+					"numoutlets" : 5,
+					"outlettype" : [ "signal", "signal", "", "float", "list" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 217.0, 207.0, 48.0, 136.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_longname" : "live.gain~",
+							"parameter_shortname" : "live.gain~",
+							"parameter_type" : 0,
+							"parameter_mmin" : -70.0,
+							"parameter_mmax" : 6.0,
+							"parameter_initial" : [ 0.0 ],
+							"parameter_unitstyle" : 4
+						}
+
+					}
+,
+					"varname" : "live.gain~"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "signal" ],
+					"patching_rect" : [ 217.0, 174.0, 68.0, 22.0 ],
+					"style" : "",
+					"text" : "cycle~ 220"
+				}
+
+			}
+ ],
+		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 1 ],
+					"order" : 0,
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"order" : 1,
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+ ],
+		"parameters" : 		{
+			"obj-2" : [ "live.gain~", "live.gain~", 0 ]
+		}
+,
 		"dependency_cache" : [  ],
 		"autosave" : 0
 	}
