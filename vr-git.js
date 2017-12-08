@@ -31,27 +31,27 @@ connection.onopen = function () {
   	//}
 };
 
-   
-
-//DON'T DELETE BELOW, ITS A WORK IN-PROGRESS
-/*//attempting to control this script from max's websocket. 
-connection.onmessage = function (e) {
-    console.log('message from server', e.data);
-    	child = exec("git diff " + diff1 + " " + diff2, function (error, stdout, stderr) {
-		git_log = JSON.stringify(stdout);
-		connection.send(git_log);
-
-};
-*/
-
 
 connection.onmessage = function (a) {
-	console.log('message from max', 'git diff ' + a.data);
-	 child2 = exec("git diff " + a.data + " | diff-so-fancy", function (error, stdout, stderr) {
+	//ideally from max you specify the command to this script.
+
+	if (a.data.includes("git diff ")) {
+		//so if you request a diff with filenames/hashes, then:
+		child2 = exec(a.data + " | diff-so-fancy", function (error, stdout, stderr) {
 	 	//git_log2 = JSON.stringify(stdout);
-	 	connection.send("@@@@@@@@@@" + stdout + "@@@@@@@@@@");
+	 	connection.send(stdout);
+	 	console.log("git diff requested for: " + a.data.slice(9));
+	 });
+
+	 }
+	 //if you typed some other git commands, then:
+	else {
+		console.log('message from max', a.data);
+		child2 = exec(a.data + " | diff-so-fancy", function (error, stdout, stderr) {
+	 	//git_log2 = JSON.stringify(stdout);
+	 	connection.send(stdout);
 	 	console.log(stdout);
 	 });
-};
 
-//connection.send('hello from client');
+	 }
+};
