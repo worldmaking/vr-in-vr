@@ -7,3 +7,5 @@ A sandbox space for Alice lab experiments in VR-authoring from within VR.
 Dependencies:
 
 Jasch library (Max/MSP) (Used for vr-git_log.maxpat)
+diff-so-fancy (git, node) (used to remove the +/- from git diffs)
+websockets

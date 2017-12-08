@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 119.0, 79.0, 1567.0, 932.0 ],
+		"rect" : [ 34.0, 79.0, 1507.0, 933.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -37,6 +37,100 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-46",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 659.0, 250.0, 65.0, 22.0 ],
+					"style" : "",
+					"text" : "closebang"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-44",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 659.0, 278.0, 37.0, 22.0 ],
+					"style" : "",
+					"text" : "clear"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-42",
+					"linecount" : 2,
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 867.0, 449.0, 50.0, 35.0 ],
+					"style" : "",
+					"text" : "0000{aaaa"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-36",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 843.0, 370.0, 113.0, 22.0 ],
+					"style" : "",
+					"text" : "0000{aaaaa{bbbbb"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 11.595187,
+					"id" : "obj-23",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 5,
+					"outlettype" : [ "", "", "", "", "" ],
+					"patching_rect" : [ 843.0, 408.0, 84.0, 21.0 ],
+					"style" : "",
+					"text" : "regexp w[^{]*$"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-21",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 5,
+					"outlettype" : [ "", "", "", "", "" ],
+					"patching_rect" : [ 958.0, 511.0, 61.0, 22.0 ],
+					"style" : "",
+					"text" : "regexp"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-10",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 936.0, 320.0, 363.0, 22.0 ],
+					"style" : "",
+					"text" : "\"0f6fed29195fd0c4fdd9168165d7c20763949fd9 vr-git_log.maxpat\""
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-48",
 					"maxclass" : "newobj",
@@ -2221,14 +2315,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-18",
-					"linecount" : 717,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1085.0, 603.0, 189.0, 9621.0 ],
-					"style" : "",
-					"text" : "\"diff --git a/vr-git_log.maxpat b/vr-git_log.maxpatnnew file mode 100644nindex 0000000..60139fdn--- /dev/nulln+++ b/vr-git_log.maxpatn@@ -0,0 +1,2837 @@n+{n+t\\\"patcher\\\" : t{n+tt\\\"fileversion\\\" : 1,n+tt\\\"appversion\\\" : tt{n+ttt\\\"major\\\" : 7,n+ttt\\\"minor\\\" : 3,n+ttt\\\"revision\\\" : 4,n+ttt\\\"architecture\\\" : \\\"x64\\\",n+ttt\\\"modernui\\\" : 1n+tt}n+,n+tt\\\"rect\\\" : [ 78.0, 79.0, 1567.0, 932.0 ],n+tt\\\"bglocked\\\" : 0,n+tt\\\"openinpresentation\\\" : 0,n+tt\\\"default_fontsize\\\" : 12.0,n+tt\\\"default_fontface\\\" : 0,n+tt\\\"default_fontname\\\" : \\\"Arial\\\",n+tt\\\"gridonopen\\\" : 1,n+tt\\\"gridsize\\\" : [ 15.0, 15.0 ],n+tt\\\"gridsnaponopen\\\" : 1,n+tt\\\"objectsnaponopen\\\" : 1,n+tt\\\"statusbarvisible\\\" : 2,n+tt\\\"toolbarvisible\\\" : 1,n+tt\\\"lefttoolbarpinned\\\" : 0,n+tt\\\"toptoolbarpinned\\\" : 0,n+tt\\\"righttoolbarpinned\\\" : 0,n+tt\\\"bottomtoolbarpinned\\\" : 0,n+tt\\\"toolbars_unpinned_last_save\\\" : 0,n+tt\\\"tallnewobj\\\" : 0,n+tt\\\"boxanimatetime\\\" : 200,n+tt\\\"enablehscroll\\\" : 1,n+tt\\\"enablevscroll\\\" : 1,n+tt\\\"devicewidth\\\" : 0.0,n+tt\\\"description\\\" : \\\"\\\",n+tt\\\"digest\\\" : \\\"\\\",n+tt\\\"tags\\\" : \\\"\\\",n+tt\\\"style\\\" : \\\"\\\",n+tt\\\"subpatcher_template\\\" : \\\"\\\",n+tt\\\"boxes\\\" : [ ttt{n+tttt\\\"box\\\" : tttt{n+ttttt\\\"id\\\" : \\\"obj-81\\\",n+ttttt\\\"linecount\\\" : 3,n+ttttt\\\"maxclass\\\" : \\\"comment\\\",n+ttttt\\\"numinlets\\\" : 1,n+ttttt\\\"numoutlets\\\" : 0,n+ttttt\\\"patching_rect\\\" : [ 348.0, 149.0, 154.0, 47.0 ],n+ttttt\\\"style\\\" : \\\"\\\",n+ttttt\\\"text\\\" : \\\"NOTE: logs now in~ /logs/ folder, but 'git log > log.txt' will put it in parent\\\"n+tttt}n+n+ttt}n+, ttt{n+tttt\\\"box\\\" : tttt{n+ttttt\\\"id\\\" : \\\"obj-76\\\",n+ttttt\\\"maxclass\\\" : \\\"button\\\",n+ttttt\\\"numinlets\\\" : 1,n+ttttt\\\"numoutlets\\\" : 1,n+ttttt\\\"outlettype\\\" : [ \\\"bang\\\" ],n+ttttt\\\"patching_rect\\\" : [ 182.0, 28.0, 24.0, 24.0 ],n+ttttt\\\"style\\\" : \\\"\\\"n+tttt}n+n+ttt}n+, ttt{n+tttt\\\"box\\\" : tttt{n+ttttt\\\"id\\\" : \\\"obj-74\\\",n+ttttt\\\"maxclass\\\" : \\\"newobj\\\",n+ttttt\\\"numinlets\\\" : 4,n+ttttt\\\"numoutlets\\\" : 1,n+ttttt\\\"outlettype\\\" : [ \\\"\\\" ],n+ttttt\\\"patcher\\\" : ttttt{n+tttttt\\\"fileversion\\\" : 1,n+tttttt\\\"appversion\\\" : tttttt{n+ttttttt\\\"major\\\" : 7,n+ttttttt\\\"minor\\\" : 3,n+ttttttt\\\"revision\\\" : 4,n+ttttttt\\\"architecture\\\" : \\\"x64\\\",n+ttttttt\\\"modernui\\\" : 1n+tttttt}n+,n+tttttt\\\"rect\\\" : [ 0.0, 0.0, 640.0, 480.0 ],n+tttttt\\\"bglocked\\\" : 0,n+tttttt\\\"openinpresentation\\\" : 0,n+tttttt\\\"default_fontsize\\\" : 12.0,n+tttttt\\\"default_fontface\\\" : 0,n+tttttt\\\"default_fontname\\\" : \\\"Arial\\\",n+tttttt\\\"gridonopen\\\" : 1,n+tttttt\\\"gridsize\\\" : [ 15.0, 15.0 ],n+tttttt\\\"gridsnaponopen\\\" : 1,n+tttttt\\\"objectsnaponopen\\\" : 1,n+tttttt\\\"statusbarvisible\\\" : 2,n+tttttt\\\"toolbarvisible\\\" : 1,n+tttttt\\\"lefttoolbarpinned\\\" : 0,n+tttttt\\\"toptoolbarpinned\\\" : 0,n+tttttt\\\"righttoolbarpinned\\\" : 0,n+tttttt\\\"bottomtoolbarpinned\\\" : 0,n+tttttt\\\"toolbars_unpinned_last_save\\\" : 0,n+tttttt\\\"tallnewobj\\\" : 0,n+tttttt\\\"boxanimatetime\\\" : 200,n+tttttt\\\"enablehscroll\\\" : 1,n+tttttt\\\"enablevscroll\\\" : 1,n+tttttt\\\"devicewidth\\\" : 0.0,n+tttttt\\\"description\\\" : \\\"\\\",n+tttttt\\\"digest\\\" : \\\"\\\",n+tttttt\\\"tags\\\" : \\\"\\\",n+tttttt\\\"style\\\" : \\\"\\\",n+tttttt\\\"subpatcher_template\\\" : \\\"\\\",n+tttttt\\\"boxes\\\" : [ ttttttt{n+tttttttt\\\"box\\\" : tttttttt{n+ttttttttt\\\"id\\\" : \\\"obj-52\\\",n+ttttttttt\\\"maxclass\\\" : \\\"newobj\\\",n+ttttttttt\\\"numinlets\\\" : 3,n+ttttttttt\\\"numoutlets\\\" : 1,n+ttttttttt\\\"outlettype\\\" : [ \\\"\\\" ],n+ttttttttt\\\"patcher\\\" : ttttttttt{n+tttttttttt\\\"fileversion\\\" : 1,n+tttttttttt\\\"appversion\\\" : tttttttttt{n+ttttttttttt\\\"major\\\" : 7,n+ttttttttttt\\\"minor\\\" : 3,n+ttttttttttt\\\"revision\\\" : 4,n+ttttttttttt\\\"architecture\\\" : \\\"x64\\\",n+ttttttttttt\\\"modernui\\\" : 1n+tttttttttt}n+,n+tttttttttt\\\"rect\\\" : [ 59.0, 104.0, 640.0, 480.0 ],n+tttttttttt\\\"bglocked\\\" : 0,n+tttttttttt\\\"openinpresentation\\\" : 0,n+tttttttttt\\\"default_fontsize\\\" : 12.0,n+tttttttttt\\\"default_fontface\\\" : 0,n+tttttttttt\\\"default_fontname\\\" : \\\"Arial\\\",n+tttttttttt\\\"gridonopen\\\" : 1,n+tttttttttt\\\"gridsize\\\" : [ 15.0, 15.0 ],n+tttttttttt\\\"gridsnaponopen\\\" : 1,n+tttttttttt\\\"objectsnaponopen\\\" : 1,n+tttttttttt\\\"statusbarvisible\\\" : 2,n+tttttttttt\\\"toolbarvisible\\\" : 1,n+tttttttttt\\\"lefttoolbarpinned\\\" : 0,n+tttttttttt\\\"toptoolbarpinned\\\" : 0,n+tttttttttt\\\"righttoolbarpinned\\\" : 0,n+tttttttttt\\\"bottomtoolbarpinned\\\" : 0,n+tttttttttt\\\"toolbars_unpinned_last_save\\\" : 0,n+tttttttttt\\\"tallnewobj\\\" : 0,n+tttttttttt\\\"boxanimatetime\\\" : 200,n+tttttttttt\\\"enablehscroll\\\" : 1,n+tttttttttt\\\"enablevscroll\\\" : 1,n+tttttttttt\\\"devicewidth\\\" : 0.0,n+tttttttttt\\\"description\\\" : \\\"\\\",n+tttttttttt\\\"digest\\\" : \\\"\\\",n+tttttttttt\\\"tags\\\" : \\\"\\\",n+tttttttttt\\\"style\\\" : \\\"\\\",n+tttttttttt\\\"subpatcher_template\\\" : \\\"\\\",n+tttttttttt\\\"boxes\\\" : [ ttttttttttt{n+tttttttttttt\\\"box\\\" : tttttttttttt{n+ttttttttttttt\\\"id\\\" : \\\"obj-44\\\",n+ttttttttttttt\\\"linecount\\\" : 2,n+ttttttttttttt\\\"maxclass\\\" : \\\"comment\\\",n+ttttttttttttt\\\"numinlets\\\" : 1,n+ttttttttttttt\\\"numoutlets\\\" : 0,n+ttttttttttttt\\\"patching_rect\\\" : [ 110.0, 168.0, 150.0, 33.0 ],n+ttttttttttttt\\\"style\\\" : \\\"\\\",n+ttttttttttttt\\\"text\\\" : \\\"removes errant 'append' symbol\\\"n+tttttttttttt}n+n+ttttttttttt}n+, ttttttttttt{n+tttttttttttt\\\"box\\\" : tttttttttttt{n+ttttttttttttt\\\"id\\\" : \\\"obj-39\\\",n+ttttttttttttt\\\"maxclass\\\" : \\\"newobj\\\",n+ttttttttttttt\\\"numinlets\\\" : 2,n+ttttttttttttt\\\"numoutlets\\\" : 2,n+ttttttttttttt\\\"outlettype\\\" : [ \\\"\\\", \\\"\\\" ],n+ttttttttttttt\\\"patching_rect\\\" : [ 50.0, 168.0, 57.0, 22.0 ],n+ttttttttttttt\\\"style\\\" : \\\"\\\",n+ttttttttttttt\\\"text\\\" : \\\"zl.slice 1\\\"n+tttttttttttt}n+n+ttttttttttt}n+, ttttttttttt{n+tttttttttttt\\\"box\\\" : tttttttttttt{n+ttttttttttttt\\\"id\\\" : \\\"obj-37\\\",n+ttttttttttttt\\\"maxclass\\\" : \\\"message\\\",n+ttttttttttttt\\\"numinlets\\\" : 2,n+ttttttttttttt\\\"numoutlets\\\" : 1,n+ttttttttttttt\\\"outlettype\\\" : [ \\\"\\\" ],n+ttttttttttttt\\\"patching_rect\\\" : [ 57.0, 243.0, 636.0, 22.0 ],n+ttttttttttttt\\\"style\\\" : \\\"\\\",n+ttttttttttttt\\\"text\\\" : \\\"\\\"intiial work on a scripting-based editor. still need the reverse lookup from scripting name to the underlying jitter object\\\"\\\"n+tttttttttttt}n+n+ttttttttttt}n+, ttttttttttt{n+tttttttttttt\\\"box\\\" : tttttttttttt{n+ttttttttttttt\\\"id\\\" : \\\"obj-30\\\",n+ttttttttttttt\\\"maxclass\\\" : \\\"newobj\\\",n+ttttttttttttt\\\"numinlets\\\" : 2,n+ttttttttttttt\\\"numoutlets\\\" : 1,n+ttttttttttttt\\\"outlettype\\\" : [ \\\"\\\" ],n+ttttttttttttt\\\"patcher\\\" : ttttttttttttt{n+tttttttttttttt\\\"fileversion\\\" : 1,n+tttttttttttttt\\\"appversion\\\" : tttttttttttttt{n+ttttttttttttttt\\\"major\\\" : 7,n+ttttttttttttttt\\\"minor\\\" : 3,n+ttttttttttttttt\\\"revision\\\" : 4,n+ttttttttttttttt\\\"architecture\\\" : \\\"x64\\\",n+ttttttttttttttt\\\"modernui\\\" : 1n+tttttttttttttt}n+,n+tttttttttttttt\\\"rect\\\" : [ 59.0, 104.0, 640.0, 480.0 ],n+tttttttttttttt\\\"bglocked\\\" : 0,n+tttttttttttttt\\\"openinpresentation\\\" : 0,n+tttttttttttttt\\\"default_fontsize\\\" : 12.0,n+tttttttttttttt\\\"default_fontface\\\" : 0,n+tttttttttttttt\\\"default_fontname\\\" : \\\"Arial\\\",n+tttttttttttttt\\\"gridonopen\\\" : 1,n+tttttttttttttt\\\"gridsize\\\" : [ 15.0, 15.0 ],n+tttttttttttttt\\\"gridsnaponopen\\\" : 1,n+tttttttttttttt\\\"objectsnaponopen\\\" : 1,n+tttttttttttttt\\\"statusbarvisible\\\" : 2,n+tttttttttttttt\\\"toolbarvisible\\\" : 1,n+tttttttttttttt\\\"lefttoolbarpinned\\\" : 0,n+tttttttttttttt\\\"toptoolbarpinned\\\" : 0,n+tttttttttttttt\\\"righttoolbarpinned\\\" : 0,n+tttttttttttttt\\\"bottomtoolbarpinned\\\" : 0,n+tttttttttttttt\\\"toolbars_unpinned_last_save\\\" : 0,n+tttttttttttttt\\\"tallnewobj\\\" : 0,n+tttttttttttttt\\\"boxanimatetime\\\" : 200,n+tttttttttttttt\\\"enablehscroll\\\" : 1,n+tttttttttttttt\\\"enablevscroll\\\" : 1,n+tttttttttttttt\\\"devicewidth\\\" : 0.0,n+tttttttttttttt\\\"description\\\" : \\\"\\\",n+tttttttttttttt\\\"digest\\\" : \\\"\\\",n+tttttttttttttt\\\"tags\\\" : \\\"\\\",n+tttttttttttttt\\\"style\\\" : \\\"\\\",n+tttttttttttttt\\\"subpatcher_template\\\" : \\\"\\\",n+tttttttttttttt\\\"boxes\\\" : [ ttttttttttttttt{n+tttttttttttttttt\\\"box\\\" : tttttttttttttttt{n+ttttttttttttttttt\\\"fontname\\\" : \\\"Arial\\\",n+ttttttttttttttttt\\\"fontsize\\\" : 9.0,n+ttttttttttttttttt\\\"id\\\" : \\\"obj-1\\\",n+ttttttttttttttttt\\\"maxclass\\\" : \\\"newobj\\\",n+ttttttttttttttttt\\\"numinlets\\\" : 1,n+ttttttttttttttttt\\\"numoutlets\\\" : 1,n+ttttttttttttttttt\\\"outlettype\\\" : [ \\\"\\\" ],n+ttttttttttttttttt\\\"patching_rect\\\" : [ 30.0, 62.0, 75.0, 19.0 ],n+ttttttttttttttttt\\\"style\\\" : \\\"\\\",n+ttttttttttttttttt\\\"text\\\" : \\\"prepend append\\\"n+tttttttttttttttt}n+n+ttttttttttttttt}n+, ttttttttttttttt{n+tttttttttttttttt\\\"box\\\" : tttttttttttttttt{n+ttttttttttttttttt\\\"comment\\\" : \\\"reset (clear list)\\\",n+ttttttttttttttttt\\\"id\\\" : \\\"obj-2\\\",n+ttttttttttttttttt\\\"index\\\" : 2,n+ttttttttttttttttt\\\"maxclass\\\" : \\\"inlet\\\",n+ttttttttttttttttt\\\"numinlets\\\" : 0,n+ttttttttttttttttt\\\"numoutlets\\\" : 1,n+ttttttttttttttttt\\\"outlettype\\\" : [ \\\"bang\\\" ],n+ttttttttttttttttt\\\"patching_rect\\\" : [ 108.0, 33.0, 15.0, 15.0 ],n+ttttttttttttttttt\\\"style\\\" : \\\"\\\"n+tttttttttttttttt}n+n+ttttttttttttttt}n+, ttttttttttttttt{n+tttttttttttttttt\\\"box\\\" : tttttttttttttttt{n+ttttttttttttttttt\\\"comment\\\" : \\\"element\\\",n+ttttttttttttttttt\\\"id\\\" : \\\"obj-3\\\",n+ttttttttttttttttt\\\"index\\\" : 1,n+ttttttttttttttttt\\\"maxclass\\\" : \\\"inlet\\\",n+ttttttttttttttttt\\\"numinlets\\\" : 0,n+ttttttttttttttttt\\\"numoutlets\\\" : 1,n+ttttttttttttttttt\\\"outlettype\\\" : [ \\\"\\\" ],n+ttttttttttttttttt\\\"patching_rect\\\" : [ 30.0, 33.0, 15.0, 15.0 ],n+ttttttttttttttttt\\\"style\\\" : \\\"\\\"n+tttttttttttttttt}n+n+ttttttttttttttt}n+, ttttttttttttttt{n+tttttttttttttttt\\\"box\\\" : tttttttttttttttt{n+ttttttttttttttttt\\\"comment\\\" : \\\"list\\\",n+ttttttttttttttttt\\\"id\\\" : \\\"obj-4\\\",n+ttttttttttttttttt\\\"index\\\" : 1,n+ttttttttttttttttt\\\"maxclass\\\" : \\\"outlet\\\",n+ttttttttttttttttt\\\"numinlets\\\" : 1,n+ttttttttttttttttt\\\"numoutlets\\\" : 0,n+ttttttttttttttttt\\\"patching_rect\\\" : [ 30.0, 96.0, 15.0, 15.0 ],n+ttttttttttttttttt\\\"style\\\" : \\\"\\\"n+tttttttttttttttt}n+n+ttttttttttttttt}n+, ttttttttttttttt{n+tttttttttttttttt\\\"box\\\" : tttttttttttttttt{n+ttttttttttttttttt\\\"fontname\\\" : \\\"Arial\\\",n+ttttttttttttttttt\\\"fontsize\\\" : 9.0,n+ttttttttttttttttt\\\"id\\\" : \\\"obj-5\\\",n+ttttttttttttttttt\\\"maxclass\\\" : \\\"message\\\",n+ttttttttttttttttt\\\"numinlets\\\" : 2,n+ttttttttttttttttt\\\"numoutlets\\\" : 1,n+ttttttttttttttttt\\\"outlettype\\\" : [ \\\"\\\" ],n+ttttttttttttttttt\\\"patching_rect\\\" : [ 108.0, 64.0, 22.0, 19.0 ],n+ttttttttttttttttt\\\"style\\\" : \\\"\\\",n+ttttttttttttttttt\\\"text\\\" : \\\"set\\\"n+tttttttttttttttt}n+n+ttttttttttttttt}n+, ttttttttttttttt{n+tttttttttttttttt\\\"box\\\" : tttttttttttttttt{n+ttttttttttttttttt\\\"fontname\\\" : \\\"Arial\\\",n+ttttttttttttttttt\\\"fontsize\\\" : 9.0,n+ttttttttttttttttt\\\"id\\\" : \\\"obj-6\\\",n+ttttttttttttttttt\\\"maxclass\\\" : \\\"comment\\\",n+ttttttttttttttttt\\\"numinlets\\\" : 1,n+ttttttttttttttttt\\\"numoutlets\\\" : 0,n+ttttttttttttttttt\\\"patching_rect\\\" : [ 49.0, 97.0, 142.0, 17.0 ],n+ttttttttttttttttt\\\"style\\\" : \\\"\\\",n+ttttttttttttttttt\\\"text\\\" : \\\"1993-2004 by Karlheinz Essl\\\"n+tttttttttttttttt}n+n+ttttttttttttttt}n+, ttttttttttttttt{n+tttttttttttttttt\\\"box\\\" : tttttttttttttttt{n+ttttttttttttttttt\\\"fontname\\\" : \\\"Arial\\\",n+ttttttttttttttttt\\\"fontsize\\\" : 9.0,n+ttttttttttttttttt\\\"id\\\" : \\\"obj-7\\\",n+ttttttttttttttttt\\\"maxclass\\\" : \\\"comment\\\",n+ttttttttttttttttt\\\"numinlets\\\" : 1,n+ttttttttttttttttt\\\"numoutlets\\\" : 0,n+ttttttttttttttttt\\\"patching_rect\\\" : [ 49.0, 111.0, 41.0, 17.0 ],n+ttttttttttttttttt\\\"style\\\" : \\\"\\\",n+ttttttttttttttttt\\\"text\\\" : \\\"vs. 1.1\\\"n+tttttttttttttttt}n+n+ttttttttttttttt}n+ ],n+tttttttttttttt\\\"lines\\\" : [ ttttttttttttttt{n+tttttttttttttttt\\\"patchline\\\" : tttttttttttttttt{n+ttttttttttttttttt\\\"destination\\\" : [ \\\"obj-4\\\", 0 ],n+ttttttttttttttttt\\\"source\\\" : [ \\\"obj-1\\\", 0 ]n+tttttttttttttttt}n+n+ttttttttttttttt}n+, ttttttttttttttt{n+tttttttttttttttt\\\"patchline\\\" : tttttttttttttttt{n+ttttttttttttttttt\\\"destination\\\" : [ \\\"obj-5\\\", 0 ],n+ttttttttttttttttt\\\"source\\\" : [ \\\"obj-2\\\", 0 ]n+tttttttttttttttt}n+n+ttttttttttttttt}n+, ttttttttttttttt{n+tttttttttttttttt\\\"patchline\\\" : tttttttttttttttt{n+ttttttttttttttttt\\\"destination\\\" : [ \\\"obj-1\\\", 0 ],n+ttttttttttttttttt\\\"source\\\" : [ \\\"obj-3\\\", 0 ]n+tttttttttttttttt}n+n+ttttttttttttttt}n+, ttttttttttttttt{n+tttttttttttttttt\\\"patchline\\\" : tttttttttttttttt{n+ttttttttttttttttt\\\"destination\\\" : [ \\\"obj-4\\\", 0 ],n+ttttttttttttttttt\\\"midpoints\\\" : [ 117.5, 87.0, 39.0, 87.0 ],n+ttttttttttttttttt\\\"source\\\" : [ \\\"obj-5\\\", 0 ]n+tttttttttttttttt}n+n+ttttttttttttttt}n+ ]n+ttttttttttttt}n+,n+ttttttttttttt\\\"patching_rect\\\" : [ 88.0, 100.0, 55.0, 22.0 ],n+ttttttttttttt\\\"saved_object_attributes\\\" : ttttttttttttt{n+tttttttttttttt\\\"description\\\" : \\\"\\\",n+tttttttttttttt\\\"digest\\\" : \\\"\\\",n+tttttttttttttt\\\"globalpatchername\\\" : \\\"\\\",n+tttttttttttttt\\\"style\\\" : \\\"\\\",n+tttttttttttttt\\\"tags\\\" : \\\"\\\"n+ttttttttttttt}n+,n+ttttttttttttt\\\"style\\\" : \\\"\\\",n+ttttttttttttt\\\"text\\\" : \\\"p collect\\\"n+tttttttttttt}n+n+ttttttttttt}n+, ttttttttttt{n+tttttttttttt\\\"box\\\" : tttttttttttt{n+ttttttttttttt\\\"id\\\" : \\\"obj-10\\\",n+ttttttttttttt\\\"maxclass\\\" : \\\"newobj\\\",n+ttttttttttttt\\\"numinlets\\\" : 1,n+ttttttttttttt\\\"numoutlets\\\" : 1,n+ttttttttttttt\\\"outlettype\\\" : [ \\\"\\\" ],n+ttttttttttttt\\\"patching_rect\\\" : [ 88.0, 207.0, 59.0, 22.0 ],n+ttttttttttttt\\\"style\\\" : \\\"\\\",n+ttttttttttttt\\\"text\\\" : \\\"tosymbol\\\"n+tttttttttttt}n+n+ttttttttttt}n+, ttttttttttt{n+tttttttttttt\\\"box\\\" : tttttttttttt{n+ttttttttttttt\\\"comment\\\" : \\\"\\\",n+ttttttttttttt\\\"id\\\" : \\\"obj-46\\\",n+ttttttttttttt\\\"index\\\" : 1,n+ttttttttttttt\\\"maxclass\\\" : \\\"inlet\\\",n+ttttttttttttt\\\"numinlets\\\" : 0,n+ttttttttttttt\\\"numoutlets\\\" : 1,n+ttttttttttttt\\\"outlettype\\\" : [ \\\"bang\\\" ],n+ttttttttttttt\\\"patching_rect\\\" : [ 57.0, 40.0, 30.0, 30.0 ],n+ttttttttttttt\\\"style\\\" : \\\"\\\"n+tttttttttttt}n+n+ttttttttttt}n+, ttttttttttt{n+tttttttttttt\\\"box\\\" : tttttttttttt{n+ttttttttttttt\\\"comment\\\" : \\\"\\\",n+ttttttttttttt\\\"id\\\" : \\\"obj-47\\\",n+ttttttttttttt\\\"index\\\" : 2,n+ttttttttttttt\\\"maxclass\\\" : \\\"inlet\\\",n+ttttttttttttt\\\"numinlets\\\" : 0,n+ttttttttttttt\\\"numoutlets\\\" : 1,n+ttttttttttttt\\\"outlettype\\\" : [ \\\"\\\" ],n+ttttttttttttt\\\"patching_rect\\\" : [ 88.0, 40.0, 30.0, 30.0 ],n+ttttttttttttt\\\"style\\\" : \\\"\\\"n+tttttttttttt}n+n+ttttttttttt}n+, ttttttttttt{n+tttttttttttt\\\"box\\\" : tttttttttttt{n+ttttttttttttt\\\"comment\\\" : \\\"\\\",n+ttttttttttttt\\\"id\\\" : \\\"obj-48\\\",n+ttttttttttttt\\\"index\\\" : 3,n+ttttttttttttt\\\"maxclass\\\" : \\\"inlet\\\",n+ttttttttttttt\\\"numinlets\\\" : 0,n+ttttttttttttt\\\"numoutlets\\\" : 1,n+ttttttttttttt\\\"outlettype\\\" : [ \\\"bang\\\" ],n+ttttttttttttt\\\"patching_rect\\\" : [ 124.0, 40.0, 30.0, 30.0 ],n+ttttttttttttt\\\"style\\\" : \\\"\\\"n+tttttttttttt}n+n+ttttttttttt}n+, ttttttttttt{n+tttttttttttt\\\"box\\\" : tttttttttttt{n+ttttttttttttt\\\"comment\\\" : \\\"\\\",n+ttttttttttttt\\\"id\\\" : \\\"obj-49\\\",n+ttttttttttttt\\\"index\\\" : 1,n+ttttttttttttt\\\"maxclass\\\" : \\\"outlet\\\",n+ttttttttttttt\\\"numinlets\\\" : 1,n+ttttttttttttt\\\"numoutlets\\\" : 0,n+ttttttttttttt\\\"patching_rect\\\" : [ 57.0, 325.0, 30.0, 30.0 ],n+ttttttttttttt\\\"style\\\" : \\\"\\\"n+tttttttttttt}n+n+ttttttttttt}n+ ],n+tttttttttt\\\"lines\\\" : [ ttttttttttt{n+tttttttttttt\\\"patchline\\\" : tttttttttttt{n+ttttttttttttt\\\"destination\\\" : [ \\\"obj-37\\\", 1 ],n+ttttttttttttt\\\"source\\\" : [ \\\"obj-10\\\", 0 ]n+tttttttttttt}n+n+ttttttttttt}n+, ttttttttttt{n+tttttttttttt\\\"patchline\\\" : tttttttttttt{n+ttttttttttttt\\\"destination\\\" : [ \\\"obj-39\\\", 0 ],n+ttttttttttttt\\\"source\\\" : [ \\\"obj-30\\\", 0 ]n+tttttttttttt}n+n+ttttttttttt}n+, ttttttttttt{n+tttttttttttt\\\"patchline\\\" : tttttttttttt{n+ttttttttttttt\\\"destination\\\" : [ \\\"obj-49\\\", 0 ],n+ttttttttttttt\\\"source\\\" : [ \\\"obj-37\\\", 0 ]n+tttttttttttt}n+n+ttttttttttt}n+, ttttttttttt{n+tttttttttttt\\\"patchline\\\" : tttttttttttt{n+ttttttttttttt\\\"destination\\\" : [ \\\"obj-10\\\", 0 ],n+ttttttttttttt\\\"source\\\" : [ \\\"obj-39\\\", 1 ]n+tttttttttttt}n+n+ttttttttttt}n+, ttttttttttt{n+tttttttttttt\\\"patchline\\\" : tttttttttttt{n+ttttttttttttt\\\"destination\\\" : [ \\\"obj-37\\\", 0 ],n+ttttttttttttt\\\"source\\\" : [ \\\"obj-46\\\", 0 ]n+tttttttttttt}n+n+ttttttttttt}n+, ttttttttttt{n+tttttttttttt\\\"patchline\\\" : tttttttttttt{n+ttttttttttttt\\\"destination\\\" : [ \\\"obj-30\\\", 0 ],n+ttttttttttttt\\\"source\\\" : [ \\\"obj-47\\\", 0 ]n+tttttttttttt}n+n+ttttttttttt}n+, ttttttttttt{n+tttttttttttt\\\"patchline\\\" : tttttttttttt{n+ttttttttttttt\\\"destination\\\" : [ \\\"obj-30\\\", 1 ],n+ttttttttttttt\\\"source\\\" : [ \\\"obj-48\\\", 0 ]n+tttttttttttt}n+n+ttttttttttt}n+ ]n+ttttttttt}n+,n+ttttttttt\\\"patching_rect\\\" : [ 89.5, 100.0, 129.0, 22.0 ],n+ttttttttt\\\"saved_object_attributes\\\" : ttttttttt{n+tttttttttt\\\"description\\\" : \\\"\\\",n+tttttttttt\\\"digest\\\" : \\\"\\\",n+tttttttttt\\\"globalpatchername\\\" : \\\"\\\",n+tttttttttt\\\"style\\\" : \\\"\\\",n+tttttttttt\\\"tags\\\" : \\\"\\\"n+ttttttttt}n+,n+ttttttttt\\\"style\\\" : \\\"\\\",n+ttttttttt\\\"text\\\" : \\\"p collect_and_stringify\\\"n+tttttttt}n+n+ttttttt}n+, ttttttt{n+tttttttt\\\"box\\\" : tttttttt{n+ttttttttt\\\"id\\\" : \\\"obj-19\\\",n+ttttttttt\\\"maxclass\\\" : \\\"newobj\\\",n+ttttttttt\\\"numinlets\\\" : 2,n+ttttttttt\\\"numoutlets\\\" : 1,n+ttttttttt\\\"outlettype\\\" : [ \\\"\\\" ],n+ttttttttt\\\"patching_rect\\\" : [ 50.0, 195.0, 258.0, 22.0 ],n+ttttttttt\\\"style\\\" : \\\"\\\",n+ttttttttt\\\"text\\\" : \\\"sprintf comment commits::%s::comment \\\\\\\"%s\\\\\\\"\\\"n+tttttttt}n+n+ttttttt}n+, ttttttt{n+tttttttt\\\"box\\\" : tttttttt{n+ttttttttt\\\"id\\\" : \\\"obj-6\\\",n+ttttttttt\\\"maxclass\\\" : \\\"newobj\\\",n+ttttttttt\\\"numinlets\\\" : 2,n+ttttttttt\\\"numoutlets\\\" : 2,n+ttttttttt\\\"outlettype\\\" : [ \\\"\\\", \\\"\\\" ],n+ttttttttt\\\"patcher\\\" : ttttttttt{n+tttttttttt\\\"fileversion\\\" : 1,n+tttttttttt\\\"appversion\\\" : tttttttttt{n+ttttttttttt\\\"major\\\" : 7,n+ttttttttttt\\\"minor\\\" : 3,n+ttttttttttt\\\"revision\\\" : 4,n+ttttttttttt\\\"architecture\\\" : \\\"x64\\\",n+ttttttttttt\\\"modernui\\\" : 1n+tttttttttt}n+,n+tttttttttt\\\"rect\\\" : [ 59.0, 104.0, 640.0, 480.0 ],n+tttttttttt\\\"bglocked\\\" : 0,n+tttttttttt\\\"openinpresentation\\\" : 0,n+tttttttttt\\\"default_fontsize\\\" : 12.0,n+tttttttttt\\\"default_fontface\\\" : 0,n+tttttttttt\\\"default_fontname\\\" : \\\"Arial\\\",n+tttttttttt\\\"gridonopen\\\" : 1,n+tttttttttt\\\"gridsize\\\" : [ 15.0, 15.0 ],n+tttttttttt\\\"gridsnaponopen\\\" : 1,n+tttttttttt\\\"objectsnaponopen\\\" : 1,n+tttttttttt\\\"statusbarvisible\\\" : 2,n+tttttttttt\\\"toolbarvisible\\\" : 1,n+tttttttttt\\\"lefttoolbarpinned\\\" : 0,n+tttttttttt\\\"toptoolbarpinned\\\" : 0,n+tttttttttt\\\"righttoolbarpinned\\\" : 0,n+tttttttttt\\\"bottomtoolbarpinned\\\" : 0,n+tttttttttt\\\"toolbars_unpinned_last_save\\\" : 0,n+tttttttttt\\\"tallnewobj\\\" : 0,n+tttttttttt\\\"boxanimatetime\\\" : 200,n+tttttttttt\\\"enablehscroll\\\" : 1,n+tttttttttt\\\"enablevscroll\\\" : 1,n+tttttttttt\\\"devicewidth\\\" : 0.0,n+tttttttttt\\\"description\\\" : \\\"\\\",n+tttttttttt\\\"digest\\\" : \\\"\\\",n+tttttttttt\\\"tags\\\" : \\\"\\\",n+tttttttttt\\\"style\\\" : \\\"\\\",n+tttttttttt\\\"subpatcher_template\\\" : \\\"\\\",n+tttttttttt\\\"boxes\\\" : [ ttttttttttt{n+tttttttttttt\\\"box\\\" : tttttttttttt{n+ttttttttttttt\\\"id\\\" : \\\"obj-34\\\",n+ttttttttttttt\\\"maxclass\\\" : \\\"newobj\\\",n+ttttttttttttt\\\"numinlets\\\" : 1,n+ttttttttttttt\\\"numoutlets\\\" : 2,n+ttttttttttttt\\\"outlettype\\\" : [ \\\"bang\\\", \\\"\\\" ],n+ttttttttttttt\\\"patching_rect\\\" : [ 118.0, 112.955078, 33.0, 22.0 ],n+ttttttttttttt\\\"style\\\" : \\\"\\\",n+ttttttttttttt\\\"text\\\" : \\\"t b s\\\"n+tttttttttttt}n+n+ttttttttttt}n+, ttttttttttt{n+tttttttttttt\\\"box\\\" : tttttttttttt{n+ttttttttttttt\\\"id\\\" : \\\"obj-33\\\",n+ttttttttttttt\\\"linecount\\\" : 7,n+ttttttttttttt\\\"maxclass\\\" : \\\"message\\\",n+ttttttttttttt\\\"numinlets\\\" : 2,n+ttttttttttttt\\\"numoutlets\\\" : 1,n+ttttttttttttt\\\"outlettype\\\" : [ \\\"\\\" ],n+ttttttttttttt\\\"patching_rect\\\" : [ 50.0, 106.955078, 50.0, 102.0 ],n+ttttttttttttt\\\"style\\\" : \\\"\\\",n+ttttttttttttt\\\"text\\\" : \\\"794b22ce209a017bc435e4fa3b928bdd89153c72\\\"n+tttttttttttt}n+n+ttttttttttt}n+, ttttttttttt{n+tttttttttttt\\\"box\\\" : tttttttttttt{n+ttttttttttttt\\\"comment\\\" : \\\"\\\",n+ttttttttttttt\\\"id\\\" : \\\"obj-36\\\",n+ttttttttttttt\\\"index\\\" : 1,n+ttttttttttttt\\\"maxclass\\\" : \\\"inlet\\\",n+ttttttttttttt\\\"numinlets\\\" : 0,n+ttttttttttttt\\\"numoutlets\\\" : 1,n+ttttttttttttt\\\"outlettype\\\" : [ \\\"\\\" ],n+ttttttttttttt\\\"patching_rect\\\" : [ 81.0, 40.0, 30.0, 30.0 ],n+ttttttttttttt\\\"style\\\" : \\\"\\\"n+tttttttttttt}n+n+ttttttttttt}n+, ttttttttttt{n+tttttttttttt\\\"box\\\" : tttttttttttt{n+ttttttttttttt\\\"comment\\\" : \\\"\\\",n+ttttttttttttt\\\"id\\\" : \\\"obj-37\\\",n+ttttttttttttt\\\"index\\\" : 2,n+ttttttttttttt\\\"maxclass\\\" : \\\"inlet\\\",n+ttttttttttttt\\\"numinlets\\\" : 0,n+ttttttttttttt\\\"numoutlets\\\" : 1,n+ttttttttttttt\\\"outlettype\\\" : [ \\\"\\\" ],n+ttttttttttttt\\\"patching_rect\\\" : [ 118.0, 40.0, 30.0, 30.0 ],n+ttttttttttttt\\\"style\\\" : \\\"\\\"n+tttttttttttt}n+n+ttttttttttt}n+, ttttttttttt{n+tttttttttttt\\\"box\\\" : tttttttttttt{n+ttttttttttttt\\\"comment\\\" : \\\"\\\",n+ttttttttttttt\\\"id\\\" : \\\"obj-38\\\",n+ttttttttttttt\\\"index\\\" : 1,n+ttttttttttttt\\\"maxclass\\\" : \\\"outlet\\\",n+ttttttttttttt\\\"numinlets\\\" : 1,n+ttttttttttttt\\\"numoutlets\\\" : 0,n+ttttttttttttt\\\"patching_rect\\\" : [ 50.0, 267.582031, 30.0, 30.0 ],n+ttttttttttttt\\\"style\\\" : \\\"\\\"n+tttttttttttt}n+n+ttttttttttt}n+, ttttttttttt{n+tttttttttttt\\\"box\\\" : tttttttttttt{n+ttttttttttttt\\\"comment\\\" : \\\"\\\",n+ttttttttttttt\\\"id\\\" : \\\"obj-39\\\",n+ttttttttttttt\\\"index\\\" : 2,n+ttttttttttttt\\\"maxclass\\\" : \\\"outlet\\\",n+ttttttttttttt\\\"numinlets\\\" : 1,n+ttttttttttttt\\\"numoutlets\\\" : 0,n+ttttttttttttt\\\"patching_rect\\\" : [ 129.0, 201.582031, 30.0, 30.0 ],n+ttttttttttttt\\\"style\\\" : \\\"\\\"n+tttttttttttt}n+n+ttttttttttt}n+ ],n+tttttttttt\\\"lines\\\" : [ ttttttttttt{n+tttttttttttt\\\"patchline\\\" : tttttttttttt{n+ttttttttttttt\\\"destination\\\" : [ \\\"obj-38\\\", 0 ],n+ttttttttttttt\\\"source\\\" : [ \\\"obj-33\\\", 0 ]n+tttttttttttt}n+n+ttttttttttt}n+, ttttttttttt{n+tttttttttttt\\\"patchline\\\" : tttttttttttt{n+ttttttttttttt\\\"destination\\\" : [ \\\"obj-33\\\", 0 ],n+ttttttttttttt\\\"source\\\" : [ \\\"obj-34\\\", 0 ]n+tttttttttttt}n+n+ttttttttttt}n+, ttttttttttt{n+tttttttttttt\\\"patchline\\\" : tttttttttttt{n+ttttttttttttt\\\"destination\\\" : [ \\\"obj-39\\\", 0 ],n+ttttttttttttt\\\"source\\\" : [ \\\"obj-34\\\", 1 ]n+tttttttttttt}n+n+ttttttttttt}n+, ttttttttttt{n+tttttttttttt\\\"patchline\\\" : tttttttttttt{n+ttttttttttttt\\\"destination\\\" : [ \\\"obj-33\\\", 1 ],n+ttttttttttttt\\\"source\\\" : [ \\\"obj-36\\\", 0 ]n+tttttttttttt}n+n+ttttttttttt}n+, ttttttttttt{n+tttttttttttt\\\"patchline\\\" : tttttttttttt{n+ttttttttttttt\\\"destination\\\" : [ \\\"obj-34\\\", 0 ],n+ttttttttttttt\\\"source\\\" : [ \\\"obj-37\\\", 0 ]n+tttttttttttt}n+n+ttttttttttt}n+ ]n+ttttttttt}n+,n+ttttttttt\\\"patching_rect\\\" : [ 55.5, 147.044922, 53.0, 22.0 ],n+ttttttttt\\\"saved_object_attributes\\\" : ttttttttt{n+tttttttttt\\\"description\\\" : \\\"\\\",n+tttttttttt\\\"digest\\\" : \\\"\\\",n+tttttttttt\\\"globalpatchername\\\" : \\\"\\\",n+tttttttttt\\\"style\\\" : \\\"\\\",n+tttttttttt\\\"tags\\\" : \\\"\\\"n+ttttttttt}n+,n+ttttttttt\\\"style\\\" : \\\"\\\",n+ttttttttt\\\"text\\\" : \\\"p listreg\\\"n+tttttttt}n+n+ttttttt}n+, ttttttt{n+tttttttt\\\"box\\\" : tttttttt{n+ttttttttt\\\"comment\\\" : \\\"\\\",n+ttttttttt\\\"id\\\" : \\\"obj-66\\\",n+ttttttttt\\\"index\\\" : 1,n+ttttttttt\\\"maxclass\\\" : \\\"inlet\\\",n+ttttttttt\\\"numinlets\\\" : 0,n+ttttttttt\\\"numoutlets\\\" : 1,n+ttttttttt\\\"outlettype\\\" : [ \\\"\\\" ],n+ttttttttt\\\"patching_rect\\\" : [ 55.5, 40.0, 30.0, 30.0 ],n+ttttttttt\\\"style\\\" : \\\"\\\"n+tttttttt}n+n+ttttttt}n+, ttttttt{n+tttttttt\\\"box\\\" : tttttttt{n+ttttttttt\\\"comment\\\" : \\\"\\\",n+ttttttttt\\\"id\\\" : \\\"obj-67\\\",n+ttttttttt\\\"index\\\" : 2,n+ttttttttt\\\"maxclass\\\" : \\\"inlet\\\",n+ttttttttt\\\"numinlets\\\" : 0,n+ttttttttt\\\"numoutlets\\\" : 1,n+ttttttttt\\\"outlettype\\\" : [ \\\"bang\\\" ],n+ttttttttt\\\"patching_rect\\\" : [ 89.5, 40.0, 30.0, 30.0 ],n+ttttttttt\\\"style\\\" : \\\"\\\"n+tttttttt}n+n+ttttttt}n+, ttttttt{n+tttttttt\\\"box\\\" : tttttttt{n+ttttttttt\\\"comment\\\" : \\\"\\\",n+ttttttttt\\\"id\\\" : \\\"obj-68\\\",n+ttttttttt\\\"index\\\" : 3,n+ttttttttt\\\"maxclass\\\" : \\\"inlet\\\",n+ttttttttt\\\"numinlets\\\" : 0,n+ttttttttt\\\"numoutlets\\\" : 1,n+ttttttttt\\\"outlettype\\\" : [ \\\"\\\" ],n+ttttttttt\\\"patching_rect\\\" : [ 144.5, 40.0, 30.0, 30.0 ],n+ttttttttt\\\"style\\\" : \\\"\\\"n+tttttttt}n+n+ttttttt}n+, ttttttt{n+tttttttt\\\"box\\\" : tttttttt{n+ttttttttt\\\"comment\\\" : \\\"\\\",n+ttttttttt\\\"id\\\" : \\\"obj-69\\\",n+ttttttttt\\\"index\\\" : 4,n+ttttttttt\\\"maxclass\\\" : \\\"inlet\\\",n+ttttttttt\\\"numinlets\\\" : 0,n+ttttttttt\\\"numoutlets\\\" : 1,n+ttttttttt\\\"outlettype\\\" : [ \\\"bang\\\" ],n+ttttttttt\\\"patching_rect\\\" : [ 199.5, \""
+					"patching_rect" : [ 879.0, 603.0, 1052.0, 22.0 ],
+					"style" : ""
 				}
 
 			}
@@ -2698,7 +2790,7 @@
 													"maxclass" : "inlet",
 													"numinlets" : 0,
 													"numoutlets" : 1,
-													"outlettype" : [ "bang" ],
+													"outlettype" : [ "set" ],
 													"patching_rect" : [ 57.0, 40.0, 30.0, 30.0 ],
 													"style" : ""
 												}
@@ -3025,7 +3117,7 @@
 									"maxclass" : "inlet",
 									"numinlets" : 0,
 									"numoutlets" : 1,
-									"outlettype" : [ "bang" ],
+									"outlettype" : [ "set" ],
 									"patching_rect" : [ 89.5, 40.0, 30.0, 30.0 ],
 									"style" : ""
 								}
@@ -4788,6 +4880,13 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
+					"destination" : [ "obj-92", 0 ],
+					"source" : [ "obj-10", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-14", 0 ],
 					"source" : [ "obj-11", 0 ]
 				}
@@ -4851,6 +4950,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-45", 0 ],
 					"source" : [ "obj-22", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-42", 1 ],
+					"source" : [ "obj-23", 1 ]
 				}
 
 			}
@@ -4953,6 +5059,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-23", 0 ],
+					"source" : [ "obj-36", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-92", 0 ],
 					"source" : [ "obj-38", 0 ]
 				}
@@ -4974,8 +5087,32 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-18", 1 ],
-					"source" : [ "obj-48", 0 ]
+					"destination" : [ "obj-1", 0 ],
+					"order" : 0,
+					"source" : [ "obj-44", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-14", 0 ],
+					"order" : 2,
+					"source" : [ "obj-44", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-79", 0 ],
+					"order" : 1,
+					"source" : [ "obj-44", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-44", 0 ],
+					"source" : [ "obj-46", 0 ]
 				}
 
 			}
@@ -5025,6 +5162,14 @@
 				"patchline" : 				{
 					"destination" : [ "obj-45", 0 ],
 					"source" : [ "obj-58", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-18", 1 ],
+					"disabled" : 1,
+					"source" : [ "obj-6", 0 ]
 				}
 
 			}
