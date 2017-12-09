@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 172.0, 275.0, 1135.0, 737.0 ],
+		"rect" : [ 676.0, 79.0, 616.0, 913.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -169,7 +169,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1216.0, 244.0, 51.0, 22.0 ],
+					"patching_rect" : [ 1278.0, 243.0, 51.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 52.0, 267.0, 51.0, 22.0 ],
 					"style" : "",
@@ -195,36 +195,6 @@
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 11.595187,
-					"id" : "obj-49",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 5,
-					"outlettype" : [ "", "", "", "", "" ],
-					"patching_rect" : [ 810.0, 471.0, 374.0, 21.0 ],
-					"style" : "",
-					"text" : "regexp --------------------------------------------------------------------------------(.*)"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 11.595187,
-					"id" : "obj-23",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 5,
-					"outlettype" : [ "", "", "", "", "" ],
-					"patching_rect" : [ 843.0, 408.0, 374.0, 21.0 ],
-					"style" : "",
-					"text" : "regexp --------------------------------------------------------------------------------(.*)"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-10",
 					"maxclass" : "message",
 					"numinlets" : 2,
@@ -240,29 +210,18 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-48",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 843.0, 370.0, 73.0, 22.0 ],
-					"style" : "",
-					"text" : "fromsymbol"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-18",
+					"linecount" : 103,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 879.0, 603.0, 1059.0, 22.0 ],
+					"patching_rect" : [ 879.0, 603.0, 1059.0, 1389.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 52.0, 325.0, 1059.0, 22.0 ],
+					"presentation_linecount" : 103,
+					"presentation_rect" : [ 52.0, 325.0, 1059.0, 1389.0 ],
 					"style" : "",
-					"text" : "\" @ README.md:1 @[1m[38 5 146m[0m # vr-in-vr A sandbox space for Alice lab experiments in VR-authoring from within VR.\""
+					"text" : "\"--------------------------------------------------------------------------------\nmodified: diff_tester_a.maxpat\n--------------------------------------------------------------------------------\n@ diff_tester_a.maxpat:40 @[1m[38;5;146m[0m\n\t\t\\\"style\\\" : \\\"\\\",\n\t\t\\\"subpatcher_template\\\" : \\\"\\\",\n\t\t\\\"boxes\\\" : [ \t\t\t{\n\t\t\t\t\\\"box\\\" : \t\t\t\t{\n\t\t\t\t\t\\\"id\\\" : \\\"obj-7\\\",\n\t\t\t\t\t\\\"maxclass\\\" : \\\"live.gain~\\\",\n\t\t\t\t\t\\\"numinlets\\\" : 2,\n\t\t\t\t\t\\\"numoutlets\\\" : 5,\n\t\t\t\t\t\\\"outlettype\\\" : [ \\\"signal\\\", \\\"signal\\\", \\\"\\\", \\\"float\\\", \\\"list\\\" ],\n\t\t\t\t\t\\\"parameter_enable\\\" : 1,\n\t\t\t\t\t\\\"patching_rect\\\" : [ 217.0, 448.0, 48.0, 136.0 ],\n\t\t\t\t\t\\\"saved_attribute_attributes\\\" : \t\t\t\t\t{\n\t\t\t\t\t\t\\\"valueof\\\" : \t\t\t\t\t\t{\n\t\t\t\t\t\t\t\\\"parameter_longname\\\" : \\\"live.gain~[1]\\\",\n\t\t\t\t\t\t\t\\\"parameter_shortname\\\" : \\\"live.gain~[1]\\\",\n\t\t\t\t\t\t\t\\\"parameter_type\\\" : 0,\n\t\t\t\t\t\t\t\\\"parameter_mmin\\\" : -70.0,\n\t\t\t\t\t\t\t\\\"parameter_mmax\\\" : 6.0,\n\t\t\t\t\t\t\t\\\"parameter_initial\\\" : [ 0.0 ],\n\t\t\t\t\t\t\t\\\"parameter_unitstyle\\\" : 4\n\t\t\t\t\t\t}\n\n\t\t\t\t\t}\n,\n\t\t\t\t\t\\\"varname\\\" : \\\"live.gain~[1]\\\"\n\t\t\t\t}\n\n\t\t\t}\n, \t\t\t{\n\t\t\t\t\\\"box\\\" : \t\t\t\t{\n\t\t\t\t\t\\\"id\\\" : \\\"obj-6\\\",\n\t\t\t\t\t\\\"maxclass\\\" : \\\"newobj\\\",\n\t\t\t\t\t\\\"numinlets\\\" : 2,\n\t\t\t\t\t\\\"numoutlets\\\" : 1,\n\t\t\t\t\t\\\"outlettype\\\" : [ \\\"signal\\\" ],\n\t\t\t\t\t\\\"patching_rect\\\" : [ 290.0, 299.0, 65.0, 22.0 ],\n\t\t\t\t\t\\\"style\\\" : \\\"\\\",\n\t\t\t\t\t\\\"text\\\" : \\\"cycle~ 0.5\\\"\n\t\t\t\t}\n\n\t\t\t}\n, \t\t\t{\n\t\t\t\t\\\"box\\\" : \t\t\t\t{\n\t\t\t\t\t\\\"id\\\" : \\\"obj-5\\\",\n\t\t\t\t\t\\\"maxclass\\\" : \\\"newobj\\\",\n\t\t\t\t\t\\\"numinlets\\\" : 2,\n\t\t\t\t\t\\\"numoutlets\\\" : 1,\n\t\t\t\t\t\\\"outlettype\\\" : [ \\\"signal\\\" ],\n\t\t\t\t\t\\\"patching_rect\\\" : [ 217.0, 384.0, 29.5, 22.0 ],\n\t\t\t\t\t\\\"style\\\" : \\\"\\\",\n\t\t\t\t\t\\\"text\\\" : \\\"*~\\\"\n\t\t\t\t}\n\n\t\t\t}\n, \t\t\t{\n\t\t\t\t\\\"box\\\" : \t\t\t\t{\n\t\t\t\t\t\\\"id\\\" : \\\"obj-4\\\",\n\t\t\t\t\t\\\"maxclass\\\" : \\\"newobj\\\",\n@ diff_tester_a.maxpat:171 @[1m[38;5;146m[0m\n\t\t\t\t\t\\\"source\\\" : [ \\\"obj-1\\\", 0 ]\n\t\t\t\t}\n\n\t\t\t}\n, \t\t\t{\n\t\t\t\t\\\"patchline\\\" : \t\t\t\t{\n\t\t\t\t\t\\\"destination\\\" : [ \\\"obj-5\\\", 0 ],\n\t\t\t\t\t\\\"source\\\" : [ \\\"obj-2\\\", 0 ]\n\t\t\t\t}\n\n\t\t\t}\n, \t\t\t{\n\t\t\t\t\\\"patchline\\\" : \t\t\t\t{\n@ diff_tester_a.maxpat:185 @[1m[38;5;146m[0m\n\t\t\t\t\t\\\"source\\\" : [ \\\"obj-4\\\", 0 ]\n\t\t\t\t}\n\n\t\t\t}\n, \t\t\t{\n\t\t\t\t\\\"patchline\\\" : \t\t\t\t{\n\t\t\t\t\t\\\"destination\\\" : [ \\\"obj-7\\\", 0 ],\n\t\t\t\t\t\\\"source\\\" : [ \\\"obj-5\\\", 0 ]\n\t\t\t\t}\n\n\t\t\t}\n, \t\t\t{\n\t\t\t\t\\\"patchline\\\" : \t\t\t\t{\n\t\t\t\t\t\\\"destination\\\" : [ \\\"obj-5\\\", 1 ],\n\t\t\t\t\t\\\"source\\\" : [ \\\"obj-6\\\", 0 ]\n\t\t\t\t}\n\n\t\t\t}\n ],\n\t\t\\\"parameters\\\" : \t\t{\n\t\t\t\\\"obj-2\\\" : [ \\\"live.gain~\\\", \\\"live.gain~\\\", 0 ]\n\t\t\t\\\"obj-2\\\" : [ \\\"live.gain~\\\", \\\"live.gain~\\\", 0 ],\n\t\t\t\\\"obj-7\\\" : [ \\\"live.gain~[1]\\\", \\\"live.gain~[1]\\\", 0 ]\n\t\t}\n,\n\t\t\\\"dependency_cache\\\" : [  ],\n\""
 				}
 
 			}
@@ -478,7 +437,7 @@
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 57.0, 243.0, 636.0, 22.0 ],
 													"style" : "",
-													"text" : ""
+													"text" : "\"intiial work on a scripting-based editor. still need the reverse lookup from scripting name to the underlying jitter object\""
 												}
 
 											}
@@ -2329,7 +2288,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-62",
-					"items" : [ "first commit", ",", "Create README.md", ",", "ab sketches", ",", "for oculus", ",", "phys play", ",", "lab works", ",", "phys playground", ",", "phys", ",", "patcher scripting work", ",", "ontogenesis", ",", "comments", ",", "Update README.md", ",", "tidying", ",", "palumbo: added something to watch for updated git log files to provide user with versions of previous work from within vr.", ",", "Adam Siska's toxine object can be used for xml files. i'm going to give this a try towards parsing our git logs", ",", "sadam library doesn't initialize for 64-bit max so removing it from dependencies.", ",", "using jasch objects for xml so added it as a dependency", ",", "testing the jasch xml object 'toxine'", ",", "the git log is adding an odd line to the end of its xml files '<Cb=YC'. not sure why but i'm going to for now write something into max that ignores this.", ",", "I think that bug I described in last commit of the '<Cb=YC' being appended to log.xml might actually have been caused by a bad usage of 'toxine.mxo' on my part. we need to clear the 'idx.mxo' each time we load a new log.xml into the patch", ",", "gixed xml parsing", ",", "vr-git_log is working now as proof-of-concept for what I set out to do today. please see https://github.com/worldmaking/vr-in-vr/projects/1 to view progress and to-do list", ",", "added creating & deleting objects", ",", "cleanup & comment", ",", "first pass at a vr max objects", ",", "intiial work on a scripting-based editor. still need the reverse lookup from scripting name to the underlying jitter object" ],
+					"items" : [ "Create README.md", ",", "ab sketches", ",", "for oculus", ",", "phys play", ",", "lab works", ",", "phys playground", ",", "phys", ",", "patcher scripting work", ",", "ontogenesis", ",", "comments", ",", "Update README.md", ",", "tidying", ",", "palumbo: added something to watch for updated git log files to provide user with versions of previous work from within vr.", ",", "Adam Siska's toxine object can be used for xml files. i'm going to give this a try towards parsing our git logs", ",", "sadam library doesn't initialize for 64-bit max so removing it from dependencies.", ",", "using jasch objects for xml so added it as a dependency", ",", "testing the jasch xml object 'toxine'", ",", "the git log is adding an odd line to the end of its xml files '<Cb=YC'. not sure why but i'm going to for now write something into max that ignores this.", ",", "I think that bug I described in last commit of the '<Cb=YC' being appended to log.xml might actually have been caused by a bad usage of 'toxine.mxo' on my part. we need to clear the 'idx.mxo' each time we load a new log.xml into the patch", ",", "gixed xml parsing", ",", "vr-git_log is working now as proof-of-concept for what I set out to do today. please see https://github.com/worldmaking/vr-in-vr/projects/1 to view progress and to-do list", ",", "added creating & deleting objects", ",", "cleanup & comment", ",", "first pass at a vr max objects", ",", "intiial work on a scripting-based editor. still need the reverse lookup from scripting name to the underlying jitter object" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -2834,13 +2793,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-49", 0 ],
-					"source" : [ "obj-23", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-27", 1 ],
 					"order" : 0,
 					"source" : [ "obj-25", 0 ]
@@ -2919,20 +2871,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-92", 0 ],
 					"source" : [ "obj-4", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-23", 0 ],
-					"source" : [ "obj-48", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-18", 1 ],
-					"source" : [ "obj-49", 1 ]
 				}
 
 			}
@@ -3181,6 +3119,14 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-18", 1 ],
+					"order" : 0,
+					"source" : [ "obj-92", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-3", 0 ],
 					"source" : [ "obj-92", 1 ]
 				}
@@ -3188,16 +3134,8 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-48", 0 ],
-					"order" : 1,
-					"source" : [ "obj-92", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-91", 0 ],
-					"order" : 0,
+					"order" : 1,
 					"source" : [ "obj-92", 0 ]
 				}
 

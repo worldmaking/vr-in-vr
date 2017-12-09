@@ -37,17 +37,25 @@ connection.onmessage = function (a) {
 
 	if (a.data.includes("git diff ")) {
 		//so if you request a diff with filenames/hashes, then:
-		child2 = exec(a.data + " | diff-so-fancy", function (error, stdout, stderr) {
+		//
+		// first save the diffs to a patch file (THIS IS WHAT WE WILL WORK ON NEXT:
+		// WE NEED TO FIND A WAY TO APPLY THE PATCH TO THE FILE IN A TEMP LOCATION
+		// AND SEE IF THAT LETS US LOAD A FULL VERSION SAID FILE IN MAX. 
+		child2 = exec(a.data + " > temp.patch");
+		// and, also send the diff over to max (but we don't yet know how to process
+		// this data)
+		child = exec(a.data + " | diff-so-fancy", function (error, stdout, stderr) {
+
 	 	//git_log2 = JSON.stringify(stdout);
 	 	connection.send(stdout);
-	 	console.log("git diff requested for: " + a.data.slice(9));
+	 	console.log("git diff (fancy) requested for: " + a.data.slice(9), stdout);
 	 });
 
 	 }
 	 //if you typed some other git commands, then:
 	else {
-		console.log('message from max', a.data);
-		child2 = exec(a.data + " | diff-so-fancy", function (error, stdout, stderr) {
+		console.log('standard git output', a.data);
+		child2 = exec(a.data, function (error, stdout, stderr) {
 	 	//git_log2 = JSON.stringify(stdout);
 	 	connection.send(stdout);
 	 	console.log(stdout);
