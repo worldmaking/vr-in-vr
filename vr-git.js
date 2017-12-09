@@ -54,21 +54,20 @@ connection.onmessage = function (a) {
 		child3 = exec("cp diff_tester_a.maxpat git_patch_files/")
 		// and, also send the patch over to max (but we don't yet know how to process
 		// this data)
-		child = exec(a.data + " | diff-so-fancy", function (error, stdout, stderr) {
+		child = exec(a.data, function (error, stdout, stderr) {
 		
 	 	//git_log2 = JSON.stringify(compressed);
 	 	connection.send(stdout);
-	 	console.log("git diff (fancy) requested for: " + a.data.slice(9));
+	 	console.log("***WARNING***: do not attempt to apply a patch to the vr-in-vr repo until you can demonstrate a safe process to Graham within a practice repository, i.e. '/gitpatch'");
 	 });
-
+never to attempt to apply 
 	 }
 	 //if you typed some other git commands, then:
 	else {
-		console.log('standard git output', a.data);
-		child2 = exec(a.data, function (error, stdout, stderr) {
+		child2 = exec(a.data + " | diff-so-fancy", function (error, stdout, stderr) {
 	 	//git_log2 = JSON.stringify(stdout);
 	 	connection.send(stdout);
-	 	console.log(stdout);
+	 	console.log("git diff (fancy) requested for: " + a.data.slice(9));
 	 });
 
 	 }
