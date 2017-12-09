@@ -14,6 +14,7 @@ var util = require('util')
 var exec = require('child_process').exec;
 var child;
 var child2;
+var child3;
 
 // DON'T DELETE THIS BELOW, IT WORKS AS A CLI CMD
 connection.onopen = function () {
@@ -41,7 +42,10 @@ connection.onmessage = function (a) {
 		// first save the diffs to a patch file (THIS IS WHAT WE WILL WORK ON NEXT:
 		// WE NEED TO FIND A WAY TO APPLY THE PATCH TO THE FILE IN A TEMP LOCATION
 		// AND SEE IF THAT LETS US LOAD A FULL VERSION SAID FILE IN MAX. 
-		child2 = exec(a.data + " > temp.patch");
+		// http://www.thegeekstuff.com/2014/03/git-patch-create-and-apply/
+		child2 = exec(a.data + " > git_patch_files/temp.patch");
+		//copy the diff_tester_a maxpat over to the git-patch folder for this process
+		child3 = exec("cp diff_tester_a.maxpat git_patch_files/")
 		// and, also send the diff over to max (but we don't yet know how to process
 		// this data)
 		child = exec(a.data + " | diff-so-fancy", function (error, stdout, stderr) {
