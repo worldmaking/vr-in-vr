@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 818.0, 79.0, 547.0, 913.0 ],
+		"rect" : [ 2646.0, 79.0, 839.0, 913.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -486,7 +486,7 @@
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 57.0, 243.0, 636.0, 22.0 ],
 													"style" : "",
-													"text" : "\"intiial work on a scripting-based editor. still need the reverse lookup from scripting name to the underlying jitter object\""
+													"text" : "£££££££££££££££££££££££££££££££££££££££££££"
 												}
 
 											}
@@ -3213,13 +3213,6 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "log_to_dict.js",
-				"bootpath" : "~/vr-in-vr",
-				"patcherrelativepath" : ".",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "parse_diff.js",
 				"bootpath" : "~/vr-in-vr",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",

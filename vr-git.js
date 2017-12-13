@@ -60,7 +60,7 @@ connection.onmessage = function (a) {
 	 	connection.send(stdout);
 	 	console.log("***WARNING***: do not attempt to apply a patch to the vr-in-vr repo until you can demonstrate a safe process to Graham within a practice repository, i.e. '/gitpatch'");
 	 });
-never to attempt to apply 
+
 	 }
 	 //if you typed some other git commands, then:
 	else {
