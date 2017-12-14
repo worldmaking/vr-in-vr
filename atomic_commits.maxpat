@@ -43,7 +43,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 84.0, 562.0, 478.0, 141.0 ],
+					"patching_rect" : [ 78.25, 562.0, 478.0, 141.0 ],
 					"style" : "",
 					"text" : "possible data structure for representing Editor files in git diffs: GML\n\nhttp://docs.yworks.com/yfiles/doc/developers-guide/gml.html\n\nNeed to ask Graham if this is something he'd work with. The trick is that we'd need to get every node and edge in its own line (no line breaks, or else git gets weird)\n\n\nalternately, graphviz might make more sense, since it powers a lot of apps. could therefore stick with the the dot format of files. "
 				}
