@@ -175,7 +175,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 479.0, 454.0, 196.0, 22.0 ],
+					"patching_rect" : [ 541.0, 493.0, 196.0, 22.0 ],
 					"style" : "",
 					"text" : "git commit -a -m \\\"atomic_commit\\\""
 				}
@@ -491,7 +491,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-92", 0 ],
-					"midpoints" : [ 488.5, 550.5, 569.75, 550.5 ],
+					"midpoints" : [ 550.5, 550.5, 569.75, 550.5 ],
 					"source" : [ "obj-46", 0 ]
 				}
 
