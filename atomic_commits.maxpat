@@ -266,7 +266,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 379.0, 102.0, 24.0, 24.0 ],
+					"patching_rect" : [ 379.0, 149.0, 24.0, 24.0 ],
 					"style" : ""
 				}
 
@@ -278,7 +278,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 379.0, 135.0, 72.0, 22.0 ],
+					"patching_rect" : [ 379.0, 182.0, 72.0, 22.0 ],
 					"style" : "",
 					"text" : "loadmess 1"
 				}
@@ -316,7 +316,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 379.0, 163.0, 190.0, 22.0 ],
+					"patching_rect" : [ 379.0, 210.0, 190.0, 22.0 ],
 					"style" : "",
 					"text" : "filewatch atomic_commits.maxpat"
 				}
