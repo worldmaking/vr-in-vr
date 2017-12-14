@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 1717.0, 80.0, 999.0, 846.0 ],
+		"rect" : [ 1717.0, 80.0, 1045.0, 846.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -69,7 +69,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 528.0, 313.0, 407.0, 22.0 ],
+					"patching_rect" : [ 764.0, 325.0, 407.0, 22.0 ],
 					"style" : "",
 					"text" : "\"git commit -a -m \\\"atomic_commit\\\"\""
 				}
