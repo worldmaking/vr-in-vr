@@ -39,11 +39,13 @@
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-84",
+					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 569.0, 384.0, 150.0, 20.0 ],
-					"style" : ""
+					"patching_rect" : [ 569.0, 384.0, 150.0, 33.0 ],
+					"style" : "",
+					"text" : "1. run \"node vr-commits.js\" in terminal"
 				}
 
 			}
