@@ -43,7 +43,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 231.0, 475.0, 204.0, 22.0 ],
+					"patching_rect" : [ 175.0, 475.0, 204.0, 22.0 ],
 					"style" : "",
 					"text" : "write atomic_commits.keyframe.json"
 				}
