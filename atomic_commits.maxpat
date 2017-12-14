@@ -38,25 +38,13 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-72",
+					"id" : "obj-73",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 0,
-					"patching_rect" : [ 109.0, 453.0, 30.0, 22.0 ],
+					"patching_rect" : [ 87.0, 379.0, 83.0, 22.0 ],
 					"style" : "",
-					"text" : "test"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-71",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 97.0, 398.0, 150.0, 20.0 ],
-					"style" : "",
-					"text" : "test djkdjk"
+					"text" : "aka.keyboard"
 				}
 
 			}
@@ -596,17 +584,10 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-72::obj-11" : [ "live.gain~", "live.gain~", 0 ]
+
 		}
 ,
 		"dependency_cache" : [ 			{
-				"name" : "test.maxpat",
-				"bootpath" : "~/gitpatch",
-				"patcherrelativepath" : "../gitpatch",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "ws.mxo",
 				"type" : "iLaX"
 			}
