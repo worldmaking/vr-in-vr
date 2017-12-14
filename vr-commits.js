@@ -52,7 +52,11 @@ connection.onmessage = function (a) {
 	 	//git_log2 = JSON.stringify(compressed);
 	 	//connection.send(stdout);
 	 	console.log(stdout);
-	 	
+
+	 	// I want to include a bit of code that also takes the patcher as a dictionary 
+	 	// in from the ws:8080, but since it is the same file, it will include the
+	 	// message box that is being filtered out using the 'if' statement above. 
+	 		// for now i'll just use another patch with its own websocket...
 	 
 
 
