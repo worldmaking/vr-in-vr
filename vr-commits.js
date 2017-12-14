@@ -52,7 +52,7 @@ connection.onmessage = function (a) {
 	 	//git_log2 = JSON.stringify(compressed);
 	 	//connection.send(stdout);
 	 	console.log(stdout);
-	 	console.log(a.data);
+	 	
 	 
 
 
