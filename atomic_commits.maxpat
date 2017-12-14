@@ -43,7 +43,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 569.0, 384.0, 150.0, 33.0 ],
+					"patching_rect" : [ 260.0, 4.5, 150.0, 33.0 ],
 					"style" : "",
 					"text" : "1. run \"node vr-commits.js\" in terminal"
 				}
