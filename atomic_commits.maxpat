@@ -43,7 +43,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 175.0, 475.0, 204.0, 22.0 ],
+					"patching_rect" : [ 56.0, 335.0, 204.0, 22.0 ],
 					"style" : "",
 					"text" : "write atomic_commits.keyframe.json"
 				}
@@ -56,7 +56,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 525.25, 281.0, 150.0, 47.0 ],
+					"patching_rect" : [ 406.25, 141.0, 150.0, 47.0 ],
 					"style" : "",
 					"text" : "for now, this will be how we commit, using a single line commit. "
 				}
@@ -69,7 +69,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 379.0, 416.0, 36.0, 22.0 ],
+					"patching_rect" : [ 260.0, 276.0, 36.0, 22.0 ],
 					"style" : "",
 					"text" : "sel 0"
 				}
@@ -81,7 +81,7 @@
 					"maxclass" : "dict.view",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 394.0, 553.0, 215.0, 96.0 ],
+					"patching_rect" : [ 275.0, 413.0, 215.0, 96.0 ],
 					"style" : ""
 				}
 
@@ -93,7 +93,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "bang" ],
-					"patching_rect" : [ 379.0, 440.0, 34.0, 22.0 ],
+					"patching_rect" : [ 260.0, 300.0, 34.0, 22.0 ],
 					"style" : "",
 					"text" : "t b b"
 				}
@@ -106,7 +106,7 @@
 					"numinlets" : 5,
 					"numoutlets" : 4,
 					"outlettype" : [ "int", "", "", "int" ],
-					"patching_rect" : [ 379.0, 392.0, 77.0, 22.0 ],
+					"patching_rect" : [ 260.0, 252.0, 77.0, 22.0 ],
 					"style" : "",
 					"text" : "counter 0 10"
 				}
@@ -119,7 +119,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "bang" ],
-					"patching_rect" : [ 379.0, 234.0, 34.0, 22.0 ],
+					"patching_rect" : [ 260.0, 94.0, 34.0, 22.0 ],
 					"style" : "",
 					"text" : "t b b"
 				}
@@ -132,7 +132,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 394.0, 475.0, 187.0, 22.0 ],
+					"patching_rect" : [ 275.0, 335.0, 187.0, 22.0 ],
 					"style" : "",
 					"text" : "readany atomic_commits.maxpat"
 				}
@@ -145,7 +145,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 394.0, 520.0, 215.0, 22.0 ],
+					"patching_rect" : [ 275.0, 380.0, 215.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0
@@ -176,7 +176,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 506.0, 333.0, 196.0, 22.0 ],
+					"patching_rect" : [ 387.0, 193.0, 196.0, 22.0 ],
 					"style" : "",
 					"text" : "git commit -a -m \\\"atomic_commit\\\""
 				}
@@ -228,7 +228,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 525.25, 361.0, 115.0, 22.0 ],
+					"patching_rect" : [ 406.25, 221.0, 115.0, 22.0 ],
 					"style" : "",
 					"text" : "metro 10 @active 1"
 				}
@@ -242,7 +242,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 525.25, 402.0, 91.0, 22.0 ],
+					"patching_rect" : [ 406.25, 262.0, 91.0, 22.0 ],
 					"style" : "",
 					"text" : "ws @port 8080"
 				}
@@ -255,7 +255,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 379.0, 182.0, 72.0, 22.0 ],
+					"patching_rect" : [ 260.0, 42.0, 72.0, 22.0 ],
 					"style" : "",
 					"text" : "loadmess 1"
 				}
@@ -268,7 +268,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 379.0, 210.0, 190.0, 22.0 ],
+					"patching_rect" : [ 260.0, 70.0, 190.0, 22.0 ],
 					"style" : "",
 					"text" : "filewatch atomic_commits.maxpat"
 				}
@@ -407,7 +407,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-92", 0 ],
-					"midpoints" : [ 515.5, 390.5, 534.75, 390.5 ],
+					"midpoints" : [ 396.5, 250.5, 415.75, 250.5 ],
 					"source" : [ "obj-46", 0 ]
 				}
 
@@ -443,7 +443,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-46", 0 ],
-					"midpoints" : [ 403.5, 262.0, 515.5, 262.0 ],
+					"midpoints" : [ 284.5, 122.0, 396.5, 122.0 ],
 					"source" : [ "obj-59", 1 ]
 				}
 
@@ -465,7 +465,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-54", 0 ],
-					"midpoints" : [ 388.5, 506.5, 403.5, 506.5 ],
+					"midpoints" : [ 269.5, 366.5, 284.5, 366.5 ],
 					"order" : 0,
 					"source" : [ "obj-62", 0 ]
 				}
@@ -481,7 +481,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-82", 0 ],
-					"midpoints" : [ 388.5, 468.0, 184.5, 468.0 ],
+					"midpoints" : [ 269.5, 328.0, 65.5, 328.0 ],
 					"order" : 1,
 					"source" : [ "obj-62", 0 ]
 				}
@@ -511,7 +511,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-54", 0 ],
-					"midpoints" : [ 184.5, 514.0, 403.5, 514.0 ],
+					"midpoints" : [ 65.5, 374.0, 284.5, 374.0 ],
 					"source" : [ "obj-82", 0 ]
 				}
 
