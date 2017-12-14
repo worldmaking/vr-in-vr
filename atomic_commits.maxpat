@@ -215,7 +215,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 419.0, 30.5, 166.0, 87.0 ],
+					"patching_rect" : [ 7.75, 215.0, 166.0, 87.0 ],
 					"style" : "",
 					"text" : "right now an atomic change is a mouse click-up, or a keyup\n\n(evenutally it could also be a parameter change)"
 				}
