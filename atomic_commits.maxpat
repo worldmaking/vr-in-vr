@@ -279,7 +279,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 266.0, 82.0, 24.0, 24.0 ],
+					"patching_rect" : [ 266.0, 119.0, 24.0, 24.0 ],
 					"style" : ""
 				}
 
@@ -291,7 +291,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 266.0, 112.0, 89.0, 22.0 ],
+					"patching_rect" : [ 266.0, 149.0, 89.0, 22.0 ],
 					"style" : "",
 					"text" : "loadmess path"
 				}
@@ -317,7 +317,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "write" ],
-					"patching_rect" : [ 201.0, 112.0, 43.0, 22.0 ],
+					"patching_rect" : [ 201.0, 149.0, 43.0, 22.0 ],
 					"style" : "",
 					"text" : "t write"
 				}
@@ -382,7 +382,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 201.0, 154.0, 69.0, 22.0 ],
+					"patching_rect" : [ 201.0, 191.0, 69.0, 22.0 ],
 					"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
 					"style" : "",
 					"text" : "thispatcher"
