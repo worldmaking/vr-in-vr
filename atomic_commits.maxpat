@@ -606,8 +606,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "", -1 ],
-					"midpoints" : [ 224.0, 276.0 ],
+					"destination" : [ "obj-62", 0 ],
 					"source" : [ "obj-91", 0 ]
 				}
 
