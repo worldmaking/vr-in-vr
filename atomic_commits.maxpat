@@ -40,11 +40,12 @@
 				"box" : 				{
 					"id" : "obj-65",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 361.0, 592.0, 100.0, 22.0 ],
-					"style" : ""
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "bang", "" ],
+					"patching_rect" : [ 361.0, 592.0, 36.0, 22.0 ],
+					"style" : "",
+					"text" : "sel 0"
 				}
 
 			}
