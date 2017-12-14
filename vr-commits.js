@@ -43,7 +43,7 @@ connection.onopen = function () {
 connection.onmessage = function (a) {
 	//ideally from max you specify the command to this script.
 
-	if (a.data.includes("atomic")) {
+	if (a.data.includes("ztomic")) {
 
 		//child2 = exec("git add .", function (stdout) {console.log(stdout)});
 
@@ -79,10 +79,10 @@ connection.onmessage = function (a) {
 	 }
 	 //if you typed some other git commands, then:
 	else {
-		child2 = exec(a.data + " | diff-so-fancy", function (error, stdout, stderr) {
+		child2 = exec(a.data, function (error, stdout, stderr) {
 	 	//git_log2 = JSON.stringify(stdout);
 	 	connection.send(stdout);
-	 	console.log("git diff (fancy) requested for: " + a.data.slice(9));
+	 	console.log(a.data);
 	 });
 
 	 }
