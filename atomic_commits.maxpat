@@ -527,6 +527,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-46", 0 ],
+					"midpoints" : [ 403.5, 259.0, 515.5, 259.0 ],
 					"source" : [ "obj-59", 1 ]
 				}
 
