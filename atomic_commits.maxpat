@@ -56,9 +56,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 479.0, 454.0, 185.0, 22.0 ],
+					"patching_rect" : [ 479.0, 454.0, 196.0, 22.0 ],
 					"style" : "",
-					"text" : "\\\"git commit -a -m \\\"atomic test\\\"\\\""
+					"text" : "git commit -a -m \\\"atomic_commit\\\""
 				}
 
 			}
