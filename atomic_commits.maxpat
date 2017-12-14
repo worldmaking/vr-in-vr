@@ -40,11 +40,12 @@
 				"box" : 				{
 					"id" : "obj-97",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 564.0, 391.0, 100.0, 22.0 ],
-					"style" : ""
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 564.0, 391.0, 54.0, 22.0 ],
+					"style" : "",
+					"text" : "route git"
 				}
 
 			}
