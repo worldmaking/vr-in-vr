@@ -55,7 +55,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 560.25, 441.0, 150.0, 47.0 ],
+					"patching_rect" : [ 525.25, 281.0, 150.0, 47.0 ],
 					"style" : "",
 					"text" : "for now, this will be how we commit, using a single line commit. "
 				}
@@ -175,7 +175,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 541.0, 493.0, 196.0, 22.0 ],
+					"patching_rect" : [ 506.0, 333.0, 196.0, 22.0 ],
 					"style" : "",
 					"text" : "git commit -a -m \\\"atomic_commit\\\""
 				}
@@ -227,7 +227,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 560.25, 521.0, 115.0, 22.0 ],
+					"patching_rect" : [ 525.25, 361.0, 115.0, 22.0 ],
 					"style" : "",
 					"text" : "metro 10 @active 1"
 				}
@@ -241,7 +241,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 560.25, 562.0, 91.0, 22.0 ],
+					"patching_rect" : [ 525.25, 402.0, 91.0, 22.0 ],
 					"style" : "",
 					"text" : "ws @port 8080"
 				}
@@ -491,7 +491,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-92", 0 ],
-					"midpoints" : [ 550.5, 550.5, 569.75, 550.5 ],
+					"midpoints" : [ 515.5, 390.5, 534.75, 390.5 ],
 					"source" : [ "obj-46", 0 ]
 				}
 
