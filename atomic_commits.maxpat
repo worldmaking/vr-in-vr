@@ -96,7 +96,7 @@
 						"lines" : [  ]
 					}
 ,
-					"patching_rect" : [ 483.25, 674.0, 478.0, 22.0 ],
+					"patching_rect" : [ 131.5, 517.0, 48.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -106,7 +106,7 @@
 					}
 ,
 					"style" : "",
-					"text" : "p"
+					"text" : "p more"
 				}
 
 			}
