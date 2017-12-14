@@ -227,7 +227,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 349.5, 517.0, 115.0, 22.0 ],
+					"patching_rect" : [ 560.25, 521.0, 115.0, 22.0 ],
 					"style" : "",
 					"text" : "metro 10 @active 1"
 				}
@@ -241,7 +241,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 349.5, 558.0, 91.0, 22.0 ],
+					"patching_rect" : [ 560.25, 562.0, 91.0, 22.0 ],
 					"style" : "",
 					"text" : "ws @port 8080"
 				}
@@ -491,7 +491,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-92", 0 ],
-					"midpoints" : [ 488.5, 550.5, 359.0, 550.5 ],
+					"midpoints" : [ 488.5, 550.5, 569.75, 550.5 ],
 					"source" : [ "obj-46", 0 ]
 				}
 
