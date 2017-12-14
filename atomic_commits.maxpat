@@ -42,7 +42,7 @@
 					"maxclass" : "dict.view",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 188.0, 722.0, 100.0, 100.0 ],
+					"patching_rect" : [ 188.0, 726.0, 215.0, 96.0 ],
 					"style" : ""
 				}
 
