@@ -40,11 +40,12 @@
 				"box" : 				{
 					"id" : "obj-58",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 512.0, 255.0, 100.0, 22.0 ],
-					"style" : ""
+					"numinlets" : 5,
+					"numoutlets" : 4,
+					"outlettype" : [ "int", "", "", "int" ],
+					"patching_rect" : [ 512.0, 255.0, 77.0, 22.0 ],
+					"style" : "",
+					"text" : "counter 0 99"
 				}
 
 			}
