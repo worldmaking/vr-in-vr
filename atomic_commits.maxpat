@@ -215,7 +215,7 @@
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 54.5, 454.0, 115.0, 22.0 ],
 					"style" : "",
-					"text" : "metro 50 @active 1"
+					"text" : "metro 10 @active 1"
 				}
 
 			}
