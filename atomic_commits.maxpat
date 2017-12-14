@@ -188,6 +188,7 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-8",
@@ -235,7 +236,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 492.0, 299.0, 399.0, 18641.0 ],
+									"patching_rect" : [ 492.0, 299.0, 399.0, 20.0 ],
 									"style" : ""
 								}
 
@@ -320,9 +321,9 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 187.0, 417.0, 16538.0 ],
+									"patching_rect" : [ 50.0, 187.0, 417.0, 22.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 52.0, 325.0, 1059.0, 16404.0 ],
+									"presentation_rect" : [ 52.0, 325.0, 1059.0, 22.0 ],
 									"style" : ""
 								}
 
