@@ -39,11 +39,10 @@
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-64",
-					"maxclass" : "newobj",
+					"maxclass" : "dict.view",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 203.0, 753.0, 100.0, 22.0 ],
+					"numoutlets" : 0,
+					"patching_rect" : [ 203.0, 753.0, 100.0, 100.0 ],
 					"style" : ""
 				}
 
@@ -536,6 +535,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-92", 0 ],
 					"source" : [ "obj-53", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-64", 0 ],
+					"source" : [ "obj-54", 0 ]
 				}
 
 			}
