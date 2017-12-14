@@ -1,4 +1,5 @@
-const readline = require('readline');
+  var YAML = require("json2yaml")
+var json2yaml = require("json2yaml")
 
 // enter this in the CLI: "node vr-git.js 0f6fed29195fd0c4fdd9168165d7c20763949fd9 vr-git_log.maxpat" + Enter
 //script arguments for the CLI
@@ -81,8 +82,11 @@ connection.onmessage = function (a) {
 	else {
 		child2 = exec(a.data, function (error, stdout, stderr) {
 	 	//git_log2 = JSON.stringify(stdout);
-	 	connection.send(a.data);
-	 	console.log(a.data);
+	 	jason = json.stringify(stdout);
+	 	yamie = YAML.stringify(jason);
+
+	 	connection.send(yamie);
+	 	console.log(yamie);
 	 });
 
 	 }
