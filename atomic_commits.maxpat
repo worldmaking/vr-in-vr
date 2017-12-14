@@ -38,6 +38,24 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-93",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 4,
+					"outlettype" : [ "dictionary", "", "", "" ],
+					"patching_rect" : [ 513.0, 380.0, 89.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"embed" : 0,
+						"parameter_enable" : 0
+					}
+,
+					"style" : "",
+					"text" : "dict keyframe2"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-91",
 					"maxclass" : "button",
 					"numinlets" : 1,
@@ -608,6 +626,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-62", 0 ],
 					"source" : [ "obj-91", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-93", 0 ],
+					"source" : [ "obj-92", 0 ]
 				}
 
 			}
