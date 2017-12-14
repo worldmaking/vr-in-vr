@@ -46,7 +46,7 @@
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 478.0, 608.0, 91.0, 22.0 ],
 					"style" : "",
-					"text" : "ws @port 8080"
+					"text" : "ws @port 8081"
 				}
 
 			}
