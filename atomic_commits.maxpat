@@ -43,7 +43,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 41.5, 413.0, 154.0, 100.0 ],
+					"patching_rect" : [ 187.5, 612.0, 154.0, 100.0 ],
 					"style" : "",
 					"text" : "possible data structure for representing Editor files in git diffs: GML\n\nhttp://docs.yworks.com/yfiles/doc/developers-guide/gml.html"
 				}
