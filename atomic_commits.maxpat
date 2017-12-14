@@ -38,24 +38,6 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-74",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 91.0, 416.0, 71.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"filename" : "keypress.js",
-						"parameter_enable" : 0
-					}
-,
-					"style" : "",
-					"text" : "js keypress"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-69",
 					"maxclass" : "button",
 					"numinlets" : 1,
