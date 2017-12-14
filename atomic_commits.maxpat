@@ -63,7 +63,7 @@
 					}
 ,
 					"style" : "",
-					"text" : "dict keyframe atomic_commits.maxpat"
+					"text" : "dict keyframe"
 				}
 
 			}
