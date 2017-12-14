@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 1717.0, 80.0, 726.0, 846.0 ],
+		"rect" : [ 1717.0, 80.0, 678.0, 846.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -43,7 +43,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 458.0, 611.0, 167.0, 22.0 ],
+					"patching_rect" : [ 188.0, 642.0, 167.0, 22.0 ],
 					"style" : "",
 					"text" : "read atomic_commits.maxpat"
 				}
@@ -56,7 +56,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 458.0, 662.0, 50.5, 22.0 ],
+					"patching_rect" : [ 188.0, 693.0, 50.5, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0
