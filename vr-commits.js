@@ -43,25 +43,16 @@ connection.onopen = function () {
 connection.onmessage = function (a) {
 	//ideally from max you specify the command to this script.
 
-	if (a.data.includes("git format-patch")) {
-		//so if you request a diff with filenames/hashes, then:
-		//
-		// first save the diffs to a patch file (THIS IS WHAT WE WILL WORK ON NEXT:
-		// WE NEED TO FIND A WAY TO APPLY THE PATCH TO THE FILE IN A TEMP LOCATION
-		// AND SEE IF THAT LETS US LOAD A FULL VERSION SAID FILE IN MAX. 
-		// http://www.thegeekstuff.com/2014/03/git-patch-create-and-apply/
-		child2 = exec(a.data + " > git_patch_files/test.patch");
-		console.log(a.data + " > git_patch_files/test.patch");
-		//copy the diff_tester_a maxpat over to the git-patch folder, so we
-		//evenutally can try applying a patch to this.
-		child3 = exec("cp diff_tester_a.maxpat git_patch_files/")
-		// and, also send the patch over to max (but we don't yet know how to process
-		// this data)
+	if (a.data.includes("atomic")) {
+
+		//child2 = exec("git add .", function (stdout) {console.log(stdout)});
+
 		child = exec(a.data, function (error, stdout, stderr) {
 		
 	 	//git_log2 = JSON.stringify(compressed);
-	 	connection.send(stdout);
-	 	console.log("***WARNING***: do not attempt to apply a patch to the vr-in-vr repo until you can demonstrate a safe process to Graham within a practice repository, i.e. '/gitpatch'");
+	 	//connection.send(stdout);
+	 	console.log(stdout);
+	 	console.log(a.data);
 	 
 
 
