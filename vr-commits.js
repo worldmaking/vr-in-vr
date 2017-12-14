@@ -81,7 +81,7 @@ connection.onmessage = function (a) {
 	else {
 		child2 = exec(a.data, function (error, stdout, stderr) {
 	 	//git_log2 = JSON.stringify(stdout);
-	 	connection.send(stdout);
+	 	connection.send(a.data);
 	 	console.log(a.data);
 	 });
 

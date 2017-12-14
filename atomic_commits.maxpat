@@ -46,7 +46,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 528.0, 313.0, 407.0, 49.0 ],
 					"style" : "",
-					"text" : "\"[master d5662ad] atomic_commit\n 1 file changed, 3 insertions(+), 3 deletions(-)\n\""
+					"text" : "\"[master 4d95eae] atomic_commit\n 1 file changed, 2 insertions(+), 2 deletions(-)\n\""
 				}
 
 			}
