@@ -39,12 +39,14 @@
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-88",
+					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 263.0, 771.0, 50.0, 22.0 ],
-					"style" : ""
+					"patching_rect" : [ 263.0, 771.0, 164.0, 35.0 ],
+					"style" : "",
+					"text" : ";\rmax sortpatcherdictonsave 1"
 				}
 
 			}
