@@ -78,14 +78,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-95",
-					"linecount" : 3,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 764.0, 325.0, 407.0, 49.0 ],
+					"patching_rect" : [ 764.0, 325.0, 407.0, 22.0 ],
 					"style" : "",
-					"text" : "\"---\\\"\\\"[master b762a7c] atomic_commit\\\\n 1 file changed, 3 insertions(+), 2 deletions(-)\\\\n\\\"\\\"\n\""
+					"text" : "---\\\"\\\"\\\"\\\"\n"
 				}
 
 			}
