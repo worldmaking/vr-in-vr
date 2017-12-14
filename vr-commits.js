@@ -82,7 +82,7 @@ connection.onmessage = function (a) {
 	else {
 		child2 = exec(a.data, function (error, stdout, stderr) {
 	 	//git_log2 = JSON.stringify(stdout);
-	 	jason = json.stringify(stdout);
+	 	jason = JSON.stringify(stdout);
 	 	yamie = YAML.stringify(jason);
 
 	 	connection.send(yamie);
