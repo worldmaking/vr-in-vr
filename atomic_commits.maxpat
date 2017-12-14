@@ -38,13 +38,19 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-73",
+					"id" : "obj-74",
 					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 0,
-					"patching_rect" : [ 87.0, 379.0, 83.0, 22.0 ],
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 91.0, 416.0, 71.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"filename" : "keypress",
+						"parameter_enable" : 0
+					}
+,
 					"style" : "",
-					"text" : "aka.keyboard"
+					"text" : "js keypress"
 				}
 
 			}
