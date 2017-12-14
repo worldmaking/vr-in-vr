@@ -78,13 +78,14 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-95",
+					"linecount" : 8,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 764.0, 325.0, 407.0, 22.0 ],
+					"patching_rect" : [ 764.0, 325.0, 407.0, 116.0 ],
 					"style" : "",
-					"text" : "---\\\"\\\"\\\"\\\"\n"
+					"text" : "\"---\\\"\\\"On branch master\\\\nYour branch is ahead of 'origin/master' by 194 commits.\\\\n  (use \\\\\\\"git push\\\\\\\" to publish your local commits)\\\\n\\\\nUntracked files:\\\\n\\\\tatomic_commits.json\\\\n\\\\tatomic_commits.keyframe.json\\\\n\\\\tatomic_commits.keyframe.yaml\\\\n\\\\tdiff_tester_a.json\\\\n\\\\tdiff_tester_a.yml\\\\n\\\\tkeyframe_commit.yaml\\\\n\\\\ttest.yaml\\\\n\\\\nnothing added to commit but untracked files present\\\\n\\\"\\\"\n\""
 				}
 
 			}
