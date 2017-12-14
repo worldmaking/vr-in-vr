@@ -43,7 +43,7 @@
 					"numinlets" : 5,
 					"numoutlets" : 4,
 					"outlettype" : [ "int", "", "", "int" ],
-					"patching_rect" : [ 497.0, 307.0, 77.0, 22.0 ],
+					"patching_rect" : [ 497.0, 290.0, 77.0, 22.0 ],
 					"style" : "",
 					"text" : "counter 0 99"
 				}
