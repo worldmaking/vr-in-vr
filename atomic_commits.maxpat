@@ -43,7 +43,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "bang" ],
-					"patching_rect" : [ 413.0, 579.0, 34.0, 22.0 ],
+					"patching_rect" : [ 173.0, 613.0, 34.0, 22.0 ],
 					"style" : "",
 					"text" : "t b b"
 				}
