@@ -202,7 +202,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 349.5, 493.0, 115.0, 22.0 ],
+					"patching_rect" : [ 349.5, 517.0, 115.0, 22.0 ],
 					"style" : "",
 					"text" : "metro 10 @active 1"
 				}
