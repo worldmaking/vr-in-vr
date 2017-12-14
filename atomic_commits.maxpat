@@ -57,7 +57,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 516.0, 392.0, 150.0, 47.0 ],
 					"style" : "",
-					"text" : "for now, this will be how we commit, using a single line "
+					"text" : "for now, this will be how we commit, using a single line commit. "
 				}
 
 			}
