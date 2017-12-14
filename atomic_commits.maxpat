@@ -44,9 +44,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 531.0, 334.0, 407.0, 49.0 ],
+					"patching_rect" : [ 528.0, 313.0, 407.0, 49.0 ],
 					"style" : "",
-					"text" : "\"[master f64a88b] atomic_commit\n 1 file changed, 2 insertions(+), 2 deletions(-)\n\""
+					"text" : "\"[master d5662ad] atomic_commit\n 1 file changed, 3 insertions(+), 3 deletions(-)\n\""
 				}
 
 			}
