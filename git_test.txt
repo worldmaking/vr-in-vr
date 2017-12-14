@@ -1,5 +1,0 @@
-this is an attempt to see what happens when we patch on a non-maxpat file. 
-
-added this second line
-
-added a third line, and some characters ()
