@@ -218,7 +218,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 400.0, 454.0, 51.0, 22.0 ],
+					"patching_rect" : [ 400.0, 437.0, 51.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 52.0, 267.0, 51.0, 22.0 ],
 					"style" : "",
