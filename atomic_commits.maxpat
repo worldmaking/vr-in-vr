@@ -96,7 +96,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 56.0, 335.0, 207.0, 22.0 ],
+					"patching_rect" : [ 52.0, 335.0, 207.0, 22.0 ],
 					"style" : "",
 					"text" : "write atomic_commits.keyframe.yaml"
 				}
@@ -534,7 +534,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-82", 0 ],
-					"midpoints" : [ 269.5, 328.0, 65.5, 328.0 ],
+					"midpoints" : [ 269.5, 328.0, 61.5, 328.0 ],
 					"order" : 1,
 					"source" : [ "obj-62", 0 ]
 				}
@@ -564,7 +564,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-54", 0 ],
-					"midpoints" : [ 65.5, 374.0, 284.5, 374.0 ],
+					"midpoints" : [ 61.5, 374.0, 284.5, 374.0 ],
 					"source" : [ "obj-82", 0 ]
 				}
 
