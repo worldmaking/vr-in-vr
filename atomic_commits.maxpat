@@ -56,7 +56,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 188.0, 693.0, 50.5, 22.0 ],
+					"patching_rect" : [ 188.0, 693.0, 200.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0
