@@ -279,7 +279,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 326.0, 62.0, 24.0, 24.0 ],
+					"patching_rect" : [ 266.0, 82.0, 24.0, 24.0 ],
 					"style" : ""
 				}
 
