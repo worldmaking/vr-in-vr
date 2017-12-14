@@ -46,7 +46,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 531.0, 334.0, 50.0, 210.0 ],
 					"style" : "",
-					"text" : "\"[master c65ab32] atomic_commit\n 1 file changed, 2 insertions(+), 4 deletions(-)\n\""
+					"text" : "\"[master b24ec2c] atomic_commit\n 1 file changed, 4 insertions(+), 2 deletions(-)\n\""
 				}
 
 			}
@@ -75,7 +75,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 213.0, 253.0, 24.0, 24.0 ],
+					"patching_rect" : [ 203.0, 252.0, 24.0, 24.0 ],
 					"style" : ""
 				}
 
