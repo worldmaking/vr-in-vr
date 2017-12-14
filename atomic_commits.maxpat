@@ -583,10 +583,6 @@
 
 			}
  ],
-		"parameters" : 		{
-
-		}
-,
 		"dependency_cache" : [ 			{
 				"name" : "ws.mxo",
 				"type" : "iLaX"
