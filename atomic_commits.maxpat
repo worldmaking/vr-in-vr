@@ -39,11 +39,13 @@
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-86",
+					"linecount" : 7,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 172.0, 646.0, 150.0, 20.0 ],
-					"style" : ""
+					"patching_rect" : [ 172.0, 646.0, 154.0, 100.0 ],
+					"style" : "",
+					"text" : "possible data structure for representing Editor files in git diffs:\n\nhttp://docs.yworks.com/yfiles/doc/developers-guide/gml.html"
 				}
 
 			}
