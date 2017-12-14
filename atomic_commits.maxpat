@@ -45,7 +45,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 91.0, 416.0, 71.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"filename" : "keypress",
+						"filename" : "keypress.js",
 						"parameter_enable" : 0
 					}
 ,
