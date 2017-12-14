@@ -202,7 +202,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 283.5, 427.0, 115.0, 22.0 ],
+					"patching_rect" : [ 349.5, 458.0, 115.0, 22.0 ],
 					"style" : "",
 					"text" : "metro 10 @active 1"
 				}
@@ -216,7 +216,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 283.5, 527.0, 91.0, 22.0 ],
+					"patching_rect" : [ 349.5, 558.0, 91.0, 22.0 ],
 					"style" : "",
 					"text" : "ws @port 8080"
 				}
