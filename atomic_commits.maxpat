@@ -106,7 +106,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 282.0, 615.0, 187.0, 22.0 ],
+					"patching_rect" : [ 282.0, 622.0, 187.0, 22.0 ],
 					"style" : "",
 					"text" : "readany atomic_commits.maxpat"
 				}
