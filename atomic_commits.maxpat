@@ -68,7 +68,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 267.0, 562.0, 36.0, 22.0 ],
+					"patching_rect" : [ 379.0, 416.0, 36.0, 22.0 ],
 					"style" : "",
 					"text" : "sel 0"
 				}
@@ -80,7 +80,7 @@
 					"maxclass" : "dict.view",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 282.0, 699.0, 215.0, 96.0 ],
+					"patching_rect" : [ 394.0, 553.0, 215.0, 96.0 ],
 					"style" : ""
 				}
 
@@ -92,7 +92,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "bang" ],
-					"patching_rect" : [ 267.0, 586.0, 34.0, 22.0 ],
+					"patching_rect" : [ 379.0, 440.0, 34.0, 22.0 ],
 					"style" : "",
 					"text" : "t b b"
 				}
@@ -131,7 +131,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 282.0, 621.0, 187.0, 22.0 ],
+					"patching_rect" : [ 394.0, 475.0, 187.0, 22.0 ],
 					"style" : "",
 					"text" : "readany atomic_commits.maxpat"
 				}
@@ -144,7 +144,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 282.0, 666.0, 215.0, 22.0 ],
+					"patching_rect" : [ 394.0, 520.0, 215.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0
@@ -549,7 +549,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-54", 0 ],
-					"midpoints" : [ 276.5, 652.5, 291.5, 652.5 ],
+					"midpoints" : [ 388.5, 506.5, 403.5, 506.5 ],
 					"source" : [ "obj-62", 0 ]
 				}
 
