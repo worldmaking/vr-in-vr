@@ -43,7 +43,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 173.0, 589.0, 36.0, 22.0 ],
+					"patching_rect" : [ 267.0, 562.0, 36.0, 22.0 ],
 					"style" : "",
 					"text" : "sel 0"
 				}
@@ -55,7 +55,7 @@
 					"maxclass" : "dict.view",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 188.0, 726.0, 215.0, 96.0 ],
+					"patching_rect" : [ 282.0, 699.0, 215.0, 96.0 ],
 					"style" : ""
 				}
 
@@ -67,7 +67,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "bang" ],
-					"patching_rect" : [ 173.0, 613.0, 34.0, 22.0 ],
+					"patching_rect" : [ 267.0, 586.0, 34.0, 22.0 ],
 					"style" : "",
 					"text" : "t b b"
 				}
@@ -106,7 +106,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 188.0, 642.0, 187.0, 22.0 ],
+					"patching_rect" : [ 282.0, 615.0, 187.0, 22.0 ],
 					"style" : "",
 					"text" : "readany atomic_commits.maxpat"
 				}
@@ -119,7 +119,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 188.0, 693.0, 215.0, 22.0 ],
+					"patching_rect" : [ 282.0, 666.0, 215.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0
@@ -202,7 +202,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 189.5, 454.0, 115.0, 22.0 ],
+					"patching_rect" : [ 283.5, 427.0, 115.0, 22.0 ],
 					"style" : "",
 					"text" : "metro 10 @active 1"
 				}
@@ -216,7 +216,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 189.5, 554.0, 91.0, 22.0 ],
+					"patching_rect" : [ 283.5, 527.0, 91.0, 22.0 ],
 					"style" : "",
 					"text" : "ws @port 8080"
 				}
