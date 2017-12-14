@@ -444,7 +444,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 189.5, 350.0, 428.0, 22.0 ],
+					"patching_rect" : [ 170.0, 346.0, 428.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 52.0, 243.0, 428.0, 22.0 ],
 					"style" : "",
