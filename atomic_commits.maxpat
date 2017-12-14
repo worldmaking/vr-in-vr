@@ -39,14 +39,14 @@
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-95",
-					"linecount" : 15,
+					"linecount" : 3,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 531.0, 334.0, 50.0, 210.0 ],
+					"patching_rect" : [ 531.0, 334.0, 407.0, 49.0 ],
 					"style" : "",
-					"text" : "\"[master b24ec2c] atomic_commit\n 1 file changed, 4 insertions(+), 2 deletions(-)\n\""
+					"text" : "\"[master f64a88b] atomic_commit\n 1 file changed, 2 insertions(+), 2 deletions(-)\n\""
 				}
 
 			}
