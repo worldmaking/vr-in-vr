@@ -39,13 +39,13 @@
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-86",
-					"linecount" : 3,
+					"linecount" : 7,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 187.5, 612.0, 425.0, 47.0 ],
+					"patching_rect" : [ 187.5, 612.0, 425.0, 100.0 ],
 					"style" : "",
-					"text" : "possible data structure for representing Editor files in git diffs: GML\n\nhttp://docs.yworks.com/yfiles/doc/developers-guide/gml.html"
+					"text" : "possible data structure for representing Editor files in git diffs: GML\n\nhttp://docs.yworks.com/yfiles/doc/developers-guide/gml.html\n\nNeed to ask Graham if this is something he'd work with. The trick is that we'd need to get every node and edge in its own line (no line breaks, or else git gets weird)"
 				}
 
 			}
