@@ -42,9 +42,10 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 694.0, 465.0, 100.0, 22.0 ],
-					"style" : ""
+					"outlettype" : [ "dictionary" ],
+					"patching_rect" : [ 694.0, 465.0, 90.0, 22.0 ],
+					"style" : "",
+					"text" : "dict.deserialize"
 				}
 
 			}
