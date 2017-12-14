@@ -43,9 +43,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 188.0, 642.0, 167.0, 22.0 ],
+					"patching_rect" : [ 188.0, 642.0, 187.0, 22.0 ],
 					"style" : "",
-					"text" : "read atomic_commits.maxpat"
+					"text" : "readany atomic_commits.maxpat"
 				}
 
 			}
