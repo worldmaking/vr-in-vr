@@ -38,6 +38,80 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-99",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patcher" : 					{
+						"fileversion" : 1,
+						"appversion" : 						{
+							"major" : 7,
+							"minor" : 3,
+							"revision" : 4,
+							"architecture" : "x64",
+							"modernui" : 1
+						}
+,
+						"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
+						"bglocked" : 0,
+						"openinpresentation" : 0,
+						"default_fontsize" : 12.0,
+						"default_fontface" : 0,
+						"default_fontname" : "Arial",
+						"gridonopen" : 1,
+						"gridsize" : [ 15.0, 15.0 ],
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
+						"statusbarvisible" : 2,
+						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
+						"boxanimatetime" : 200,
+						"enablehscroll" : 1,
+						"enablevscroll" : 1,
+						"devicewidth" : 0.0,
+						"description" : "",
+						"digest" : "",
+						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
+						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-86",
+									"linecount" : 10,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 50.0, 100.0, 478.0, 141.0 ],
+									"style" : "",
+									"text" : "possible data structure for representing Editor files in git diffs: GML\n\nhttp://docs.yworks.com/yfiles/doc/developers-guide/gml.html\n\nNeed to ask Graham if this is something he'd work with. The trick is that we'd need to get every node and edge in its own line (no line breaks, or else git gets weird)\n\n\nalternately, graphviz might make more sense, since it powers a lot of apps. could therefore stick with the the dot format of files. "
+								}
+
+							}
+ ],
+						"lines" : [  ]
+					}
+,
+					"patching_rect" : [ 483.25, 674.0, 478.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"description" : "",
+						"digest" : "",
+						"globalpatchername" : "",
+						"style" : "",
+						"tags" : ""
+					}
+,
+					"style" : "",
+					"text" : "p"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-98",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -143,19 +217,6 @@
 					"patching_rect" : [ 263.0, 771.0, 164.0, 35.0 ],
 					"style" : "",
 					"text" : ";\rmax sortpatcherdictonsave 1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-86",
-					"linecount" : 10,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 483.25, 674.0, 478.0, 141.0 ],
-					"style" : "",
-					"text" : "possible data structure for representing Editor files in git diffs: GML\n\nhttp://docs.yworks.com/yfiles/doc/developers-guide/gml.html\n\nNeed to ask Graham if this is something he'd work with. The trick is that we'd need to get every node and edge in its own line (no line breaks, or else git gets weird)\n\n\nalternately, graphviz might make more sense, since it powers a lot of apps. could therefore stick with the the dot format of files. "
 				}
 
 			}
