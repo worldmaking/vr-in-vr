@@ -44,7 +44,7 @@ connection.onopen = function () {
 connection.onmessage = function (a) {
 	//ideally from max you specify the command to this script.
 
-	if (a.data.includes("ztomic")) {
+	if (a.data.includes("atomic")) {
 
 		//child2 = exec("git add .", function (stdout) {console.log(stdout)});
 
