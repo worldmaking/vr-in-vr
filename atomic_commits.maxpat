@@ -318,7 +318,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "write" ],
-					"patching_rect" : [ 201.0, 112.0, 43.0, 22.0 ],
+					"patching_rect" : [ 201.0, 118.0, 43.0, 22.0 ],
 					"style" : "",
 					"text" : "t write"
 				}
