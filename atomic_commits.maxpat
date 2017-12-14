@@ -43,8 +43,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 209.0, 484.0, 50.0, 22.0 ],
-					"style" : ""
+					"patching_rect" : [ 209.0, 484.0, 151.0, 22.0 ],
+					"style" : "",
+					"text" : "write atomic_commits.json"
 				}
 
 			}
@@ -551,6 +552,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
 					"source" : [ "obj-8", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-54", 0 ],
+					"source" : [ "obj-82", 0 ]
 				}
 
 			}
