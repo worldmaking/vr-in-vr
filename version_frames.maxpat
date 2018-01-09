@@ -633,7 +633,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
+						"rect" : [ 59.0, 104.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -773,8 +773,8 @@
  ]
 					}
 ,
-					"patching_rect" : [ 124.0, 212.0, 47.0, 22.0 ],
-					"presentation_rect" : [ 124.0, 212.0, 47.0, 22.0 ],
+					"patching_rect" : [ 42.0, 221.0, 47.0, 22.0 ],
+					"presentation_rect" : [ 42.0, 221.0, 47.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -1018,7 +1018,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-7", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-20", 0 ],
+					"disabled" : 1,
 					"source" : [ "obj-7", 0 ]
 				}
 
@@ -1033,15 +1041,15 @@
 			}
 , 			{
 				"name" : "n4m.monitor.maxpat",
-				"bootpath" : "~/Documents/Max/Max 8/Packages/Node For Max/patchers/debug-monitor",
-				"patcherrelativepath" : "../Documents/Max/Max 8/Packages/Node For Max/patchers/debug-monitor",
+				"bootpath" : "~/Documents/Max 8/Packages/Node For Max/patchers/debug-monitor",
+				"patcherrelativepath" : "../Documents/Max 8/Packages/Node For Max/patchers/debug-monitor",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "n4m.monitor.fileurl.js",
-				"bootpath" : "~/Documents/Max/Max 8/Packages/Node For Max/patchers/debug-monitor",
-				"patcherrelativepath" : "../Documents/Max/Max 8/Packages/Node For Max/patchers/debug-monitor",
+				"bootpath" : "~/Documents/Max 8/Packages/Node For Max/patchers/debug-monitor",
+				"patcherrelativepath" : "../Documents/Max 8/Packages/Node For Max/patchers/debug-monitor",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
