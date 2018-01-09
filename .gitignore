@@ -1,2 +1,3 @@
-/atomic_commits/*
-atomic_commits/*
+/version_frames
+version_frames/*
+*.DS_Store
