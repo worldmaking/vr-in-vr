@@ -2,14 +2,14 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 7,
-			"minor" : 3,
-			"revision" : 4,
-			"architecture" : "x64",
+			"major" : 8,
+			"minor" : 0,
+			"revision" : 0,
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 1717.0, 80.0, 1045.0, 846.0 ],
+		"rect" : [ 2074.0, 106.0, 1368.0, 846.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -45,14 +45,14 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 7,
-							"minor" : 3,
-							"revision" : 4,
-							"architecture" : "x64",
+							"major" : 8,
+							"minor" : 0,
+							"revision" : 0,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
+						"rect" : [ 59.0, 104.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -87,6 +87,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 50.0, 100.0, 478.0, 141.0 ],
+									"presentation_linecount" : 10,
+									"presentation_rect" : [ 50.0, 100.0, 478.0, 141.0 ],
 									"style" : "",
 									"text" : "possible data structure for representing Editor files in git diffs: GML\n\nhttp://docs.yworks.com/yfiles/doc/developers-guide/gml.html\n\nNeed to ask Graham if this is something he'd work with. The trick is that we'd need to get every node and edge in its own line (no line breaks, or else git gets weird)\n\n\nalternately, graphviz might make more sense, since it powers a lot of apps. could therefore stick with the the dot format of files. "
 								}
@@ -97,6 +99,7 @@
 					}
 ,
 					"patching_rect" : [ 52.0, 409.0, 50.0, 22.0 ],
+					"presentation_rect" : [ 52.0, 409.0, 50.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -118,6 +121,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "dictionary" ],
 					"patching_rect" : [ 574.0, 494.0, 90.0, 22.0 ],
+					"presentation_rect" : [ 574.0, 494.0, 90.0, 22.0 ],
 					"style" : "",
 					"text" : "dict.deserialize"
 				}
@@ -131,6 +135,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 552.0, 389.0, 73.0, 22.0 ],
+					"presentation_rect" : [ 552.0, 389.0, 73.0, 22.0 ],
 					"style" : "",
 					"text" : "fromsymbol"
 				}
@@ -144,6 +149,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 539.0, 433.0, 54.0, 22.0 ],
+					"presentation_rect" : [ 539.0, 433.0, 54.0, 22.0 ],
 					"style" : "",
 					"text" : "route git"
 				}
@@ -157,7 +163,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 764.0, 325.0, 407.0, 49.0 ],
+					"patching_rect" : [ 764.0, 325.0, 408.0, 49.0 ],
+					"presentation_linecount" : 3,
+					"presentation_rect" : [ 764.0, 325.0, 408.0, 49.0 ],
 					"style" : "",
 					"text" : "\"---\\\"\\\"[master ae727b5] atomic_commit\\\\n 1 file changed, 2 insertions(+), 3 deletions(-)\\\\n\\\"\\\"\n\""
 				}
@@ -171,6 +179,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
 					"patching_rect" : [ 574.0, 533.0, 89.0, 22.0 ],
+					"presentation_rect" : [ 574.0, 533.0, 89.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0
@@ -189,6 +198,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 203.0, 252.0, 24.0, 24.0 ],
+					"presentation_rect" : [ 203.0, 252.0, 24.0, 24.0 ],
 					"style" : ""
 				}
 
@@ -201,6 +211,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 263.0, 737.0, 60.0, 22.0 ],
+					"presentation_rect" : [ 263.0, 737.0, 60.0, 22.0 ],
 					"style" : "",
 					"text" : "loadbang"
 				}
@@ -215,6 +226,8 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 263.0, 771.0, 164.0, 35.0 ],
+					"presentation_linecount" : 2,
+					"presentation_rect" : [ 263.0, 771.0, 164.0, 35.0 ],
 					"style" : "",
 					"text" : ";\rmax sortpatcherdictonsave 1"
 				}
@@ -228,6 +241,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 260.0, 4.5, 150.0, 33.0 ],
+					"presentation_linecount" : 2,
+					"presentation_rect" : [ 260.0, 4.5, 150.0, 33.0 ],
 					"style" : "",
 					"text" : "1. run \"node vr-commits.js\" in terminal"
 				}
@@ -241,6 +256,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 52.0, 335.0, 207.0, 22.0 ],
+					"presentation_rect" : [ 52.0, 335.0, 207.0, 22.0 ],
 					"style" : "",
 					"text" : "write atomic_commits.keyframe.yaml"
 				}
@@ -254,6 +270,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 406.25, 141.0, 150.0, 47.0 ],
+					"presentation_linecount" : 3,
+					"presentation_rect" : [ 406.25, 141.0, 150.0, 47.0 ],
 					"style" : "",
 					"text" : "for now, this will be how we commit, using a single line commit. "
 				}
@@ -267,6 +285,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
 					"patching_rect" : [ 260.0, 276.0, 36.0, 22.0 ],
+					"presentation_rect" : [ 260.0, 276.0, 36.0, 22.0 ],
 					"style" : "",
 					"text" : "sel 0"
 				}
@@ -278,7 +297,8 @@
 					"maxclass" : "dict.view",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 275.0, 413.0, 215.0, 96.0 ],
+					"patching_rect" : [ 275.0, 413.0, 262.0, 310.0 ],
+					"presentation_rect" : [ 275.0, 413.0, 262.0, 310.0 ],
 					"style" : ""
 				}
 
@@ -291,6 +311,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "bang" ],
 					"patching_rect" : [ 260.0, 300.0, 34.0, 22.0 ],
+					"presentation_rect" : [ 260.0, 300.0, 34.0, 22.0 ],
 					"style" : "",
 					"text" : "t b b"
 				}
@@ -304,6 +325,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "int", "", "", "int" ],
 					"patching_rect" : [ 260.0, 252.0, 77.0, 22.0 ],
+					"presentation_rect" : [ 260.0, 252.0, 77.0, 22.0 ],
 					"style" : "",
 					"text" : "counter 0 10"
 				}
@@ -317,6 +339,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "bang" ],
 					"patching_rect" : [ 260.0, 94.0, 34.0, 22.0 ],
+					"presentation_rect" : [ 260.0, 94.0, 34.0, 22.0 ],
 					"style" : "",
 					"text" : "t b b"
 				}
@@ -330,6 +353,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 275.0, 335.0, 187.0, 22.0 ],
+					"presentation_rect" : [ 275.0, 335.0, 187.0, 22.0 ],
 					"style" : "",
 					"text" : "readany atomic_commits.maxpat"
 				}
@@ -343,6 +367,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
 					"patching_rect" : [ 275.0, 380.0, 215.0, 22.0 ],
+					"presentation_rect" : [ 275.0, 380.0, 215.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0
@@ -362,6 +387,7 @@
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 84.0, 9.0, 24.0, 24.0 ],
+					"presentation_rect" : [ 84.0, 9.0, 24.0, 24.0 ],
 					"style" : ""
 				}
 
@@ -374,6 +400,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 387.0, 193.0, 196.0, 22.0 ],
+					"presentation_rect" : [ 387.0, 193.0, 196.0, 22.0 ],
 					"style" : "",
 					"text" : "git commit -a -m \\\"atomic_commit\\\""
 				}
@@ -387,6 +414,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 7.75, 99.0, 24.0, 22.0 ],
+					"presentation_rect" : [ 7.75, 99.0, 24.0, 22.0 ],
 					"style" : "",
 					"text" : "t b"
 				}
@@ -400,6 +428,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "int", "int", "int", "int" ],
 					"patching_rect" : [ 7.75, 68.0, 50.5, 22.0 ],
+					"presentation_rect" : [ 7.75, 68.0, 50.5, 22.0 ],
 					"style" : "",
 					"text" : "keyup"
 				}
@@ -413,6 +442,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 7.75, 215.0, 166.0, 87.0 ],
+					"presentation_linecount" : 6,
+					"presentation_rect" : [ 7.75, 215.0, 166.0, 87.0 ],
 					"style" : "",
 					"text" : "right now an atomic change is a mouse click-up, or a keyup\n\n(evenutally it could also be a parameter change)"
 				}
@@ -426,6 +457,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 406.25, 221.0, 115.0, 22.0 ],
+					"presentation_rect" : [ 406.25, 221.0, 115.0, 22.0 ],
 					"style" : "",
 					"text" : "metro 10 @active 1"
 				}
@@ -440,6 +472,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 406.25, 262.0, 91.0, 22.0 ],
+					"presentation_rect" : [ 406.25, 262.0, 91.0, 22.0 ],
 					"style" : "",
 					"text" : "ws @port 8080"
 				}
@@ -453,6 +486,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 260.0, 42.0, 72.0, 22.0 ],
+					"presentation_rect" : [ 260.0, 42.0, 72.0, 22.0 ],
 					"style" : "",
 					"text" : "loadmess 1"
 				}
@@ -466,6 +500,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 260.0, 70.0, 190.0, 22.0 ],
+					"presentation_rect" : [ 260.0, 70.0, 190.0, 22.0 ],
 					"style" : "",
 					"text" : "filewatch atomic_commits.maxpat"
 				}
@@ -479,6 +514,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "write" ],
 					"patching_rect" : [ 84.0, 146.0, 43.0, 22.0 ],
+					"presentation_rect" : [ 84.0, 146.0, 43.0, 22.0 ],
 					"style" : "",
 					"text" : "t write"
 				}
@@ -492,6 +528,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
 					"patching_rect" : [ 84.0, 116.0, 36.0, 22.0 ],
+					"presentation_rect" : [ 84.0, 116.0, 36.0, 22.0 ],
 					"style" : "",
 					"text" : "sel 0"
 				}
@@ -505,6 +542,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "int", "int" ],
 					"patching_rect" : [ 84.0, 92.0, 50.0, 22.0 ],
+					"presentation_rect" : [ 84.0, 92.0, 50.0, 22.0 ],
 					"style" : "",
 					"text" : "change"
 				}
@@ -518,6 +556,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 84.0, 41.0, 115.0, 22.0 ],
+					"presentation_rect" : [ 84.0, 41.0, 115.0, 22.0 ],
 					"style" : "",
 					"text" : "metro 10 @active 1"
 				}
@@ -531,6 +570,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "int", "int", "int", "int", "int" ],
 					"patching_rect" : [ 84.0, 68.0, 73.0, 22.0 ],
+					"presentation_rect" : [ 84.0, 68.0, 73.0, 22.0 ],
 					"style" : "",
 					"text" : "mousestate"
 				}
@@ -544,6 +584,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 84.0, 182.0, 69.0, 22.0 ],
+					"presentation_rect" : [ 84.0, 182.0, 69.0, 22.0 ],
 					"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
 					"style" : "",
 					"text" : "thispatcher"
