@@ -74,7 +74,11 @@ function load_state() {
 	patcher = new Patcher(20, 20, 500, 500);
 	// show it:
 	patcher.front();
-
+	// can we add something that adds the [version_frames.maxpat] abstraction
+	// to the canvas of patcher? 
+	//attempt:
+	//this.patcher.newobject("bang");
+	 
 	// read the file from disk:
 	var f = new File("state.json", "read");
 	var json_state = f.readstring(json_state, f.eof);

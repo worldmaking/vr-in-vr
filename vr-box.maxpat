@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 949.0, 99.0, 992.0, 895.0 ],
+		"rect" : [ 685.0, 85.0, 992.0, 895.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -161,7 +161,7 @@
 					"patching_rect" : [ 20.0, 276.0, 508.0, 22.0 ],
 					"style" : "",
 					"text" : "jit.phys.body vr-phys @shape cube @scale 1 0.2 0.2 @kinematic 1 @mass 0 @send_scale 0",
-					"varname" : "vrbox_446_body"
+					"varname" : "vrbox_235_body"
 				}
 
 			}
@@ -364,9 +364,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 144.0, 463.0, 320.0, 22.0 ],
+					"patching_rect" : [ 144.0, 463.0, 350.0, 22.0 ],
 					"style" : "",
-					"text" : "jit.gl.text editor-world @mode 3d @color 0 0 0 1 @layer -1"
+					"text" : "jit.gl.text editor-world @mode 3d @color 0.1 0.1 0.1 1 @layer -1"
 				}
 
 			}
