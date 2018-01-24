@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 295.0, 536.0, 640.0, 480.0 ],
+		"rect" : [ 213.0, 165.0, 640.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -43,9 +43,9 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 8.0, 131.0, 315.0, 33.0 ],
+					"patching_rect" : [ 8.0, 112.0, 315.0, 33.0 ],
 					"presentation_linecount" : 2,
-					"presentation_rect" : [ 8.0, 131.0, 315.0, 33.0 ],
+					"presentation_rect" : [ 8.0, 112.0, 315.0, 33.0 ],
 					"style" : "",
 					"text" : "2. \nThen make some changes in this patch, and press save"
 				}
@@ -71,7 +71,8 @@
 					"id" : "obj-1",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
-					"numoutlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
 					"patching_rect" : [ 8.0, 31.0, 91.0, 22.0 ],
 					"presentation_rect" : [ 8.0, 31.0, 91.0, 22.0 ],
 					"style" : "",

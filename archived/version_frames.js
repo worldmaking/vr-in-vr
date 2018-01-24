@@ -47,6 +47,20 @@ var dest = (__dirname + "/version_frames/" + patchname + "/" + utc + "_key_" + p
 child = exec("cp " + source + " " + dest);
 });
 
+
+//**MAKE KEY FRAMES OF state.json**
+watch("state.json", { recursive: true }, function(evt, name) {
+
+//console.log('%s changed' name)
+
+var source = (__dirname + "/state.json");
+var utc = Date.now();
+var dest = (__dirname + "/version_frames/" + patchname + "/" + utc + "_key_" + "state.json")
+
+child2 = exec("cp " + source + " " + dest);
+})
+
+
 //** MAKE ATOMIC FRAMES **
 //NOTE: This works! But, its meaningless unless you're SAVING the file first, but that would then 
 //result in a KEYFRAME being made as well. So, I'm awaiting help from the max community to 

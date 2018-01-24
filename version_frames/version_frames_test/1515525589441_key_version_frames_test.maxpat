@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 295.0, 536.0, 640.0, 480.0 ],
+		"rect" : [ 59.0, 104.0, 640.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,30 +39,28 @@
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-5",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 8.0, 131.0, 315.0, 33.0 ],
-					"presentation_linecount" : 2,
-					"presentation_rect" : [ 8.0, 131.0, 315.0, 33.0 ],
+					"patching_rect" : [ 173.0, 123.0, 150.0, 47.0 ],
+					"presentation_rect" : [ 173.0, 123.0, 150.0, 47.0 ],
 					"style" : "",
-					"text" : "2. \nThen make some changes in this patch, and press save"
+					"text" : "Then make some changes in this patch, and press save"
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"id" : "obj-3",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 8.0, 71.0, 315.0, 33.0 ],
-					"presentation_linecount" : 2,
-					"presentation_rect" : [ 8.0, 71.0, 315.0, 33.0 ],
+					"patching_rect" : [ 173.0, 74.0, 150.0, 47.0 ],
+					"presentation_rect" : [ 173.0, 74.0, 150.0, 47.0 ],
 					"style" : "",
-					"text" : "1. \ngo to ~/vr-in-vr/version_frames/version_frames_test/"
+					"text" : "go to ~/vr-in-vr/version_frames/version_frames_test"
 				}
 
 			}
@@ -72,8 +70,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 0,
-					"patching_rect" : [ 8.0, 31.0, 91.0, 22.0 ],
-					"presentation_rect" : [ 8.0, 31.0, 91.0, 22.0 ],
+					"patching_rect" : [ 8.0, 22.0, 91.0, 22.0 ],
+					"presentation_rect" : [ 8.0, 22.0, 91.0, 22.0 ],
 					"style" : "",
 					"text" : "version_frames"
 				}
@@ -97,15 +95,15 @@
 			}
 , 			{
 				"name" : "n4m.monitor.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/Node For Max/patchers/debug-monitor",
-				"patcherrelativepath" : "../Documents/Max 8/Packages/Node For Max/patchers/debug-monitor",
+				"bootpath" : "~/Documents/Max/Max 8/Packages/Node For Max/patchers/debug-monitor",
+				"patcherrelativepath" : "../Documents/Max/Max 8/Packages/Node For Max/patchers/debug-monitor",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "n4m.monitor.fileurl.js",
-				"bootpath" : "~/Documents/Max 8/Packages/Node For Max/patchers/debug-monitor",
-				"patcherrelativepath" : "../Documents/Max 8/Packages/Node For Max/patchers/debug-monitor",
+				"bootpath" : "~/Documents/Max/Max 8/Packages/Node For Max/patchers/debug-monitor",
+				"patcherrelativepath" : "../Documents/Max/Max 8/Packages/Node For Max/patchers/debug-monitor",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
