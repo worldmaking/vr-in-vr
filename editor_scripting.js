@@ -118,6 +118,9 @@ function objects_create_shape_body(x, y, z){
 		}
 	});
 	
+	
+	//dump the created objects name from the first outlet of editor_scripting.js
+	outlet(0, box_name);
 	return body;
 }
 
@@ -183,13 +186,17 @@ function collisions(hand, dictname) {
 			// find the collided object:
 			var body1 = collision.get("body1");
 			var body2 = collision.get("body2");
-			
+
 			
 			
 			// TODO: get this from patcher_objects intead???
 			
 			// pick whichever of these wasn't the ghost:
-			var target = findobject(body1) || findobject(body2); 
+			var target = findobject(body1) || findobject(body2);
+			
+			//dump the grabbed object's id from the first outlet of editor_scripting.js
+			//TODO: Figure out how to get this object's name, not id
+			outlet(0, target);
 			
 			post(body1, body2, target, "press\n");
 			if (target) {
@@ -220,6 +227,7 @@ function controller(hand, event, x, y, z, w) {
 	switch(event) {
 		case "position" : {
 			hand.position = [x, y, z];
+			
 			//hand.ghost.position = hand.position;
 		} break;
 		case "quat" : {
@@ -261,7 +269,10 @@ function controller(hand, event, x, y, z, w) {
 			}
 		} break;
 		/* other keys: velocity, angular velocity, hand_trigger, thumbstick, buttons, etc. see tracking patcher */
-	}		
+	}
+//	outlet(0, hand.quat);
+
+	
 }
 
 function bang() {
