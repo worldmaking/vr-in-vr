@@ -1,0 +1,62 @@
+{
+  "objects": {
+    "obj-1": {
+      "id": "obj-1",
+      "text": [
+        "qmetro",
+        10000,
+        "@active",
+        1
+      ],
+      "numinlets": 0,
+      "numoutlets": 1,
+      "patcher_location": [
+        15,
+        15
+      ],
+      "world_location": [
+        0,
+        1.4,
+        -1
+      ],
+      "world_quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "obj-2": {
+      "id": "obj-2",
+      "text": [
+        "print",
+        "test"
+      ],
+      "numinlets": 0,
+      "numoutlets": 1,
+      "patcher_location": [
+        15,
+        45
+      ],
+      "world_location": [
+        0,
+        1,
+        -1
+      ],
+      "world_quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  "lines": [
+    {
+      "src": "obj-1",
+      "dst": "obj-2",
+      "outlet": 0,
+      "inlet": 0
+    }
+  ]
+}
