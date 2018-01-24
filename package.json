@@ -1,0 +1,22 @@
+{
+  "name": "vr-in-vr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/worldmaking/vr-in-vr.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/worldmaking/vr-in-vr/issues"
+  },
+  "homepage": "https://github.com/worldmaking/vr-in-vr#readme",
+  "dependencies": {
+    "ws": "^4.0.0"
+  }
+}

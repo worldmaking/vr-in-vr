@@ -11,7 +11,7 @@
 //var jsscompress = require("js-string-compression");
 
 // use this to communicate with the max object 'nodejs'
-const Max = require('max-api');
+//const Max = require('max-api');
 
 //make websocket client
 var WebSocket = require('ws', 'websocket')
@@ -67,7 +67,7 @@ connection.onmessage = function (a) {
 	 	console.log("***WARNING***: do not attempt to apply a patch to the vr-in-vr repo until you can demonstrate a safe process to Graham within a practice repository, i.e. '/gitpatch'");
 	 
 	 	//attempt to output stdout out of max object's 0 outlet:
-	 	Max.outlet(stdout);
+	 	//Max.outlet(stdout);
 
 	 });
 
@@ -79,7 +79,7 @@ connection.onmessage = function (a) {
 	 	connection.send(stdout);
 	 	console.log("git diff (fancy) requested for: " + a.data.slice(9));
 	 		 	//attempt to output stdout out of max object's 0 outlet:
-	 	Max.outlet(stdout);
+	 	//Max.outlet(stdout);
 	 });
 
 	 }
