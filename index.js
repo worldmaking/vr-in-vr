@@ -1,16 +1,23 @@
 
-console.log("Hello\n");
+console.log("Listening to Max on port 8080\n");
+
+
+
 
 const WebSocket = require('ws');
 const ws = new WebSocket('ws://localhost:8080');
 
 ws.on('open', function open() {
-  ws.send('something');
+  //ws.send('something');
 });
 
 ws.on('message', function incoming(data) {
   console.log(data);
   
+
+
+
+
   ws.send(data);
 });
 
@@ -22,3 +29,7 @@ http.createServer(function (req, res) {
     res.end('Hello World!');
 }).listen(8088);
 */
+
+
+
+

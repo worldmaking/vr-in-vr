@@ -1,4 +1,4 @@
-
+outlets = 2;
 ////// UTILITIES ////
 
 // get/create a global object for sharing data between reloads: 
@@ -120,8 +120,10 @@ function objects_create_shape_body(x, y, z){
 	
 	
 	//dump the created objects name from the first outlet of editor_scripting.js
-	outlet(0, box_name);
+	outlet(0, box_name, x, y, z);
 	return body;
+
+	
 }
 
 
@@ -146,6 +148,7 @@ function patcher_makeobject(name, args) {
 	var args = ([20, nextobject_y]).concat(args) ;
 	nextobject_y += 25;
 	//post(args, "\n");
+	outlet(1, args);
 	// call patcher.newdefault to create a new max object
 	// (using apply() so we can pass arguments as an array):
 	var obj_patcher = scene.newdefault.apply(scene, args);
@@ -156,6 +159,8 @@ function patcher_makeobject(name, args) {
 	objects_add(name, obj_patcher );
 	
 	return obj_patcher;
+	//post("test" + obj_patcher);
+
 }
 
 function patcher_removeobject(name) {

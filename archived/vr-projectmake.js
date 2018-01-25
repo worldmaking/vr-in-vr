@@ -55,6 +55,7 @@ var patcher_objects = {};
 function findobject(name) {
 	// this might get more complicated later
 	return patcher_objects[name];
+	post(patcher_objects[name]);
 }
 
 // a way to generate new object names:
