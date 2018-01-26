@@ -20,9 +20,10 @@ function post_info(dictname, keys)
 }
 */
 
-function add_object(a, b, c, d, e, f, x, y, z, xx, yy)
+function add_object(a, b, c, d, e, f, x, y, z, xx, yy, patchname)
 {
 	var state = new Dict("state");
+	state.replace("project_name", "" + patchname);
 	state.replace("objects::" + c + "::max_class", a);
 	state.replace("objects::" + c + "::text", c);
 	state.replace("objects::" + c + "::var_name", e);

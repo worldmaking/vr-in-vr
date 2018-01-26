@@ -38,6 +38,20 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-110",
+					"linecount" : 2,
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 648.0, 613.0, 270.791626, 35.0 ],
+					"style" : "",
+					"text" : "add_object vr-box @text vrbox_3 @name vrbox_3 @position 0.4239 0. 0. project_1 20 75"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-108",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -79,7 +93,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 514.0, 818.0, 139.0, 22.0 ],
+					"patching_rect" : [ 475.0, 814.0, 139.0, 22.0 ],
 					"style" : "",
 					"text" : "prepend state_to_scene"
 				}
@@ -92,7 +106,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 514.0, 847.0, 67.0, 22.0 ],
+					"patching_rect" : [ 475.0, 854.0, 67.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "scene.js",
 						"parameter_enable" : 0
@@ -159,7 +173,6 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"comment" : "",
@@ -712,7 +725,33 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
+						"visible" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-3",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 155.0, 134.0, 421.0, 20.0 ],
+									"style" : "",
+									"text" : "<<< evenutally need to write something that lets user set their project name"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-1",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 50.0, 134.0, 103.0, 22.0 ],
+									"style" : "",
+									"text" : "append project_1"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-74",
 									"maxclass" : "newobj",
@@ -732,7 +771,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 124.0, 117.0, 22.0 ],
+									"patching_rect" : [ 50.0, 169.0, 117.0, 22.0 ],
 									"style" : "",
 									"text" : "prepend add_object"
 								}
@@ -768,6 +807,13 @@
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
+									"destination" : [ "obj-67", 0 ],
+									"source" : [ "obj-1", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-74", 0 ],
 									"source" : [ "obj-50", 0 ]
 								}
@@ -782,7 +828,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-67", 0 ],
+									"destination" : [ "obj-1", 0 ],
 									"source" : [ "obj-74", 0 ]
 								}
 
@@ -1141,238 +1187,57 @@
 						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
-									"id" : "obj-214",
+									"id" : "obj-232",
 									"maxclass" : "newobj",
 									"numinlets" : 0,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 20.0, 0.0, 328.0, 22.0 ],
+									"patching_rect" : [ 0.0, 20.0, 328.0, 22.0 ],
 									"style" : "",
-									"text" : "vr-box @text vrbox_0 @varname vrbox_0 @position 0.6411",
+									"text" : "vr-box @text vrbox_0 @varname vrbox_0 @position 0.1048",
 									"varname" : "vrbox_0"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-215",
+									"id" : "obj-233",
 									"maxclass" : "newobj",
 									"numinlets" : 0,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 20.0, 25.0, 328.0, 22.0 ],
+									"patching_rect" : [ 0.0, 20.0, 328.0, 22.0 ],
 									"style" : "",
-									"text" : "vr-box @text vrbox_1 @varname vrbox_1 @position 0.4902",
+									"text" : "vr-box @text vrbox_1 @varname vrbox_1 @position 0.8865",
 									"varname" : "vrbox_1"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-216",
+									"id" : "obj-234",
 									"maxclass" : "newobj",
 									"numinlets" : 0,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 133.0, 57.0, 328.0, 22.0 ],
+									"patching_rect" : [ 0.0, 20.0, 328.0, 22.0 ],
 									"style" : "",
-									"text" : "vr-box @text vrbox_2 @varname vrbox_2 @position 0.1408",
+									"text" : "vr-box @text vrbox_2 @varname vrbox_2 @position 0.3701",
 									"varname" : "vrbox_2"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-217",
+									"id" : "obj-235",
 									"maxclass" : "newobj",
 									"numinlets" : 0,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 20.0, 75.0, 328.0, 22.0 ],
+									"patching_rect" : [ 0.0, 20.0, 328.0, 22.0 ],
 									"style" : "",
-									"text" : "vr-box @text vrbox_3 @varname vrbox_3 @position 0.9684",
+									"text" : "vr-box @text vrbox_3 @varname vrbox_3 @position 0.4239",
 									"varname" : "vrbox_3"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-218",
-									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 20.0, 100.0, 328.0, 22.0 ],
-									"style" : "",
-									"text" : "vr-box @text vrbox_4 @varname vrbox_4 @position 0.1916",
-									"varname" : "vrbox_4"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-219",
-									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 20.0, 125.0, 328.0, 22.0 ],
-									"style" : "",
-									"text" : "vr-box @text vrbox_5 @varname vrbox_5 @position 0.1763",
-									"varname" : "vrbox_5"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-220",
-									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 20.0, 150.0, 322.0, 22.0 ],
-									"style" : "",
-									"text" : "vr-box @text vrbox_6 @varname vrbox_6 @position 0.874",
-									"varname" : "vrbox_6"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-221",
-									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 20.0, 175.0, 328.0, 22.0 ],
-									"style" : "",
-									"text" : "vr-box @text vrbox_7 @varname vrbox_7 @position 0.7489",
-									"varname" : "vrbox_7"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-222",
-									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 20.0, 200.0, 328.0, 22.0 ],
-									"style" : "",
-									"text" : "vr-box @text vrbox_8 @varname vrbox_8 @position 0.5598",
-									"varname" : "vrbox_8"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-223",
-									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 20.0, 225.0, 328.0, 22.0 ],
-									"style" : "",
-									"text" : "vr-box @text vrbox_9 @varname vrbox_9 @position 0.0922",
-									"varname" : "vrbox_9"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-224",
-									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 20.0, 250.0, 342.0, 22.0 ],
-									"style" : "",
-									"text" : "vr-box @text vrbox_10 @varname vrbox_10 @position 0.9836",
-									"varname" : "vrbox_10"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-225",
-									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 20.0, 275.0, 340.0, 22.0 ],
-									"style" : "",
-									"text" : "vr-box @text vrbox_11 @varname vrbox_11 @position 0.8604",
-									"varname" : "vrbox_11"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-226",
-									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 20.0, 300.0, 342.0, 22.0 ],
-									"style" : "",
-									"text" : "vr-box @text vrbox_12 @varname vrbox_12 @position 0.3919",
-									"varname" : "vrbox_12"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-227",
-									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 20.0, 325.0, 342.0, 22.0 ],
-									"style" : "",
-									"text" : "vr-box @text vrbox_13 @varname vrbox_13 @position 0.8982",
-									"varname" : "vrbox_13"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-228",
-									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 20.0, 350.0, 342.0, 22.0 ],
-									"style" : "",
-									"text" : "vr-box @text vrbox_14 @varname vrbox_14 @position 0.0542",
-									"varname" : "vrbox_14"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-229",
-									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 20.0, 375.0, 342.0, 22.0 ],
-									"style" : "",
-									"text" : "vr-box @text vrbox_15 @varname vrbox_15 @position 0.1546",
-									"varname" : "vrbox_15"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-230",
-									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 0,
-									"patching_rect" : [ 20.0, 400.0, 320.0, 22.0 ],
-									"style" : "",
-									"text" : "*~ @text vrbox_16 @varname vrbox_16 @position 0.1488",
-									"varname" : "vrbox_16"
 								}
 
 							}
@@ -3971,7 +3836,16 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-110", 1 ],
+					"order" : 0,
+					"source" : [ "obj-53", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-57", 0 ],
+					"order" : 1,
 					"source" : [ "obj-53", 0 ]
 				}
 
@@ -4025,7 +3899,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-100", 0 ],
-					"midpoints" : [ 952.291626, 738.0, 952.0, 738.0, 952.0, 745.0, 1067.0, 745.0, 1067.0, 843.0, 524.0, 843.0, 524.0, 845.0, 523.5, 845.0 ],
+					"midpoints" : [ 952.291626, 738.0, 952.0, 738.0, 952.0, 745.0, 1067.0, 745.0, 1067.0, 843.0, 524.0, 843.0, 524.0, 843.0, 484.5, 843.0 ],
 					"source" : [ "obj-85", 4 ]
 				}
 
