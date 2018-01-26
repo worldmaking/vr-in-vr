@@ -1,28 +1,4 @@
 outlets = 2;
-////// UTILITIES ////
-
-// get/create a global object for sharing data between reloads: 
-var shared_data = new Global("shared_data");
-// initialize a unique_id field if necessary:
-if (!shared_data.unique_id) {
-	shared_data.unique_id = 0;
-}
-// utility function to uniquely name variables
-// (important for jitter objects that must be uniquely named)
-function uid(prefix) {
-	prefix = prefix || "var";
-	return prefix + "_" + shared_data.unique_id++;
-}
-
-function randomRange(lo, hi) {
-	return Math.random() * (hi-lo) + lo;
-}
-function randomInt(hi) {
-	return Math.floor(Math.random() * hi);
-}
-function randomPick(arr) {
-	return arr[randomInt(arr.length)];
-}
 
 ////// STATE ////
 
@@ -39,7 +15,7 @@ if (scene_box && scene_box.subpatcher()) {
 	scene.apply(function(b) {
 		//post(" " + b.patcher.name + " " + b.maxclass + " " + b.varname + " " + b.rect + "\n");
 		scene.remove(b);
-	});
+	}); 
 
 } else {
 	error("need to create a scene subpatcher\n");
@@ -63,38 +39,50 @@ function findobject(name) {
 	return scene_objects[name];
 }
 
-// next location for a patcher object:
-var nextobject_y = 10;
+function state_to_scene (px, py, a, b, c, d, x, y, z)
 
-// create the state for two hands:
-var hands = [];
-for (var i=0; i<2; i++) {
-	hands[i] = {
-		name: 0 ? "left" : "right",
-		position: [0, 0, 0],
-		quat: [0, 0, 0, 1],
-		trigger: "up",
-		trigger_squeeze: 0.,
-		button1: "up",
-		button2: "up",
+{
+
+
+//when an object already exists, 
+	if (findobject(c)) {
 		
-		selected_body: null,
-		selected_position_offset: [0, 0, 0],
-	};
-}
-
-// create some objects to play with
-for (var i=0; i<5; i++) {
-	objects_create_shape_body(randomRange(-2, 2), randomRange(0, 2), randomRange(-3, 1));
-}
-
-function test() {
+		// error(c + " name already in use\n");
+		
+		// filter it out from the list of objects to be added to the [p scene] subpatcher
+		return;
+	//	send it a message with its updated data:
 	
-	var p = this.patcher.getnamed("vrbox-test")
-	messnamed("vrbox_234", "foo", 23);
+		//	var c_print = (c + "_receive")
+		//	scene.getnamed(c_print).messnamed("bob");
+
+	}
+	// generate the arguments for patcher.newdefault
+	// as an array containing x, y, text:
+	else {
+	var args = ([px, py, a, b, c, d, x, y, z]);
+	nextobject_y += 25;
+	//post(args, "\n");
+	outlet(1, args);
+	// call patcher.newdefault to create a new max object
+	// (using apply() so we can pass arguments as an array):
+	var obj_patcher = scene.newdefault.apply(scene, args);
+	// set the "scripting name" of the max object
+	// (useful if we want to address it directly later)
+	obj_patcher.varname = c;
+	// store in lookup table:
+	objects_add(c, obj_patcher );
 	
+	return obj_patcher;
+	//post("test" + obj_patcher);
+	}
 }
 
+
+
+	
+
+/* is this where the state gets translated into vr space?
 function objects_create_shape_body(x, y, z){
 	
 	var box_name = uid("vrbox")
@@ -126,10 +114,11 @@ function objects_create_shape_body(x, y, z){
 	
 }
 
+*/
 
 function objects_remove_body(body) {
 	
-//	post("remove", body.varname, "\n");
+	post("remove", body.varname, "\n");
 	
 	// easy way out:
 	scene.remove(body.patcher.box);
@@ -138,30 +127,6 @@ function objects_remove_body(body) {
 }
 
 
-function patcher_makeobject(name, args) {
-	if (findobject(name)) {
-		error(name + " name already in use\n");
-		return;
-	}
-	// generate the arguments for patcher.newdefault
-	// as an array containing x, y, text:
-	var args = ([20, nextobject_y]).concat(args) ;
-	nextobject_y += 25;
-	//post(args, "\n");
-	outlet(1, args);
-	// call patcher.newdefault to create a new max object
-	// (using apply() so we can pass arguments as an array):
-	var obj_patcher = scene.newdefault.apply(scene, args);
-	// set the "scripting name" of the max object
-	// (useful if we want to address it directly later)
-	obj_patcher.varname = name;
-	// store in lookup table:
-	objects_add(name, obj_patcher );
-	
-	return obj_patcher;
-	//post("test" + obj_patcher);
-
-}
 
 function patcher_removeobject(name) {
 	var obj = findobject(name);
@@ -203,9 +168,9 @@ function collisions(hand, dictname) {
 			//TODO: Figure out how to get this object's name, not id
 			outlet(0, target);
 			
-		//	post(body1, body2, target, "press\n");
+			post(body1, body2, target, "press\n");
 			if (target) {
-			//	post(body1, body2, target, hand.selected_body, hand.trigger, "\n");
+				post(body1, body2, target, hand.selected_body, hand.trigger, "\n");
 				// what happens now depends on the hand state
 				if (!hand.selected_body) {
 					// we didn't have anything selected, so pick it up:
@@ -216,9 +181,9 @@ function collisions(hand, dictname) {
 					hand.selected_position_offset[1] = p[1] - hand.position[1];
 					hand.selected_position_offset[2] = p[2] - hand.position[2];
 					
-				//	post(hand.selected_position_offset[0], hand.selected_position_offset[1], hand.selected_position_offset[2], "\n");
+					post(hand.selected_position_offset[0], hand.selected_position_offset[1], hand.selected_position_offset[2], "\n");
 					var p1 = target.message("getposition");
-			//		post("Picked up:", target.varname, p1, "\n");
+					post("Picked up:", target.varname, p1, "\n");
 					
 					break;
 				}

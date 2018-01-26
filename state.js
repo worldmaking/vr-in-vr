@@ -10,6 +10,7 @@ inlets = 1;
 outlets = 1;
 
 
+/*
 function post_info(dictname, keys)
 {
 	post("Info regarding the dictionary named '", dictname, "': ");
@@ -17,14 +18,14 @@ function post_info(dictname, keys)
 	post("    Keys: " + keys);
 	post();
 }
-
+*/
 
 function add_object(a, b, c, d, e, f, x, y, z, xx, yy)
 {
 	var state = new Dict("state");
 	state.replace("objects::" + c + "::max_class", a);
 	state.replace("objects::" + c + "::text", c);
-	state.replace("objects::" + c + "::varname", e);
+	state.replace("objects::" + c + "::var_name", e);
 	state.replace("objects::" + c + "::vr_position", x, y, z);
 	
 	state.replace("objects::" + c + "::patcher_position", xx, yy);
@@ -44,8 +45,8 @@ function basic_getting_and_setting()
 	// rather than just explicitly named dictionaries
 	var names = d.getnames();
 	
-	post("Names of existing dictionaries: " + names);
-	post();	
+//	post("Names of existing dictionaries: " + names);
+//	post();	
 
 	// getkeys() will return an array of strings, each string being a key for our dict
 	var keys = d.getkeys();

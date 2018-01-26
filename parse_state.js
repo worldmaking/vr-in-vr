@@ -3,6 +3,7 @@
 //(by way of editor_scripting.js outlet 1) prints to the stdout in CLI, and also returns to this script here 
 //(see 'function keyframe_state' below)
 
+outlets = 3
 
 
 
@@ -33,19 +34,21 @@ function retrieve_state() {
 	for (var i=0; i<keys.length; i++) {
 		var obj_state = state.objects[keys[i]];
 		createobject(obj_state.id, obj_state);
+		
 	}
 	
 	// for each line
-	for (var i=0; i<state.lines.length; i++) {
-		var line = state.lines[i];
-		connectobjects(line.src, line.outlet, line.dst, line.inlet);
-	}
+//	for (var i=0; i<state.lines.length; i++) {
+//		var line = state.lines[i];
+//		connectobjects(line.src, line.outlet, line.dst, line.inlet);
+//	}
 	
 	// trigger loadbangs etc.
 	
 	
 }
 
+/*
 
 ////// SCENE SUBPATCHER ///////
 
@@ -197,6 +200,8 @@ function patcher_removeobject(name) {
 	scene.remove(obj);
 }
 
+
+*/
 // the state of the patcher being worked on
 // this is the 'ground truth' from which all views are derived
 var state = {
@@ -212,7 +217,7 @@ var patcher_objects = {};
 function findobject(name) {
 	// this might get more complicated later
 	return patcher_objects[name];
-	post(patcher_objects[name]);
+//	post(patcher_objects[name]);
 }
 
 // a way to generate new object names:
@@ -245,7 +250,7 @@ function save_state() {
 
 // called when this js file is closed
 function close() {
-	post("closing\n");
+//	post("closing\n");
 	// save current patcher to JSON:
 	save_state();
 	// close the generated patcher:
@@ -277,7 +282,7 @@ function deleteobject(name) {
 
 function newobject() {
 	var id = generate_unique_id();
-	post(id, "\n");
+//	post(id, "\n");
 	
 	var obj_state = {
 		// TODO: fill in properties with given 
@@ -302,17 +307,28 @@ function createobject(name, obj_state) {
 	
 	// generate the arguments for patcher.newdefault
 	// as an array containing x, y, text:
-	var args = obj_state.patcher_position.concat("vr-box", "@text", obj_state.text, "@position", obj_state.vr_position);
-	//post(args, "\n");
+	var args = obj_state.patcher_position.concat(obj_state.max_class, "@text", obj_state.text, "@varname", obj_state.var_name, "@position", obj_state.vr_position);
+	
+//outlet(0, "vr-box", "@text", obj_state.text, "@position", obj_state.vr_position);
+outlet(0, args);
+
 	// call patcher.newdefault to create a new max object
 	// (using apply() so we can pass arguments as an array):
-	var obj_patcher = patcher.newdefault.apply(patcher, args);
-	// set the "scripting name" of the max object
-	// (useful if we want to address it directly later)
-	obj_patcher.varname = name;
-	// store in lookup table:
-	patcher_objects[name] = obj_patcher;
+//	var obj_patcher = patcher.newdefault.apply(patcher, args);
 	
+
+//post(obj_patcher, "\n");
+
+
+// set the "scripting name" of the max object
+	// (useful if we want to address it directly later)
+//	obj_patcher.varname = name;
+	// store in lookup table:
+//	patcher_objects[name] = obj_patcher;
+	
+	
+//	post(name, "\n");
+
 	// TODO: create 3D version
 	// outlet(0, ...)
 	
@@ -348,7 +364,7 @@ function disconnectobjects(src_name, outlet, dst_name, inlet) {
 
 
 
-load_state();
+//load_state();
 
 //newobject();
 	
