@@ -22,7 +22,7 @@ function post_info(dictname, keys)
 function add_object(a, b, c, d, e, f, x, y, z, xx, yy)
 {
 	var state = new Dict("state");
-	state.replace("objects::" + c + "::maxclass", a);
+	state.replace("objects::" + c + "::max_class", a);
 	state.replace("objects::" + c + "::text", c);
 	state.replace("objects::" + c + "::varname", e);
 	state.replace("objects::" + c + "::vr_position", x, y, z);
