@@ -1,13 +1,17 @@
 const path = require('path');
 const fs = require('fs-extra'); 
 
+var exec = require('child-process-promise').exec;
+//var exec = require('child_process').exec;
+
+
 var str;
 
 var util = require('util')
-var exec = require('child_process').exec;
 var child;
 var child2;
 var child3;
+var child4;
 
 console.log("Listening to Max on port 8080\n");
 
@@ -61,13 +65,40 @@ fs.writeFileSync(dir + "/state.json", data);
 var utc = Date.now();
 fs.writeFileSync(dir + "/keyframes/" + utc + "_key_" + "state.json", data);
 
-//add and atom commit the new state.json in the repo
-child2 = exec("git add .", {cwd: dirname});
-child3 = exec("git commit -m \"atomic commit\"", {cwd: dirname});
+
+//git: add the newly saved state.json and keyframe (if there is one)
+exec('git add .', {cwd: dirname})
+    
+	//after we add the new files, commit them
+    .then(function (result) {
+        child3 = exec("git commit -m \"atomic commit\"", {cwd: dirname});
+
+    })
+        
+        .then(function (result) {
+        child = exec("git log --pretty=format:'%h' -n 1", {cwd: dirname}, (error, stdout, stderr) => {
+        	console.log("\nCommit hash: " + stdout + "\n");
+
+        	
+        	var new_hash = (stdout);
+        	state.commit_hash = (new_hash);
+        	new_state = JSON.stringify(state);
+        	//console.log(new_state);
+        	ws.send(new_state);
+
+	        })
+         })
+        	.then(function (result) {
+        		child4 = exec("git status", {cwd: dirname}, (error, stdout, stderr) => {
+        			console.log(stdout + "\n--------------------------------------------");
+        	})   
+    });
+
+ 
 
 //send the state over to max where it populates the [p scene] subpatcher 
 //with the vr-box (and eventually vr-line)
-  ws.send(data);
+  //ws.send(new_state);
 });
 
 

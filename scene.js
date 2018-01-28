@@ -39,18 +39,21 @@ function findobject(name) {
 	return scene_objects[name];
 }
 
-function state_to_scene (px, py, a, b, c, d, x, y, z)
-
-{
+function state_to_scene(px, py, a, b, c, d, x, y, z){
 
 
 //when an object already exists, 
 	if (findobject(c)) {
-		
+// filter it out from the list of objects to be added to the [p scene] subpatcher
+	return;		
 		// error(c + " name already in use\n");
 		
-		// filter it out from the list of objects to be added to the [p scene] subpatcher
-		return;
+
+// if the object already exists, then send the updated position data (and other data, like values, etc)
+// to the dict of the same name (currently not yet working, hence it being commented out)		
+		//var vrdict = new Dict(c);
+		//vrdict.set("position", x, y, z);
+
 	//	send it a message with its updated data:
 	
 		//	var c_print = (c + "_receive")
@@ -63,7 +66,7 @@ function state_to_scene (px, py, a, b, c, d, x, y, z)
 	var args = ([px, py, a, b, c, d, x, y, z]);
 	nextobject_y += 25;
 	//post(args, "\n");
-	outlet(1, args);
+	//outlet(1, args);
 	// call patcher.newdefault to create a new max object
 	// (using apply() so we can pass arguments as an array):
 	var obj_patcher = scene.newdefault.apply(scene, args);
@@ -71,7 +74,7 @@ function state_to_scene (px, py, a, b, c, d, x, y, z)
 	// (useful if we want to address it directly later)
 	obj_patcher.varname = c;
 	// store in lookup table:
-	objects_add(c, obj_patcher );
+	objects_add(c, obj_patcher);
 	
 	return obj_patcher;
 	//post("test" + obj_patcher);
