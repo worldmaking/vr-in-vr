@@ -83,8 +83,10 @@ exec('git add .', {cwd: dirname})
         	var new_hash = (stdout);
         	state.commit_hash = (new_hash);
         	new_state = JSON.stringify(state);
-        	//console.log(new_state);
-        	ws.send(new_state);
+        	
+        	//send the state over to max where it populates the [p scene] subpatcher 
+			//with the vr-box (and eventually vr-line)
+			ws.send(new_state);
 
 	        })
          })
@@ -94,12 +96,7 @@ exec('git add .', {cwd: dirname})
         	})   
     });
 
- 
-
-//send the state over to max where it populates the [p scene] subpatcher 
-//with the vr-box (and eventually vr-line)
-  //ws.send(new_state);
-});
+ });
 
 
 
