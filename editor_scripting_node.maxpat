@@ -38,6 +38,45 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-59",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "bang", "" ],
+					"patching_rect" : [ 1202.0, 636.0, 36.0, 22.0 ],
+					"style" : "",
+					"text" : "sel 0"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-54",
+					"maxclass" : "newobj",
+					"numinlets" : 5,
+					"numoutlets" : 4,
+					"outlettype" : [ "int", "", "", "int" ],
+					"patching_rect" : [ 1206.0, 600.0, 67.0, 22.0 ],
+					"style" : "",
+					"text" : "counter 10"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-50",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 1159.0, 542.0, 128.0, 22.0 ],
+					"style" : "",
+					"text" : "metro 2000 @active 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-133",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
@@ -1412,7 +1451,77 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"visible" : 1,
-						"boxes" : [  ],
+						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-1",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 20.0, 10.0, 436.0, 22.0 ],
+									"style" : "",
+									"text" : "vr-box @text vrbox_5 @name vrbox_5 @position 0.540483 0.059242 -0.536064",
+									"varname" : "vrbox_5"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-2",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 20.0, 35.0, 434.0, 22.0 ],
+									"style" : "",
+									"text" : "vr-box @text vrbox_6 @name vrbox_6 @position -1.86062 1.303454 -2.304405",
+									"varname" : "vrbox_6"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-3",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 20.0, 60.0, 432.0, 22.0 ],
+									"style" : "",
+									"text" : "vr-box @text vrbox_7 @name vrbox_7 @position -0.676211 1.571882 -1.31718",
+									"varname" : "vrbox_7"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-4",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 20.0, 85.0, 436.0, 22.0 ],
+									"style" : "",
+									"text" : "vr-box @text vrbox_8 @name vrbox_8 @position 0.850039 1.303469 -1.101294",
+									"varname" : "vrbox_8"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-5",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 20.0, 110.0, 436.0, 22.0 ],
+									"style" : "",
+									"text" : "vr-box @text vrbox_9 @name vrbox_9 @position -1.423484 0.291309 0.321873",
+									"varname" : "vrbox_9"
+								}
+
+							}
+ ],
 						"lines" : [  ]
 					}
 ,
@@ -3997,6 +4106,22 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-54", 0 ],
+					"order" : 0,
+					"source" : [ "obj-50", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-81", 0 ],
+					"order" : 1,
+					"source" : [ "obj-50", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-14", 0 ],
 					"midpoints" : [ 807.5, 321.0, 672.0, 321.0, 672.0, 321.0, 669.5, 321.0 ],
 					"source" : [ "obj-52", 0 ]
@@ -4007,6 +4132,20 @@
 				"patchline" : 				{
 					"destination" : [ "obj-57", 0 ],
 					"source" : [ "obj-53", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-59", 0 ],
+					"source" : [ "obj-54", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-103", 0 ],
+					"source" : [ "obj-59", 0 ]
 				}
 
 			}
@@ -4110,6 +4249,13 @@
 				"bootpath" : "~/vr-in-vr",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "vr-box.maxpat",
+				"bootpath" : "~/vr-in-vr",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
