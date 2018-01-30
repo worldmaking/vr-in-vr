@@ -14,6 +14,10 @@ var child;
 var child2;
 var child3;
 var child4;
+var child5;
+var child6; // child process for creating branches
+var child7; //child process for switching branches
+
 
 console.log("Listening to Max on port 8080\n");
 
@@ -41,7 +45,21 @@ var projectname = (state.project_name);
 console.log(projectname + " state changed");
 
 ///////////////////////////
-//check if a directory exists for the vr projectname in the 'git-in-vr' repo
+//ensure git-in-vr repo is switched to projectname branch
+/* So these commands work, but its not yet working as far as our workflow is concerned. need to chat with Graham about how
+//this can work. 
+exec('git branch ' + projectname, {cwd: dirname})
+    .then(function (result) {
+		console.log("branch created for new project: " + projectname);
+		exec("git checkout " + projectname, {cwd: dirname});
+    })
+    .catch(function (err) {
+        exec("git checkout " + projectname, {cwd: dirname});
+    });
+*/
+///////////////////////////
+//check if a directory exists for the vr projectname in the 'git-in-vr' repo ** NOTE for future: may not be 
+// necessary if the git branching method works for storing projects (see code above)
 
 const dir = (dirname + '/states/' + projectname);
 
@@ -70,12 +88,8 @@ fs.ensureDir(dir)
   console.error(err)
 })
 
-//TO DO NEXT:::: FIGURE OUT HOW TO APPEND THE UTC AND HASH TO THE COMMITS.JSON!!
 ////////////////////////////
-
-
-
-
+var commit_msg = ("atomic commit " + utc);
 
 
 //git: add the newly saved state.json and keyframe (if there is one)
@@ -83,13 +97,14 @@ exec('git add .', {cwd: dirname})
     
 	//after we add the new files, commit them
     .then(function (result) {
-        child3 = exec("git commit -m \"atomic commit\"", {cwd: dirname});
+        child3 = exec("git commit -m \"" + commit_msg + "\"", {cwd: dirname});
 
     })
         
         .then(function (result) {
         child = exec("git log --pretty=format:'%h' -n 1", {cwd: dirname}, (error, stdout, stderr) => {
         	console.log("\nCommit hash: " + stdout + "\n");
+
 
         	//prep the new state to include the commit hash
         	var hash = (stdout);
@@ -99,23 +114,20 @@ exec('git add .', {cwd: dirname})
         	//send the state over to max where it populates the [p scene] subpatcher 
 			//with the vr-box (and eventually vr-line)
 			ws.send(new_state);
-
-			//append the utc and hash to a json file for later use. 
-        	commits_json = JSON.stringify([utc, hash]);
-        	console.log(commits_json);
-        	//fs.appendFile(dir + "/commits.json", commits_json);
-        	fs.writeFileSync(dir + "/commits.json", commits_json, {flag: 'a'}, {spaces: 2})
 	        })
          })
         	.then(function (result) {
         		child4 = exec("git status", {cwd: dirname}, (error, stdout, stderr) => {
         			console.log(stdout + "\n--------------------------------------------");
+        		child5 = exec("git log --pretty=oneline > " + dir + "/history.txt", {cwd: dirname}); 
 
         	})   
     });
 
+
+
  });
 
 
-
+//// TODO: add something that auto-pushes git-in-vr to remote when this script closes?
 
