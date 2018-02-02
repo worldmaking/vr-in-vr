@@ -18,6 +18,7 @@
   "homepage": "https://github.com/worldmaking/vr-in-vr#readme",
   "dependencies": {
     "child-process-promise": "^2.2.1",
+    "fs-extra": "^5.0.0",
     "ws": "^4.0.0"
   }
 }
