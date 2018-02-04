@@ -38,43 +38,30 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-63",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 887.0, 855.0, 221.0, 22.0 ],
-					"presentation_rect" : [ 887.0, 855.0, 221.0, 22.0 ],
+					"id" : "obj-68",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1294.791626, 642.0, 300.0, 47.0 ],
+					"presentation_linecount" : 7,
+					"presentation_rect" : [ 1294.791626, 642.0, 300.0, 47.0 ],
 					"style" : "",
-					"text" : "state_json dictionary state"
+					"text" : "if you want to load a maxpatch into the vr space! see the index.js for details on this (still a work in progress, and it is not yet returning the json... will get there!)"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-59",
-					"maxclass" : "newobj",
+					"id" : "obj-71",
+					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 345.0, 735.0, 111.0, 22.0 ],
-					"presentation_rect" : [ 345.0, 735.0, 111.0, 22.0 ],
-					"style" : "",
-					"text" : "prepend state_json"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-58",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 379.0, 784.0, 53.0, 22.0 ],
-					"presentation_rect" : [ 379.0, 784.0, 53.0, 22.0 ],
-					"style" : "",
-					"text" : "prepend"
+					"outlettype" : [ "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 1223.791626, 642.0, 24.0, 24.0 ],
+					"presentation_rect" : [ 1223.791626, 642.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -85,10 +72,10 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 865.0, 689.0, 126.0, 22.0 ],
-					"presentation_rect" : [ 865.0, 689.0, 126.0, 22.0 ],
+					"patching_rect" : [ 1223.791626, 668.0, 69.0, 22.0 ],
+					"presentation_rect" : [ 1223.791626, 668.0, 69.0, 22.0 ],
 					"style" : "",
-					"text" : "metro 5000 @active 1"
+					"text" : "metro 1000"
 				}
 
 			}
@@ -99,8 +86,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 808.0, 634.0, 338.0, 22.0 ],
-					"presentation_rect" : [ 808.0, 634.0, 338.0, 22.0 ],
+					"patching_rect" : [ 1223.791626, 700.0, 338.0, 22.0 ],
+					"presentation_rect" : [ 1223.791626, 700.0, 338.0, 22.0 ],
 					"style" : "",
 					"text" : "load maxpat /Users/mp/vr-in-vr/maxpat-parse/patch_2.maxpat"
 				}
@@ -3353,7 +3340,7 @@
 									"patching_rect" : [ 206.0, 309.0, 289.0, 35.0 ],
 									"presentation_rect" : [ 206.0, 309.0, 289.0, 35.0 ],
 									"style" : "",
-									"text" : "20 250 vr-box @text vrbox_10 @name vrbox_10 @position 0.2854 0.6672 0.9468"
+									"text" : "20 150 vr-box @text vrbox_6 @name vrbox_6 @position 0.0271 0.4052 0.1385"
 								}
 
 							}
@@ -6551,24 +6538,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-50", 0 ],
-					"disabled" : 1,
 					"source" : [ "obj-54", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-25", 0 ],
-					"order" : 1,
-					"source" : [ "obj-59", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-63", 1 ],
-					"order" : 0,
-					"source" : [ "obj-59", 0 ]
 				}
 
 			}
@@ -6603,6 +6573,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-54", 0 ],
+					"source" : [ "obj-71", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-84", 0 ],
 					"source" : [ "obj-77", 0 ]
 				}
@@ -6617,8 +6594,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-59", 0 ],
-					"midpoints" : [ 467.5, 746.5, 354.5, 746.5 ],
+					"destination" : [ "obj-25", 0 ],
 					"source" : [ "obj-84", 0 ]
 				}
 
