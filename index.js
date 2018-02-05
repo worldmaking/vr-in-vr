@@ -113,15 +113,25 @@ if (data.includes("load maxpat")) {
 
 			//make the vrbox_nn JSON object
 				var object = {}
-				object[vr_id] = {patcher_position, inlets, outlets, var_name, vr_position};
+				object[vr_id] = {var_name, inlets, outlets, vr_position, patcher_position};
 				objs = JSON.stringify(object);
 				console.log(objs);
+
+				var new_state = {}
+				new_state['project_name'] = name;
+				new_state.objects = {objs};
+				//new_state['patcher_position'] = [patcher_positions];
+
+
+			//	new_state['objects'] = objects;
+				JSON.stringify(new_state);
+				console.log(new_state);
 
 				//push this to the main new json NOT WORKING YET!!
 				//parent_object.push(objs);
 				}
 
-
+/*
 				var new_state = {}
 				new_state['project_name'] = name;
 				new_state.objects = {parent_object};
@@ -131,7 +141,7 @@ if (data.includes("load maxpat")) {
 			//	new_state['objects'] = objects;
 				JSON.stringify(new_state);
 //				console.log(new_state);
-
+*/
 
 
 		fs.ensureDir(newdir)
