@@ -85,7 +85,6 @@ if (data.includes("load maxpat")) {
 				//console.log(prop);
 
 
-				vr_id = {}
 				//get vr-box id
 			//	console.log(state.patcher.boxes[prop].box);
 				var id = (state.patcher.boxes[prop].box.id);
@@ -98,6 +97,8 @@ if (data.includes("load maxpat")) {
 				var patcher_position = (state.patcher.boxes[prop].box.patching_rect)
 				//var p_pos = {"patcher_position":patcher_position};
 
+				//get object text
+				var obj_text = (state.patcher.boxes[prop].box.text)
 
 				//get inlets
 				var inlets = (state.patcher.boxes[prop].box.numinlets)
@@ -109,20 +110,25 @@ if (data.includes("load maxpat")) {
 				var obj = {
 					[vr_id] : {
 						"max_class" : "vr-box",
-						"text" : vr_id,
+						"text" : obj_text,
 						"var_name" : vr_id,
+						"numinlets" : inlets,
+						"numoutlets" : outlets,
 						"vr_position" : [ 0.9047, 0.2227, 0.8258 ],
 						"patcher_position" : [ 20, 0 ]
 								}
 							}
 
 
-				const vrbox = stringifyObject(obj, {
-					    indent: '  ',
+				var vrbox = stringifyObject(obj, {
+					    //indent: '  ',
 					    singleQuotes: false
 						});
  
 				console.log(vrbox);
+
+				vrboxes.push(vrbox)
+			//	vrboxes.push(vrbox);
 
 
 //				var myJSON = JSON.stringify(obj);
