@@ -6,6 +6,8 @@ const fs = require('fs-extra');
 var exec = require('child-process-promise').exec;
 //var exec = require('child_process').exec;
 
+const stringifyObject = require('stringify-object');
+
 
 var str;
 
@@ -77,18 +79,80 @@ if (data.includes("load maxpat")) {
 				var patcher_positions = [];
 				var numinlets = [];
 				var objs = {};
-				var parent_object = {}
+				var parent_object = {};
+				var vrboxes = {};
 			for (const prop in state.patcher.boxes) {
 				//console.log(prop);
 
 
-
+				vr_id = {}
 				//get vr-box id
 			//	console.log(state.patcher.boxes[prop].box);
 				var id = (state.patcher.boxes[prop].box.id);
 				var vr_id = ("vrbox_" + (id.split('-')[1]));
-				vr_ids.push(vr_id);
 
+				//make vrbox varname based on this object.
+				var var_name = {"varname":vr_id};
+
+				//get patcher_position
+				var patcher_position = (state.patcher.boxes[prop].box.patching_rect)
+				//var p_pos = {"patcher_position":patcher_position};
+
+
+				//get inlets
+				var inlets = (state.patcher.boxes[prop].box.numinlets)
+				//get outlets
+				var outlets = (state.patcher.boxes[prop].box.numoutlets)
+				
+
+
+				var obj = {
+					[vr_id] : {
+						"max_class" : "vr-box",
+						"text" : vr_id,
+						"var_name" : vr_id,
+						"vr_position" : [ 0.9047, 0.2227, 0.8258 ],
+						"patcher_position" : [ 20, 0 ]
+								}
+							}
+
+
+				const vrbox = stringifyObject(obj, {
+					    indent: '  ',
+					    singleQuotes: false
+						});
+ 
+				console.log(vrbox);
+
+
+//				var myJSON = JSON.stringify(obj);
+//				vrbox.patcher_position = patcher_position;
+
+				//JSON.stringify(vr_id);
+//				console.log(myJSON);				
+
+
+				}
+
+				//new code attempt at formatting this all as json:
+				var new_state = {}
+				new_state.project_name = name;
+				new_state.commit_hash = null;
+				new_state.UTC = utc;
+				new_state.objects = vrboxes;
+				//new_state.objects = ("vrbox_" + (id.split('-')[1]));
+				//new_state['patcher_position'] = [patcher_positions];
+
+
+			//	new_state['objects'] = objects;
+				JSON.stringify(new_state);
+				console.log(new_state);
+
+
+				//old attempt, not quite there yet!
+/*				vr_ids.push(vr_id);
+
+				
 				//make vrbox varname based on this object?
 				var var_name = vr_id;
 
@@ -128,8 +192,8 @@ if (data.includes("load maxpat")) {
 				console.log(new_state);
 
 				//push this to the main new json NOT WORKING YET!!
-				//parent_object.push(objs);
-				}
+		*/		//parent_object.push(objs);
+			//	}
 
 /*
 				var new_state = {}
