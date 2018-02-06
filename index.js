@@ -80,7 +80,7 @@ if (data.includes("load maxpat")) {
 				var numinlets = [];
 				var objs = {};
 				var parent_object = {};
-				var vrboxes = {};
+				var vrboxes = [];
 			for (const prop in state.patcher.boxes) {
 				//console.log(prop);
 
@@ -119,13 +119,9 @@ if (data.includes("load maxpat")) {
 								}
 							}
 
+				vrbox = JSON.stringify(obj);
 
-				var vrbox = stringifyObject(obj, {
-					    //indent: '  ',
-					    singleQuotes: false
-						});
- 
-				console.log(vrbox);
+
 
 				vrboxes.push(vrbox)
 			//	vrboxes.push(vrbox);
