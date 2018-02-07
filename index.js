@@ -19,6 +19,7 @@ var child4;
 var child5;
 var child6; // child process for creating branches
 var child7; //child process for switching branches
+var child_hash;
 
 
 console.log("Listening to Max on port 8080\n");
@@ -48,19 +49,23 @@ ws.on('open', function open() {
 });
 
 ws.on('message', function incoming(data) {
+console.log("-------------");
+
 
 //send a message "load maxpat <path-to-maxpat>" and this will parse it to json. eventually will get this to parse out what
 //the vr editor needs to generate these objects and patchlines in the vr editor
 if (data.includes("load maxpat")) {
 	var utc = Date.now();
-
 	var maxpat = (data.substring(12));
 
-	var filename = path.basename(maxpat);
-	var name = (filename.substring(filename.lastIndexOf(".") + 1));
+	//console.log(maxpat);
 
-	const newdir = (dirname + '/states/' + name);
-//	console.log("parsed max patcher " + filename);
+	var filename = path.basename(maxpat);
+	//var name = (filename.substring(filename.lastIndexOf(".") + 1));
+	var name = (filename.substring(filename.lastIndexOf("/")));
+	var name2 = (filename.substring(0, filename.lastIndexOf(".")));
+
+	const newdir = (dirname + '/states/' + name2);
 		
 		//get json from .maxpat
 		exec('jsonlint --sort-keys ' + maxpat, (error, stdout, stderr) => {
@@ -79,6 +84,7 @@ if (data.includes("load maxpat")) {
 				var objs = {};
 				var parent_object = {};
 				var vrboxes = [];
+			
 			for (const prop in state.patcher.boxes) {
 				//console.log(prop);
 
@@ -139,7 +145,7 @@ if (data.includes("load maxpat")) {
 				//collect the maxpat objects' data here and format as JSON
 				var new_state = {}
 				new_state.project_name = name;
-				new_state['commit_hash'] = null;
+				new_state['commit_hash'] = null;			
 				new_state['UTC'] = utc;
 				new_state['objects'] = vrboxes;
 				state_json = JSON.stringify(new_state, null, 1);
@@ -149,9 +155,13 @@ if (data.includes("load maxpat")) {
 	//create a directory for the vr representation of the maxpat file:
 	//NOTE: if directory already exists (i.e. using a maxpat already used, it will assume its the same file 
 	//and switch to that directory rather than create new. something to work out in the future.)
-
+/*
 				fs.ensureDir(newdir)
-					.then(() => {
+					if (fs.existsSync(newdir)) {
+						  	console.log("WARNING: maxpat already exists in git-in-vr directory, so potentially overwriting");
+						  	//then read the file. (find the cmd for that)
+					  }
+					else		{			
 					//save VR state to a json in the git-in-vr repo 
 					  fs.writeFileSync(newdir + "/state.json", state_json);
 					//Also, make a keyframes folder where whole states will be saved along with UTC timestamp
@@ -163,20 +173,59 @@ if (data.includes("load maxpat")) {
 					  			fs.writeFileSync(newdir + "/keyframes/" + utc + "_key_" + "state.json", state_json);
 					  			})
 					//commits.json is where utc:commit-hashes will be added each time as key-value. 
-					  if (fs.existsSync(newdir + "/commits.json")) {
-		//			  	console.log("warning: file already exists in git-in-vr directory");
-					  	//then read the file. (find the cmd for that)
-					  }
-					  else 
+					  
+				//	  else 
 						fs.writeFileSync(newdir + "/commits.json", "utc_hash:");
-					
-					})
+						console.log("NOTE: directory for " + name + " created at " + newdir);
+
+					}
+
+*/
+
+
+
+
+fs.pathExists(newdir, (err, exists) => {
+
+	if (exists == true) {
+		console.log("WARNING: maxpat already exists in git-in-vr directory");
+
+		//warn editor_scripting_node that this maxpat already has been used...
+		ws.send("error: selected max patch filename already in use by vr-editor");
+
+	}
+	if (exists == false) {
+		fs.ensureDir(newdir)
+		fs.ensureDir(newdir + "/keyframes")
+
+			console.log("NOTE: directory for " + name + " created at " + newdir)
+
+			.then(() => {
+				fs.writeFileSync(newdir + "/state.json", state_json);
+				fs.writeFileSync(newdir + "/keyframes/" + utc + "_key_" + "state.json", state_json);
+
+
+
+				})
+
+
+
+	}
+//	console.log(err)
+//	console.log(exists)
+})
+
+
+
+
+
+	/*				
 					.catch(err => {
 				  	console.error(err)
 				
-		})
+		}) */
 
-//git: add the newly saved state.json and keyframe (if there is one)
+//git: add the newly saved state.json and keyframe
 exec('git add .', {cwd: dirname})
     
 	//after we add the new files, commit them
@@ -191,19 +240,18 @@ exec('git add .', {cwd: dirname})
 
 
         	//prep the new state to include the commit hash
-        	var hash = (stdout);
-        	state_json.commit_hash = (hash);
-        	new_state2 = JSON.stringify(state_json);
+        	var commit = JSON.parse(state_json);
+        	commit.commit_hash = (stdout);
+        	new_state2 = JSON.stringify(commit);
         	
         	//send the state over to max where it populates the [p scene] subpatcher 
 			//with the vr-box (and eventually vr-line)
 			ws.send(new_state2);
-			console.log(new_state2);
 	        })
          })
         	.then(function (result) {
         		child4 = exec("git status", {cwd: dirname}, (error, stdout, stderr) => {
-        			console.log(stdout + "\n--------------------------------------------");
+        			//console.log(stdout + "\n--------------------------------------------");
         		child5 = exec("git log --pretty=oneline > " + newdir + "/history.txt", {cwd: dirname}); 
 
         	})   

@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 74.0, 82.0, 890.0, 930.0 ],
+		"rect" : [ 496.0, 82.0, 910.0, 930.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,13 +38,122 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-94",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 6.0, 794.0, 24.0, 24.0 ],
+					"presentation_rect" : [ 6.0, 794.0, 24.0, 24.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-91",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "bang", "" ],
+					"patching_rect" : [ 6.0, 747.0, 361.0, 22.0 ],
+					"presentation_rect" : [ 6.0, 747.0, 361.0, 22.0 ],
+					"style" : "",
+					"text" : "sel \"error: selected max patch filename already in use by vr-editor\""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-90",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1147.0, 861.0, 57.0, 22.0 ],
+					"presentation_rect" : [ 1147.0, 861.0, 57.0, 22.0 ],
+					"style" : "",
+					"text" : "tosymbol"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-89",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1257.0, 795.0, 145.0, 22.0 ],
+					"presentation_rect" : [ 1257.0, 795.0, 145.0, 22.0 ],
+					"style" : "",
+					"text" : "sprintf load maxpat \\\"%s\\\""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-88",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 1360.0, 853.0, 24.0, 24.0 ],
+					"presentation_rect" : [ 1360.0, 853.0, 24.0, 24.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-83",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1184.0, 872.0, 50.0, 22.0 ],
+					"presentation_rect" : [ 1184.0, 872.0, 50.0, 22.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-80",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"patching_rect" : [ 1174.0, 820.0, 67.0, 22.0 ],
+					"presentation_rect" : [ 1174.0, 820.0, 67.0, 22.0 ],
+					"style" : "",
+					"text" : "opendialog"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-79",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "bang", "bang" ],
+					"patching_rect" : [ 1224.0, 704.0, 32.0, 22.0 ],
+					"presentation_rect" : [ 1224.0, 704.0, 32.0, 22.0 ],
+					"style" : "",
+					"text" : "t b b"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-68",
 					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 1294.791626, 642.0, 300.0, 47.0 ],
-					"presentation_linecount" : 7,
+					"presentation_linecount" : 3,
 					"presentation_rect" : [ 1294.791626, 642.0, 300.0, 47.0 ],
 					"style" : "",
 					"text" : "if you want to load a maxpatch into the vr space! see the index.js for details on this (still a work in progress, and it is not yet returning the json... will get there!)"
@@ -86,10 +195,10 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1223.791626, 700.0, 338.0, 22.0 ],
-					"presentation_rect" : [ 1223.791626, 700.0, 338.0, 22.0 ],
+					"patching_rect" : [ 1219.791626, 756.5, 252.0, 22.0 ],
+					"presentation_rect" : [ 1219.791626, 756.5, 252.0, 22.0 ],
 					"style" : "",
-					"text" : "load maxpat /Users/mp/vr-in-vr/maxpat-parse/patch_2.maxpat"
+					"text" : "load maxpat /Users/mp/vr-in-vr/vr-box.maxpat"
 				}
 
 			}
@@ -313,6 +422,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 600.0, 924.5, 156.0, 48.0 ],
+					"presentation_linecount" : 3,
 					"presentation_rect" : [ 600.0, 924.5, 156.0, 48.0 ],
 					"style" : "",
 					"text" : "<<< ...And instead found a way to do it using the [thispatcher] object"
@@ -327,6 +437,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 600.0, 862.5, 150.0, 48.0 ],
+					"presentation_linecount" : 3,
 					"presentation_rect" : [ 600.0, 862.5, 150.0, 48.0 ],
 					"style" : "",
 					"text" : "<<< So I couldn't get the subpatcher scripting to work in js..."
@@ -417,6 +528,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 154.5, 100.0, 444.0, 47.0 ],
+									"presentation_linecount" : 3,
 									"presentation_rect" : [ 154.5, 100.0, 444.0, 47.0 ],
 									"style" : "",
 									"text" : "<<Receive VR project state as JSON, parse it, and send each of the max-objects out the right outlet. This is a hack, definitely not as efficient as using a single js, but I couldn't figure that out. "
@@ -574,7 +686,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 715.0, 336.0, 604.0, 595.0 ],
+						"rect" : [ 51.0, 390.0, 604.0, 595.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -601,6 +713,7 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-409",
@@ -635,7 +748,7 @@
 									"maxclass" : "inlet",
 									"numinlets" : 0,
 									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"outlettype" : [ "bang" ],
 									"patching_rect" : [ 51.0, 33.0, 19.0, 19.0 ],
 									"presentation_rect" : [ 51.0, 33.0, 19.0, 19.0 ],
 									"style" : ""
@@ -764,6 +877,7 @@
 																	"numinlets" : 1,
 																	"numoutlets" : 0,
 																	"patching_rect" : [ 522.0, 262.0, 150.0, 47.0 ],
+																	"presentation_linecount" : 3,
 																	"presentation_rect" : [ 522.0, 262.0, 150.0, 47.0 ],
 																	"style" : "",
 																	"text" : "Leave room for the scripting code in sthe subpatcher"
@@ -1243,6 +1357,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "" ],
 																	"patching_rect" : [ 50.0, 264.5, 189.0, 49.0 ],
+																	"presentation_linecount" : 3,
 																	"presentation_rect" : [ 50.0, 264.5, 189.0, 49.0 ],
 																	"style" : "",
 																	"text" : "vrbox_1 vrbox_2 vrbox_3 vrbox_4 vrbox_5 vrbox_6 vrbox_7 vrbox_8 vrbox_9 vrbox_0 vrbox_10"
@@ -1286,6 +1401,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "" ],
 																	"patching_rect" : [ 178.0, 169.5, 189.0, 49.0 ],
+																	"presentation_linecount" : 3,
 																	"presentation_rect" : [ 178.0, 169.5, 189.0, 49.0 ],
 																	"style" : "",
 																	"text" : "vrbox_1 vrbox_2 vrbox_3 vrbox_4 vrbox_5 vrbox_6 vrbox_7 vrbox_8 vrbox_9 vrbox_0 vrbox_10"
@@ -1314,7 +1430,7 @@
 																	"maxclass" : "inlet",
 																	"numinlets" : 0,
 																	"numoutlets" : 1,
-																	"outlettype" : [ "" ],
+																	"outlettype" : [ "bang" ],
 																	"patching_rect" : [ 50.0, 40.0, 30.0, 30.0 ],
 																	"presentation_rect" : [ 50.0, 40.0, 30.0, 30.0 ],
 																	"style" : ""
@@ -1452,7 +1568,7 @@
 															"modernui" : 1
 														}
 ,
-														"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
+														"rect" : [ 59.0, 104.0, 640.0, 480.0 ],
 														"bglocked" : 0,
 														"openinpresentation" : 0,
 														"default_fontsize" : 12.0,
@@ -1797,15 +1913,13 @@
 , 															{
 																"box" : 																{
 																	"id" : "obj-14",
-																	"linecount" : 2,
 																	"maxclass" : "message",
 																	"numinlets" : 2,
 																	"numoutlets" : 1,
 																	"outlettype" : [ "" ],
 																	"patching_rect" : [ 61.0, 169.5, 419.0, 22.0 ],
 																	"presentation_rect" : [ 61.0, 169.5, 419.0, 22.0 ],
-																	"style" : "",
-																	"text" : "vrbox_0 vrbox_1 vrbox_2 vrbox_3 vrbox_4 vrbox_5 vrbox_6 vrbox_7 vrbox_8 vrbox_9 vrbox_10"
+																	"style" : ""
 																}
 
 															}
@@ -1954,7 +2068,7 @@
 													"maxclass" : "inlet",
 													"numinlets" : 0,
 													"numoutlets" : 1,
-													"outlettype" : [ "" ],
+													"outlettype" : [ "bang" ],
 													"patching_rect" : [ 213.5, 79.5, 30.0, 30.0 ],
 													"presentation_rect" : [ 213.5, 79.5, 30.0, 30.0 ],
 													"style" : ""
@@ -2206,198 +2320,6 @@
 								}
 
 							}
-, 							{
-								"box" : 								{
-									"id" : "obj-3",
-									"linecount" : 48,
-									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 20.0, 150.0, 0.0, 0.0 ],
-									"presentation_rect" : [ 20.0, 150.0, 0.0, 0.0 ],
-									"style" : "",
-									"text" : "vr-box @position 0.7159 0.0086 0.7808 @varname vrbox_0",
-									"varname" : "vrbox_0"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-4",
-									"linecount" : 48,
-									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 20.0, 175.0, 0.0, 0.0 ],
-									"presentation_rect" : [ 20.0, 175.0, 0.0, 0.0 ],
-									"style" : "",
-									"text" : "vr-box @position 0.6578 0.4451 0.5978 @varname vrbox_1",
-									"varname" : "vrbox_1"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-5",
-									"linecount" : 48,
-									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 20.0, 200.0, 0.0, 0.0 ],
-									"presentation_rect" : [ 20.0, 200.0, 0.0, 0.0 ],
-									"style" : "",
-									"text" : "vr-box @position 0.0879 0.8079 0.5182 @varname vrbox_2",
-									"varname" : "vrbox_2"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-6",
-									"linecount" : 47,
-									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 20.0, 225.0, 0.0, 0.0 ],
-									"presentation_rect" : [ 20.0, 225.0, 0.0, 0.0 ],
-									"style" : "",
-									"text" : "vr-box @position 0.4083 0.996 0.6307 @varname vrbox_3",
-									"varname" : "vrbox_3"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-7",
-									"linecount" : 48,
-									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 20.0, 250.0, 0.0, 0.0 ],
-									"presentation_rect" : [ 20.0, 250.0, 0.0, 0.0 ],
-									"style" : "",
-									"text" : "vr-box @position 0.0634 0.0065 0.7988 @varname vrbox_4",
-									"varname" : "vrbox_4"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-8",
-									"linecount" : 48,
-									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 20.0, 275.0, 0.0, 0.0 ],
-									"presentation_rect" : [ 20.0, 275.0, 0.0, 0.0 ],
-									"style" : "",
-									"text" : "vr-box @position 0.7639 0.4796 0.1622 @varname vrbox_5",
-									"varname" : "vrbox_5"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-9",
-									"linecount" : 48,
-									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 20.0, 300.0, 0.0, 0.0 ],
-									"presentation_rect" : [ 20.0, 300.0, 0.0, 0.0 ],
-									"style" : "",
-									"text" : "vr-box @position 0.4197 0.1101 0.0859 @varname vrbox_6",
-									"varname" : "vrbox_6"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-10",
-									"linecount" : 48,
-									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 20.0, 325.0, 0.0, 0.0 ],
-									"presentation_rect" : [ 20.0, 325.0, 0.0, 0.0 ],
-									"style" : "",
-									"text" : "vr-box @position 0.7602 0.6302 0.6595 @varname vrbox_7",
-									"varname" : "vrbox_7"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-11",
-									"linecount" : 48,
-									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 20.0, 350.0, 0.0, 0.0 ],
-									"presentation_rect" : [ 20.0, 350.0, 0.0, 0.0 ],
-									"style" : "",
-									"text" : "vr-box @position 0.5208 0.4307 0.1288 @varname vrbox_8",
-									"varname" : "vrbox_8"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-12",
-									"linecount" : 48,
-									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 20.0, 375.0, 0.0, 0.0 ],
-									"presentation_rect" : [ 20.0, 375.0, 0.0, 0.0 ],
-									"style" : "",
-									"text" : "vr-box @position 0.2369 0.9338 0.0496 @varname vrbox_9",
-									"varname" : "vrbox_9"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-13",
-									"linecount" : 49,
-									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 20.0, 400.0, 0.0, 0.0 ],
-									"presentation_rect" : [ 20.0, 400.0, 0.0, 0.0 ],
-									"style" : "",
-									"text" : "vr-box @position 0.7865 0.7569 0.2631 @varname vrbox_10",
-									"varname" : "vrbox_10"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-14",
-									"linecount" : 48,
-									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 20.0, 150.0, 0.0, 0.0 ],
-									"presentation_rect" : [ 20.0, 150.0, 0.0, 0.0 ],
-									"style" : "",
-									"text" : "vr-box @position 0.3267 0.5265 0.2978 @varname vrbox_0",
-									"varname" : "vrbox_0[1]"
-								}
-
-							}
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
@@ -2505,6 +2427,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 307.0, 157.0, 244.0, 62.0 ],
+									"presentation_linecount" : 4,
 									"presentation_rect" : [ 307.0, 157.0, 244.0, 62.0 ],
 									"style" : "",
 									"text" : "the node.js code isn't quite ready for this to work: there is something running out of logical order with the async function that creates a new directory named after this "
@@ -3338,6 +3261,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 206.0, 309.0, 289.0, 35.0 ],
+									"presentation_linecount" : 2,
 									"presentation_rect" : [ 206.0, 309.0, 289.0, 35.0 ],
 									"style" : "",
 									"text" : "20 150 vr-box @text vrbox_6 @name vrbox_6 @position 0.0271 0.4052 0.1385"
@@ -3785,6 +3709,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 18.5, 573.0, 265.0, 36.0 ],
+					"presentation_linecount" : 2,
 					"presentation_rect" : [ 18.5, 573.0, 265.0, 36.0 ],
 					"style" : "",
 					"text" : "jit.gl.material editor-world @name inlet-material @mat_diffuse 0.2 0.2 0.2"
@@ -3884,6 +3809,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 1055.791626, 327.0, 323.0, 36.0 ],
+					"presentation_linecount" : 2,
 					"presentation_rect" : [ 1055.791626, 327.0, 323.0, 36.0 ],
 					"style" : "",
 					"text" : "jit.phys.ghost vr-phys @name ghost_right @shape sphere @scale 0.05 @collisions 1"
@@ -3955,6 +3881,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 660.0, 327.0, 386.0, 36.0 ],
+					"presentation_linecount" : 2,
 					"presentation_rect" : [ 660.0, 327.0, 386.0, 36.0 ],
 					"style" : "",
 					"text" : "jit.phys.ghost vr-phys @name ghost_left @shape sphere @scale 0.05 @collisions 1"
@@ -4117,6 +4044,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 544.708313, 77.0, 233.0, 38.0 ],
+					"presentation_linecount" : 2,
 					"presentation_rect" : [ 544.708313, 77.0, 233.0, 38.0 ],
 					"style" : "",
 					"text" : "jit.gl.physdraw vr-phys @drawto world @enable 0"
@@ -4193,6 +4121,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 77.0, 275.0, 150.0, 34.0 ],
+									"presentation_linecount" : 2,
 									"presentation_rect" : [ 77.0, 275.0, 150.0, 34.0 ],
 									"style" : "",
 									"text" : "display colour texture on desktop window"
@@ -4207,6 +4136,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 449.0, 93.0, 150.0, 48.0 ],
+									"presentation_linecount" : 3,
 									"presentation_rect" : [ 449.0, 93.0, 150.0, 48.0 ],
 									"style" : "",
 									"text" : "send texture back to [vr] object first, to display on the HMD"
@@ -5108,6 +5038,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
 									"patching_rect" : [ 745.25, 333.0, 431.0, 36.0 ],
+									"presentation_linecount" : 2,
 									"presentation_rect" : [ 745.25, 333.0, 431.0, 36.0 ],
 									"style" : "",
 									"text" : "jit.gl.gridshape @shape capsule @rad_minor 0.2 @position 0 -0.04 0.03 @rotatexyz 30 0 0 @scale 0.015 0.02 0.03 @material controller_mat"
@@ -5137,6 +5068,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
 									"patching_rect" : [ 758.25, 271.0, 360.0, 36.0 ],
+									"presentation_linecount" : 2,
 									"presentation_rect" : [ 758.25, 271.0, 360.0, 36.0 ],
 									"style" : "",
 									"text" : "jit.gl.gridshape @shape torus @rad_minor 0.2 @position 0 -0.04 0. @scale 0.035 0.035 0.05 @axes 1 @material controller_mat"
@@ -5166,6 +5098,7 @@
 									"numoutlets" : 9,
 									"outlettype" : [ "", "", "", "", "", "", "", "", "" ],
 									"patching_rect" : [ 860.75, 219.0, 336.0, 36.0 ],
+									"presentation_linecount" : 2,
 									"presentation_rect" : [ 860.75, 219.0, 336.0, 36.0 ],
 									"style" : "",
 									"text" : "route tracked_position tracked_quat velocity angular_velocity trigger hand_trigger thumbstick buttons"
@@ -5195,6 +5128,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
 									"patching_rect" : [ 126.5, 305.0, 431.0, 36.0 ],
+									"presentation_linecount" : 2,
 									"presentation_rect" : [ 126.5, 305.0, 431.0, 36.0 ],
 									"style" : "",
 									"text" : "jit.gl.gridshape @shape capsule @rad_minor 0.2 @position 0 -0.04 0.03 @rotatexyz 30 0 0 @scale 0.015 0.02 0.03 @material controller_mat"
@@ -5224,6 +5158,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
 									"patching_rect" : [ 183.5, 257.0, 360.0, 36.0 ],
+									"presentation_linecount" : 2,
 									"presentation_rect" : [ 183.5, 257.0, 360.0, 36.0 ],
 									"style" : "",
 									"text" : "jit.gl.gridshape @shape torus @rad_minor 0.2 @position 0 -0.04 0. @scale 0.035 0.035 0.05 @axes 1 @material controller_mat"
@@ -5253,6 +5188,7 @@
 									"numoutlets" : 9,
 									"outlettype" : [ "", "", "", "", "", "", "", "", "" ],
 									"patching_rect" : [ 242.5, 212.0, 336.0, 36.0 ],
+									"presentation_linecount" : 2,
 									"presentation_rect" : [ 242.5, 212.0, 336.0, 36.0 ],
 									"style" : "",
 									"text" : "route tracked_position tracked_quat velocity angular_velocity trigger hand_trigger thumbstick buttons"
@@ -5524,6 +5460,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_gl_texture", "" ],
 					"patching_rect" : [ 176.000015, 361.5, 77.0, 36.0 ],
+					"presentation_linecount" : 2,
 					"presentation_rect" : [ 176.000015, 361.5, 77.0, 36.0 ],
 					"style" : "",
 					"text" : "jit.gl.camera world"
@@ -5539,6 +5476,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_gl_texture", "" ],
 					"patching_rect" : [ 97.250008, 361.5, 77.0, 36.0 ],
+					"presentation_linecount" : 2,
 					"presentation_rect" : [ 97.250008, 361.5, 77.0, 36.0 ],
 					"style" : "",
 					"text" : "jit.gl.camera world"
@@ -6301,7 +6239,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-34", 0 ],
+					"destination" : [ "obj-91", 0 ],
 					"source" : [ "obj-25", 0 ]
 				}
 
@@ -6537,7 +6475,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-50", 0 ],
+					"destination" : [ "obj-79", 0 ],
 					"source" : [ "obj-54", 0 ]
 				}
 
@@ -6582,6 +6520,27 @@
 				"patchline" : 				{
 					"destination" : [ "obj-84", 0 ],
 					"source" : [ "obj-77", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-50", 0 ],
+					"source" : [ "obj-79", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-61", 1 ],
+					"source" : [ "obj-79", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-90", 0 ],
+					"source" : [ "obj-80", 0 ]
 				}
 
 			}
@@ -6651,6 +6610,20 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-80", 0 ],
+					"source" : [ "obj-88", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-50", 1 ],
+					"source" : [ "obj-89", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
 					"order" : 1,
 					"source" : [ "obj-9", 0 ]
@@ -6663,6 +6636,27 @@
 					"midpoints" : [ 467.5, 244.0, 669.5, 244.0 ],
 					"order" : 0,
 					"source" : [ "obj-9", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-89", 0 ],
+					"source" : [ "obj-90", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-34", 0 ],
+					"source" : [ "obj-91", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-94", 0 ],
+					"source" : [ "obj-91", 0 ]
 				}
 
 			}
@@ -6686,13 +6680,6 @@
 				"bootpath" : "~/vr-in-vr",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "vr-box.maxpat",
-				"bootpath" : "~/vr-in-vr",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
