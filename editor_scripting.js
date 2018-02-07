@@ -107,6 +107,7 @@ function objects_create_shape_body(x, y, z){
 	
 	var body;
 	
+	/*
 	// find the embedded body, rename it, and hook it up:
 	var box_patcher = box.subpatcher();
 	box_patcher.apply(function(e) {
@@ -117,7 +118,7 @@ function objects_create_shape_body(x, y, z){
 			body = e;
 		}
 	});
-	
+	*/
 	
 	//dump the created objects name from the first outlet of editor_scripting.js
 	outlet(0, box_name, x, y, z);

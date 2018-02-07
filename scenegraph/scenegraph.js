@@ -64,6 +64,19 @@ function scene_patcher_add_object(name, args) {
 	new_box.varname = name;
 	// TODO store in lookup table if needed
 	
+	// TODO: only do this if the object is a vr-box:
+	
+	// find the embedded body, rename it, and hook it up:
+	var box_patcher = new_box.subpatcher();
+	box_patcher.apply(function(e) {
+		if (e.maxclass == "jit.phys.body") {
+			e.varname = name;// + "_body";
+			//objects_add(e.varname, e);
+			//scene_bodies[e.varname] = box_name;
+			body = e;
+		}
+	});
+	
 	return new_box;
 }
 
@@ -102,6 +115,18 @@ function json(data) {
 	scene_patcher_from_data(data);
 }
 
+function fromserver(str) {
+	var obj = JSON.parse(str);
+	post("fromserver", obj.msg, obj.args);
+	if (obj.msg == "json") {
+		// clear it up:
+		scene_patcher_clean();
+		
+		// now fill it:
+		scene_patcher_from_data(obj.args);
+	}
+}
+
 function bang() {
 
 	// find the [p scene] & get the subpatcher
@@ -117,5 +142,16 @@ function bang() {
 	dictionary("scene_data");
 	 
 	post("ok");
+}
+
+function addobject(name, x, y, z) {
+	
+	var packet = {
+		msg: "addobject",
+		name: name,
+		position: [x, y, z]
+	};
+	
+	outlet(0, JSON.stringify(packet));
 }
 
