@@ -2,6 +2,7 @@
 
 const path = require('path');
 const fs = require('fs-extra'); 
+var util = require('util')
 
 var exec = require('child-process-promise').exec;
 //var exec = require('child_process').exec;
@@ -9,9 +10,14 @@ var exec = require('child-process-promise').exec;
 const stringifyObject = require('stringify-object');
 
 
+//for prompt asking if user wants to load a maxpat whose name matches a directory already 
+//in the git-in-vr repo
+var Prompt = require('prompt-improved');
+
+
+
 var str;
 
-var util = require('util')
 var child;
 var child2;
 var child3;
@@ -50,6 +56,7 @@ ws.on('open', function open() {
 
 ws.on('message', function incoming(data) {
 console.log("-------------");
+var commit_msg = ("atomic commit " + utc);
 
 
 //send a message "load maxpat <path-to-maxpat>" and this will parse it to json. eventually will get this to parse out what
@@ -183,79 +190,75 @@ if (data.includes("load maxpat")) {
 */
 
 
-
+//check to see if a folder matching this .maxpat's name already exists in the git-in-vr states directory
 
 fs.pathExists(newdir, (err, exists) => {
 
+	//if it does, then ignore this .maxpat, and inform the user. Future: maybe have a prompt here that lets them decide
+	//to overide this? 
 	if (exists == true) {
-		console.log("WARNING: maxpat already exists in git-in-vr directory");
-
+		console.log("\n\nWARNING: maxpat already exists in git-in-vr directory, not instantiating. \nTry another .maxpat, or rename the maxpat, or (last resort) remove the folder named: \n\n" + newdir)
+	
 		//warn editor_scripting_node that this maxpat already has been used...
 		ws.send("error: selected max patch filename already in use by vr-editor");
 
-	}
-	if (exists == false) {
-		fs.ensureDir(newdir)
-		fs.ensureDir(newdir + "/keyframes")
-
-			console.log("NOTE: directory for " + name + " created at " + newdir)
-
-			.then(() => {
-				fs.writeFileSync(newdir + "/state.json", state_json);
-				fs.writeFileSync(newdir + "/keyframes/" + utc + "_key_" + "state.json", state_json);
-
-
-
-				})
-
-
-
-	}
-//	console.log(err)
-//	console.log(exists)
-})
+		}
 
 
 
 
+		//if it doesn't exist yet, make a folder for it in ~/states, populate that with the JSON state data, and do a keyframe commit. 
 
-	/*				
-					.catch(err => {
-				  	console.error(err)
+		else if (exists == false) {
 				
-		}) */
+		fs.ensureDirSync(newdir)
+		fs.ensureDirSync(newdir + "/keyframes")
+		fs.writeFileSync(newdir + "/state.json", state_json);
+		fs.writeFileSync(newdir + "/keyframes/" + utc + "_key_" + "state.json", state_json);
+		console.log("NOTE: directory for " + name + " created at " + newdir)
 
-//git: add the newly saved state.json and keyframe
-exec('git add .', {cwd: dirname})
-    
-	//after we add the new files, commit them
-    .then(function (result) {
-        child3 = exec("git commit -m \"" + commit_msg + "\"", {cwd: dirname});
+		//git: add the newly saved state.json and keyframe
+		exec('git add .', {cwd: dirname})
+		    
+			//after we add the new files, commit them
+		    .then(function (result) {
+		        child3 = exec("git commit -m \"" + commit_msg + "\"", {cwd: dirname});
 
-    })
-        
-        .then(function (result) {
-        child = exec("git log --pretty=format:'%h' -n 1", {cwd: dirname}, (error, stdout, stderr) => {
-        	console.log("\nCommit hash: " + stdout + "\n");
+		    })
+			        
+		        .then(function (result) {
+		        child = exec("git log --pretty=format:'%h' -n 1", {cwd: dirname}, (error, stdout, stderr) => {
+		        	console.log("\nCommit hash: " + stdout + "\n");
 
 
-        	//prep the new state to include the commit hash
-        	var commit = JSON.parse(state_json);
-        	commit.commit_hash = (stdout);
-        	new_state2 = JSON.stringify(commit);
-        	
-        	//send the state over to max where it populates the [p scene] subpatcher 
-			//with the vr-box (and eventually vr-line)
-			ws.send(new_state2);
-	        })
-         })
-        	.then(function (result) {
-        		child4 = exec("git status", {cwd: dirname}, (error, stdout, stderr) => {
-        			//console.log(stdout + "\n--------------------------------------------");
-        		child5 = exec("git log --pretty=oneline > " + newdir + "/history.txt", {cwd: dirname}); 
+		        	//prep the new state to include the commit hash
+		        	var commit = JSON.parse(state_json);
+		        	commit.commit_hash = (stdout);
+		        	new_state2 = JSON.stringify(commit);
+		        	
+		        	//send the state over to max where it populates the [p scene] subpatcher 
+					//with the vr-box (and eventually vr-line)
+					ws.send(new_state2);
+			        })
+			    })
+	        	
+	        	.then(function (result) {
+	        		child4 = exec("git status", {cwd: dirname}, (error, stdout, stderr) => {
+	        			
+	        			var git_status = (stdout.slice(60, 64));
+	        			//var gitstatus = (git_status.substring(0, git_status.lastIndexOf("_")));
 
-        	})   
-    });
+
+	        			console.log(git_status + " atomic commits collected this session.");
+	        			child5 = exec("git log --pretty=oneline > " + newdir + "/history.txt", {cwd: dirname}); 
+
+			        	})   
+			    });
+
+			}
+				});
+
+
 
 
 
@@ -318,7 +321,7 @@ fs.ensureDir(dir)
 })
 
 ////////////////////////////
-var commit_msg = ("atomic commit " + utc);
+
 
 
 //git: add the newly saved state.json and keyframe (if there is one)
@@ -349,6 +352,12 @@ exec('git add .', {cwd: dirname})
         		child4 = exec("git status", {cwd: dirname}, (error, stdout, stderr) => {
         			console.log(stdout + "\n--------------------------------------------");
         		child5 = exec("git log --pretty=oneline > " + dir + "/history.txt", {cwd: dirname}); 
+
+        		var git_status = (stdout.slice(60, 64));
+	        	//var gitstatus = (git_status.substring(0, git_status.lastIndexOf("_")));
+
+
+	       		console.log(git_status + " atomic commits collected this session.");
 
         	})   
     });
