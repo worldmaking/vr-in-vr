@@ -2,14 +2,14 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 7,
-			"minor" : 3,
-			"revision" : 4,
+			"major" : 8,
+			"minor" : 0,
+			"revision" : 0,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 2236.0, 82.0, 992.0, 895.0 ],
+		"rect" : [ 614.0, 79.0, 992.0, 895.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -43,14 +43,15 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 731.0, 167.0, 75.0, 22.0 ],
+					"patching_rect" : [ 720.0, 214.0, 73.0, 22.0 ],
+					"presentation_rect" : [ 720.0, 214.0, 73.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0
 					}
 ,
 					"style" : "",
-					"text" : "dict #4"
+					"text" : "dict #8"
 				}
 
 			}
@@ -61,6 +62,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 509.0, 312.0, 63.0, 22.0 ],
+					"presentation_rect" : [ 509.0, 312.0, 63.0, 22.0 ],
 					"style" : "",
 					"text" : "print body"
 				}
@@ -74,6 +76,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
 					"patching_rect" : [ 603.0, 612.0, 362.0, 22.0 ],
+					"presentation_rect" : [ 603.0, 612.0, 362.0, 22.0 ],
 					"style" : "",
 					"text" : "jit.gl.gridshape editor-world @shape cube @material inlet-material"
 				}
@@ -87,6 +90,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 566.0, 579.0, 335.0, 22.0 ],
+					"presentation_rect" : [ 566.0, 579.0, 335.0, 22.0 ],
 					"style" : "",
 					"text" : "jit.anim.node editor-world @position 4 1 0 @scale 0.4 0.2 0.4"
 				}
@@ -100,6 +104,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 149.0, 214.0, 88.0, 22.0 ],
+					"presentation_rect" : [ 149.0, 214.0, 88.0, 22.0 ],
 					"style" : "",
 					"text" : "prepend name"
 				}
@@ -113,6 +118,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 149.0, 184.0, 96.0, 22.0 ],
+					"presentation_rect" : [ 149.0, 184.0, 96.0, 22.0 ],
 					"style" : "",
 					"text" : "sprintf %s_body"
 				}
@@ -126,6 +132,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 149.0, 154.0, 71.0, 22.0 ],
+					"presentation_rect" : [ 149.0, 154.0, 71.0, 22.0 ],
 					"style" : "",
 					"text" : "route name"
 				}
@@ -139,6 +146,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 545.5, 89.0, 115.0, 22.0 ],
+					"presentation_rect" : [ 545.5, 89.0, 115.0, 22.0 ],
 					"style" : "",
 					"text" : "substitute name set"
 				}
@@ -152,6 +160,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 545.5, 123.0, 49.0, 22.0 ],
+					"presentation_rect" : [ 545.5, 123.0, 49.0, 22.0 ],
 					"style" : "",
 					"text" : "receive"
 				}
@@ -165,6 +174,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 228.0, 42.0, 24.0, 24.0 ],
+					"presentation_rect" : [ 228.0, 42.0, 24.0, 24.0 ],
 					"style" : ""
 				}
 
@@ -177,6 +187,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 20.0, 276.0, 508.0, 22.0 ],
+					"presentation_rect" : [ 20.0, 276.0, 508.0, 22.0 ],
 					"style" : "",
 					"text" : "jit.phys.body vr-phys @shape cube @scale 1 0.2 0.2 @kinematic 1 @mass 0 @send_scale 0",
 					"varname" : "vrbox_0_body"
@@ -190,6 +201,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 545.5, 154.0, 85.0, 22.0 ],
+					"presentation_rect" : [ 545.5, 154.0, 85.0, 22.0 ],
 					"style" : "",
 					"text" : "print to-vr-box"
 				}
@@ -203,6 +215,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 577.0, 390.0, 55.0, 22.0 ],
+					"presentation_rect" : [ 577.0, 390.0, 55.0, 22.0 ],
 					"style" : "",
 					"text" : "r update"
 				}
@@ -217,6 +230,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 510.5, 797.0, 30.0, 30.0 ],
+					"presentation_rect" : [ 510.5, 797.0, 30.0, 30.0 ],
 					"style" : ""
 				}
 
@@ -230,6 +244,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 419.0, 805.0, 30.0, 30.0 ],
+					"presentation_rect" : [ 419.0, 805.0, 30.0, 30.0 ],
 					"style" : ""
 				}
 
@@ -242,6 +257,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 483.0, 716.0, 105.0, 22.0 ],
+					"presentation_rect" : [ 483.0, 716.0, 105.0, 22.0 ],
 					"style" : "",
 					"text" : "route localtoworld"
 				}
@@ -255,6 +271,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 577.0, 428.0, 114.0, 22.0 ],
+					"presentation_rect" : [ 577.0, 428.0, 114.0, 22.0 ],
 					"style" : "",
 					"text" : "localtoworld 0. 0. 0."
 				}
@@ -268,6 +285,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 416.0, 762.0, 105.0, 22.0 ],
+					"presentation_rect" : [ 416.0, 762.0, 105.0, 22.0 ],
 					"style" : "",
 					"text" : "route localtoworld"
 				}
@@ -281,6 +299,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "", "", "", "", "" ],
 					"patching_rect" : [ 20.0, 114.0, 191.0, 22.0 ],
+					"presentation_rect" : [ 20.0, 114.0, 191.0, 22.0 ],
 					"style" : "",
 					"text" : "routepass position quat text name"
 				}
@@ -294,6 +313,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
 					"patching_rect" : [ 144.0, 683.0, 362.0, 22.0 ],
+					"presentation_rect" : [ 144.0, 683.0, 362.0, 22.0 ],
 					"style" : "",
 					"text" : "jit.gl.gridshape editor-world @shape cube @material inlet-material"
 				}
@@ -307,6 +327,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 109.0, 650.0, 339.0, 22.0 ],
+					"presentation_rect" : [ 109.0, 650.0, 339.0, 22.0 ],
 					"style" : "",
 					"text" : "jit.anim.node editor-world @position 0 -1 0 @scale 0.4 0.2 0.4"
 				}
@@ -320,6 +341,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
 					"patching_rect" : [ 144.0, 612.0, 362.0, 22.0 ],
+					"presentation_rect" : [ 144.0, 612.0, 362.0, 22.0 ],
 					"style" : "",
 					"text" : "jit.gl.gridshape editor-world @shape cube @material inlet-material"
 				}
@@ -333,6 +355,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 109.0, 579.0, 335.0, 22.0 ],
+					"presentation_rect" : [ 109.0, 579.0, 335.0, 22.0 ],
 					"style" : "",
 					"text" : "jit.anim.node editor-world @position 0 1 0 @scale 0.4 0.2 0.4"
 				}
@@ -346,6 +369,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
 					"patching_rect" : [ 144.0, 540.0, 359.0, 22.0 ],
+					"presentation_rect" : [ 144.0, 540.0, 359.0, 22.0 ],
 					"style" : "",
 					"text" : "jit.gl.gridshape editor-world @shape cube @material box-material"
 				}
@@ -359,6 +383,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 109.0, 507.0, 322.0, 22.0 ],
+					"presentation_rect" : [ 109.0, 507.0, 322.0, 22.0 ],
 					"style" : "",
 					"text" : "jit.anim.node editor-world @position 4 0 0 @scale 5 1 0.25"
 				}
@@ -372,6 +397,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 109.0, 432.0, 269.0, 22.0 ],
+					"presentation_rect" : [ 109.0, 432.0, 269.0, 22.0 ],
 					"style" : "",
 					"text" : "jit.anim.node editor-world @position -0.3 -0.3 0.3"
 				}
@@ -385,6 +411,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
 					"patching_rect" : [ 144.0, 463.0, 320.0, 22.0 ],
+					"presentation_rect" : [ 144.0, 463.0, 320.0, 22.0 ],
 					"style" : "",
 					"text" : "jit.gl.text editor-world @mode 3d @color 0 0 0 1 @layer -1"
 				}
@@ -398,6 +425,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 20.0, 319.0, 208.0, 22.0 ],
+					"presentation_rect" : [ 20.0, 319.0, 208.0, 22.0 ],
 					"style" : "",
 					"text" : "jit.anim.node editor-world @scale 0.1"
 				}
@@ -411,6 +439,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 228.0, 73.0, 74.0, 22.0 ],
+					"presentation_rect" : [ 228.0, 73.0, 74.0, 22.0 ],
 					"style" : "",
 					"text" : "patcherargs"
 				}
