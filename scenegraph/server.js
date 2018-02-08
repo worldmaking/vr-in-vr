@@ -82,6 +82,8 @@ wsServer.on('request', function(request) {
 	connection.on('close', function(connection) {
 		// close user connection
 		console.log("closed");
+
+		// tell git-in-vr to push the atomic commits?
 	});
 });
 

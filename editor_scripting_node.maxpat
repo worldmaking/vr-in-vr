@@ -5,11 +5,11 @@
 			"major" : 8,
 			"minor" : 0,
 			"revision" : 0,
-			"architecture" : "x64",
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 37.0, 86.0, 1692.0, 930.0 ],
+		"rect" : [ 2508.0, 79.0, 818.0, 933.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,31 +38,13 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-83",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 4,
-					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 199.0, 743.0, 73.0, 22.0 ],
-					"presentation_rect" : [ 199.0, 743.0, 73.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"embed" : 0,
-						"parameter_enable" : 0
-					}
-,
-					"style" : "",
-					"text" : "dict vr_box1"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-74",
 					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 296.0, 20.0, 150.0, 33.0 ],
+					"presentation_linecount" : 2,
 					"presentation_rect" : [ 296.0, 20.0, 150.0, 33.0 ],
 					"style" : "",
 					"text" : "turn off vr for testing (michael)"
@@ -104,8 +86,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 340.0, 211.5, 133.0, 22.0 ],
-					"presentation_rect" : [ 340.0, 211.5, 133.0, 22.0 ],
+					"patching_rect" : [ 384.0, 181.5, 133.0, 22.0 ],
+					"presentation_rect" : [ 384.0, 181.5, 133.0, 22.0 ],
 					"style" : "",
 					"text" : "qmetro @interval 90 hz"
 				}
@@ -160,7 +142,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1531.791626, 820.0, 269.0, 22.0 ],
-					"presentation_linecount" : 2,
 					"presentation_rect" : [ 1531.791626, 820.0, 269.0, 22.0 ],
 					"style" : "",
 					"text" : "/Users/mp/vr-in-vr/maxpat-parse/patch_2.maxpat"
@@ -318,7 +299,7 @@
 							"major" : 8,
 							"minor" : 0,
 							"revision" : 0,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -546,7 +527,7 @@
 							"major" : 8,
 							"minor" : 0,
 							"revision" : 0,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -577,7 +558,6 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-101",
@@ -639,7 +619,7 @@
 											"major" : 8,
 											"minor" : 0,
 											"revision" : 0,
-											"architecture" : "x64",
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -773,11 +753,11 @@
 							"major" : 8,
 							"minor" : 0,
 							"revision" : 0,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 76.0, 291.0, 604.0, 595.0 ],
+						"rect" : [ 76.0, 291.0, 905.0, 633.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -858,7 +838,7 @@
 											"major" : 8,
 											"minor" : 0,
 											"revision" : 0,
-											"architecture" : "x64",
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -889,7 +869,6 @@
 										"tags" : "",
 										"style" : "",
 										"subpatcher_template" : "",
-										"visible" : 1,
 										"boxes" : [ 											{
 												"box" : 												{
 													"id" : "obj-74",
@@ -929,7 +908,7 @@
 															"major" : 8,
 															"minor" : 0,
 															"revision" : 0,
-															"architecture" : "x64",
+															"architecture" : "x86",
 															"modernui" : 1
 														}
 ,
@@ -1162,7 +1141,7 @@
 , 															{
 																"patchline" : 																{
 																	"destination" : [ "obj-1", 0 ],
-																	"midpoints" : [ 308.166672, 249.0, 488.5, 249.0 ],
+																	"midpoints" : [ 308.166687, 249.0, 488.5, 249.0 ],
 																	"source" : [ "obj-9", 8 ]
 																}
 
@@ -1170,7 +1149,7 @@
 , 															{
 																"patchline" : 																{
 																	"destination" : [ "obj-7", 2 ],
-																	"midpoints" : [ 281.833338, 279.0, 345.5, 279.0 ],
+																	"midpoints" : [ 281.833344, 279.0, 345.5, 279.0 ],
 																	"source" : [ "obj-9", 7 ]
 																}
 
@@ -1178,7 +1157,7 @@
 , 															{
 																"patchline" : 																{
 																	"destination" : [ "obj-7", 1 ],
-																	"midpoints" : [ 150.166668, 237.0, 42.0, 237.0, 42.0, 285.0, 202.5, 285.0 ],
+																	"midpoints" : [ 150.166672, 237.0, 42.0, 237.0, 42.0, 285.0, 202.5, 285.0 ],
 																	"source" : [ "obj-9", 2 ]
 																}
 
@@ -1186,7 +1165,7 @@
 , 															{
 																"patchline" : 																{
 																	"destination" : [ "obj-8", 5 ],
-																	"midpoints" : [ 255.500004, 230.0, 283.071429, 230.0 ],
+																	"midpoints" : [ 255.5, 230.0, 283.071442, 230.0 ],
 																	"source" : [ "obj-9", 6 ]
 																}
 
@@ -1194,7 +1173,7 @@
 , 															{
 																"patchline" : 																{
 																	"destination" : [ "obj-8", 4 ],
-																	"midpoints" : [ 229.16667, 237.0, 238.357143, 237.0 ],
+																	"midpoints" : [ 229.166672, 237.0, 238.357147, 237.0 ],
 																	"source" : [ "obj-9", 5 ]
 																}
 
@@ -1202,7 +1181,7 @@
 , 															{
 																"patchline" : 																{
 																	"destination" : [ "obj-8", 3 ],
-																	"midpoints" : [ 202.833336, 237.0, 193.642857, 237.0 ],
+																	"midpoints" : [ 202.833344, 237.0, 193.642853, 237.0 ],
 																	"source" : [ "obj-9", 4 ]
 																}
 
@@ -1210,7 +1189,7 @@
 , 															{
 																"patchline" : 																{
 																	"destination" : [ "obj-8", 2 ],
-																	"midpoints" : [ 176.500002, 237.0, 148.928571, 237.0 ],
+																	"midpoints" : [ 176.5, 237.0, 148.928574, 237.0 ],
 																	"source" : [ "obj-9", 3 ]
 																}
 
@@ -1263,7 +1242,7 @@
 															"major" : 8,
 															"minor" : 0,
 															"revision" : 0,
-															"architecture" : "x64",
+															"architecture" : "x86",
 															"modernui" : 1
 														}
 ,
@@ -1417,11 +1396,11 @@
 															"major" : 8,
 															"minor" : 0,
 															"revision" : 0,
-															"architecture" : "x64",
+															"architecture" : "x86",
 															"modernui" : 1
 														}
 ,
-														"rect" : [ 2871.0, 238.0, 640.0, 480.0 ],
+														"rect" : [ 1006.0, 238.0, 640.0, 480.0 ],
 														"bglocked" : 0,
 														"openinpresentation" : 0,
 														"default_fontsize" : 12.0,
@@ -1664,7 +1643,7 @@
 															"major" : 8,
 															"minor" : 0,
 															"revision" : 0,
-															"architecture" : "x64",
+															"architecture" : "x86",
 															"modernui" : 1
 														}
 ,
@@ -1951,7 +1930,7 @@
 															"major" : 8,
 															"minor" : 0,
 															"revision" : 0,
-															"architecture" : "x64",
+															"architecture" : "x86",
 															"modernui" : 1
 														}
 ,
@@ -2013,14 +1992,16 @@
 , 															{
 																"box" : 																{
 																	"id" : "obj-14",
+																	"linecount" : 2,
 																	"maxclass" : "message",
 																	"numinlets" : 2,
 																	"numoutlets" : 1,
 																	"outlettype" : [ "" ],
-																	"patching_rect" : [ 61.0, 169.5, 419.0, 22.0 ],
-																	"presentation_rect" : [ 61.0, 169.5, 419.0, 22.0 ],
+																	"patching_rect" : [ 61.0, 169.5, 419.0, 35.0 ],
+																	"presentation_linecount" : 2,
+																	"presentation_rect" : [ 61.0, 169.5, 419.0, 35.0 ],
 																	"style" : "",
-																	"text" : "vrbox_0 vrbox_1 vrbox_2 vrbox_3 vrbox_4 vrbox_5 vrbox_6"
+																	"text" : "vrbox_0 vrbox_1 vrbox_2 vrbox_3 vrbox_4 vrbox_5 vrbox_6 vrbox_7 vrbox_8 vrbox_9 vrbox_10"
 																}
 
 															}
@@ -2423,7 +2404,7 @@
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-13",
+									"id" : "obj-22",
 									"maxclass" : "newobj",
 									"numinlets" : 0,
 									"numoutlets" : 2,
@@ -2438,7 +2419,7 @@
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-14",
+									"id" : "obj-23",
 									"maxclass" : "newobj",
 									"numinlets" : 0,
 									"numoutlets" : 2,
@@ -2453,7 +2434,7 @@
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-15",
+									"id" : "obj-24",
 									"maxclass" : "newobj",
 									"numinlets" : 0,
 									"numoutlets" : 2,
@@ -2468,7 +2449,7 @@
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-16",
+									"id" : "obj-25",
 									"maxclass" : "newobj",
 									"numinlets" : 0,
 									"numoutlets" : 2,
@@ -2483,7 +2464,7 @@
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-17",
+									"id" : "obj-26",
 									"maxclass" : "newobj",
 									"numinlets" : 0,
 									"numoutlets" : 2,
@@ -2498,7 +2479,7 @@
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-18",
+									"id" : "obj-27",
 									"maxclass" : "newobj",
 									"numinlets" : 0,
 									"numoutlets" : 2,
@@ -2508,6 +2489,66 @@
 									"style" : "",
 									"text" : "vr-box @text vrbox_6 @position 0.1033 0.9597 0.3992 @varname vrbox_6",
 									"varname" : "vrbox_6"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-28",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 20.0, 325.0, 408.0, 22.0 ],
+									"presentation_rect" : [ 20.0, 325.0, 408.0, 22.0 ],
+									"style" : "",
+									"text" : "vr-box @text vrbox_7 @position 0.8067 0.2606 0.7495 @varname vrbox_7",
+									"varname" : "vrbox_7"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-29",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 51.0, 363.0, 402.0, 22.0 ],
+									"presentation_rect" : [ 51.0, 363.0, 402.0, 22.0 ],
+									"style" : "",
+									"text" : "vr-box @text vrbox_8 @position 0.0557 0.371 0.3423 @varname vrbox_8",
+									"varname" : "vrbox_8"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-30",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 37.0, 401.0, 402.0, 22.0 ],
+									"presentation_rect" : [ 37.0, 401.0, 402.0, 22.0 ],
+									"style" : "",
+									"text" : "vr-box @text vrbox_9 @position 0.4783 0.144 0.4351 @varname vrbox_9",
+									"varname" : "vrbox_9"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-31",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 37.0, 441.0, 402.0, 22.0 ],
+									"presentation_rect" : [ 37.0, 441.0, 402.0, 22.0 ],
+									"style" : "",
+									"text" : "vr-box @text vrbox_10 @position 0.8383 0.2835 0.3 @varname vrbox_10",
+									"varname" : "vrbox_10"
 								}
 
 							}
@@ -2565,7 +2606,7 @@
 							"major" : 8,
 							"minor" : 0,
 							"revision" : 0,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -2842,7 +2883,7 @@
 							"major" : 8,
 							"minor" : 0,
 							"revision" : 0,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -3412,7 +3453,7 @@
 							"major" : 8,
 							"minor" : 0,
 							"revision" : 0,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -3455,7 +3496,7 @@
 									"presentation_linecount" : 2,
 									"presentation_rect" : [ 206.0, 309.0, 289.0, 35.0 ],
 									"style" : "",
-									"text" : "20 150 vr-box @text vrbox_6 @name vrbox_6 @position 0.1033 0.9597 0.3992"
+									"text" : "20 10 vr-box @text vrbox_1 @name vrbox_1 @position 0.887448 0.237855 0.87976"
 								}
 
 							}
@@ -3655,7 +3696,7 @@
 							"major" : 8,
 							"minor" : 0,
 							"revision" : 0,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -4273,7 +4314,7 @@
 							"major" : 8,
 							"minor" : 0,
 							"revision" : 0,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -4443,7 +4484,7 @@
 							"major" : 8,
 							"minor" : 0,
 							"revision" : 0,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -4691,7 +4732,7 @@
 							"major" : 8,
 							"minor" : 0,
 							"revision" : 0,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -4914,7 +4955,7 @@
 							"major" : 8,
 							"minor" : 0,
 							"revision" : 0,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -5775,7 +5816,7 @@
 							"major" : 8,
 							"minor" : 0,
 							"revision" : 0,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -5879,7 +5920,7 @@
 							"major" : 8,
 							"minor" : 0,
 							"revision" : 0,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -5965,7 +6006,7 @@
 											"major" : 8,
 											"minor" : 0,
 											"revision" : 0,
-											"architecture" : "x64",
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
