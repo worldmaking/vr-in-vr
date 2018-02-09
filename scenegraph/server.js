@@ -10,14 +10,14 @@ wsServer = new WebSocketServer({
 	httpServer: server
 });
 
-var testdata = {
+var patcher_state = {
 	"objects" : 	{
 		"sausage" : 		{
-			"args" : [ "vr-box", "@text", "sausage", "@position", 0.0, 1.3, 0.0, "@name", "sausage" ]
+			"args" : [ "vr-box", "@text", "sausage", "@position", 0.0, 1.7, 0.0, "@name", "sausage" ]
 		}
 ,
 		"haggis" : 		{
-			"args" : [ "vr-box", "@text", "haggis", "@position", 0.0, 1.0, 0.0, "@name", "haggis" ]
+			"args" : [ "vr-box", "@text", "haggis", "@position", 0.0, 1.3, 0.0, "@name", "haggis" ]
 		}
 
 	}
@@ -40,6 +40,10 @@ function uid(prefix) {
 	return prefix + "_" + unique_id++;
 }
 
+function send_patcher(connection) {
+	connection.sendUTF(JSON.stringify({msg:"json", args:patcher_state}));
+}
+
 wsServer.on('request', function(request) {
 	var connection = request.accept(null, request.origin);
 	console.log("received connection");
@@ -56,7 +60,7 @@ wsServer.on('request', function(request) {
 					console.log("addobject");
 					
 					var name = packet.name;
-					testdata.objects[name] = {
+					patcher_state.objects[name] = {
 						args: [
 							"vr-box", 
 							"@text", name,
@@ -64,11 +68,11 @@ wsServer.on('request', function(request) {
 							"@name", name
 						]
 					}
-					connection.sendUTF(JSON.stringify({msg:"json", args:testdata}));
+					send_patcher(connection);
 				}
 				
 			} else if (text == "loadpatcher") {
-				connection.sendUTF(JSON.stringify({msg:"json", args:testdata}));
+				send_patcher(connection);
 			}
 			
 			
@@ -85,6 +89,10 @@ wsServer.on('request', function(request) {
 
 		// tell git-in-vr to push the atomic commits?
 	});
+	
+	// reply with current patcher:
+	send_patcher(connection);
+	
 });
 
 console.log("ok");
