@@ -21,6 +21,8 @@ var scene_patcher;
 var scene_patcher_nextobject_y = 10;
 
 function scene_box_find() {
+	if (scene_box) return;
+	
 	scene_box = this.patcher.getnamed("scene");
 	if (scene_box && scene_box.subpatcher()) {
 		scene_patcher = scene_box.subpatcher();
@@ -106,6 +108,9 @@ function dictionary(name) {
 
 // if we receive JSON, parse it and create the patcher:
 function json(data) {
+
+	
+
 	var data = JSON.parse(data);
 	
 	// clear it up:
@@ -155,3 +160,4 @@ function addobject(name, x, y, z) {
 	outlet(0, JSON.stringify(packet));
 }
 
+scene_box_find();
