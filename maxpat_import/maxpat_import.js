@@ -1,42 +1,92 @@
+
+
 var path = require('path');
 var exec = require('child-process-promise').exec;
 
- 
+const fs = require('fs-extra'); 
+var util = require('util')
 
-//wtf i can't figure this out!!!!
+var dir = __dirname
+
+//var maxpat_path = "/Users/mp/vr-in-vr/maxpat-parse/patch_1.maxpat"
+/*
+exports.get_json = */
+
+//function test(maxpat_path, UTC) {
 
 
-function maxpat_json() { 
+module.exports = {
 
-	module.exports = exec('jsonlint --sort-keys ' + "/Users/mp/vr-in-vr/maxpat-parse/patch_1.maxpat", (error, stdout, stderr) => {
+	get_json: function(){
+		
+		exec('jsonlint --sort-keys ' + this.maxpat_path, (error, stdout, stderr) => {
+console.log(stdout);
+	});
+
+}}
+
+
+/*
+exports.make_git_dir = function(maxpat_path) {
+
+	var slice_dir = (dir.substring(0,dir.lastIndexOf("/maxpat_import")));
+	var dirname = slice_dir.replace("vr-in-vr", "git-in-vr");
+
+
+    var filename = path.basename(maxpat_path);
+	//var name = (filename.substring(filename.lastIndexOf(".") + 1));
+	var name = (filename.substring(filename.lastIndexOf("/")));
+	var name2 = (filename.substring(0, filename.lastIndexOf(".")));
+
+
+	const newdir = (dirname + '/states/' + name2);
+
+
+
+}
+
+
+/*
+exports.import = function(maxpat_path) {
+
+var slice_dir = (dir.substring(0,dir.lastIndexOf("/maxpat_import")));
+var dirname = slice_dir.replace("vr-in-vr", "git-in-vr");
+
+//console.log(maxpat_path + "   " + git_in_vr_path);
+
+    var filename = path.basename(maxpat_path);
+	//var name = (filename.substring(filename.lastIndexOf(".") + 1));
+	var name = (filename.substring(filename.lastIndexOf("/")));
+	var name2 = (filename.substring(0, filename.lastIndexOf(".")));
+
+
+	const newdir = (dirname + '/states/' + name2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+exec('jsonlint --sort-keys ' + "/Users/mp/vr-in-vr/maxpat-parse/patch_1.maxpat", (error, stdout, stderr) => {
 		var test = JSON.stringify(stdout);
 })
-}
+
+};
 
 //			return {stdout};
 //})
 
 /*
-
-function (maxpat_path) {
-
-const { PI } = Math;
-
-exports.area = (r) => PI * r ** 2;
-
-//exports.circumference = (r) => 2 * PI * r;
-
-
-var circumference;
-
-//this file should either remain in the /maxpat_import folder, or slice_dir may need to be adjusted
-
-var maxpat_import;
-
-var path = require('path');
-var exec = require('child-process-promise').exec;
-
-var exports = module.exports = {};
 
 var maxpat_path = "/Users/mp/vr-in-vr/maxpat-parse/patch_1.maxpat";
 

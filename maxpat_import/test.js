@@ -1,27 +1,14 @@
-
-
-const maxpat_import = require('./maxpat_import.js').maxpat_import;
-
-maxpat_import();
-
-var method = maxpat_import.maxpat_json;
-
-console.log(method);	
-
-//console.log(maxpat_import.publicMethod());
-
-
-/*
-
-var maxpat_import = require('./maxpat_import.js').maxpat_import;
+var Maxpat_Import = require('./maxpat_import.js');
 
 
 
+//create a git-in-vr directory and populate it with a state.json
+//Maxpat_Import.make_git_dir("/Users/mp/vr-in-vr/maxpat-parse/patch_1.maxpat");
 
-//console.log(maxpat_import.state_json());
-var require = function(path) {
-return module.exports;
-}
+//input the path to the max patch we want to import into vr-editor
+Maxpat_Import.maxpat_path = "/Users/mp/vr-in-vr/maxpat-parse/patch_1.maxpat" 
+Maxpat_Import.get_json();
 
 
-*/
+//console.log("test " + Maxpat_Import.get_json.done)
+//console.log(Maxpat_Import);
