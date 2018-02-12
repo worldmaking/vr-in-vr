@@ -12,15 +12,17 @@ Install [Node.js](https://nodejs.org/)
 
 The node script can install all dependencies by running
 
-```npm install```
+```cd server && npm install```
 
 From a node.js console (Windows) or regular console (OSX) in this folder. 
 
-## Starting up
+## Starting up the server
 
-Open a node.js console in this folder (On OSX, just cd to to the folder in a regular console) and type
+Open a node.js console in the ```server``` folder (On OSX, just cd to to the folder in a regular console) and type
 
 ```npm start```
+
+## Starting up the client:
 
 If you have an HMD, launch the vr-scenegraph.maxpat, otherwise, launch the desktop-scenegraph.maxpat
 
