@@ -21,6 +21,7 @@
     "condense-whitespace": "^1.0.0",
     "crystalgazer": "^0.9.0",
     "fs-extra": "^5.0.0",
+    "gulp-umd": "^0.2.1",
     "inquirer": "^5.1.0",
     "jsonminify": "^0.4.1",
     "mjson": "^0.4.2",
