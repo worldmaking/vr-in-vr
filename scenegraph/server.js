@@ -85,4 +85,18 @@ wsServer.on('request', function(request) {
 	});
 });
 
-console.log("ok");
+process.on("message", function(m) {
+	if (m === "close") {
+		if (server) {
+	console.log("received", m);
+			server.close();
+			throw new Error("bye");
+		}
+	}
+});
+
+process.on("exit", function(m) {
+	console.log("server closing");
+});
+
+console.log("server running");
