@@ -119,7 +119,6 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-1",
@@ -680,36 +679,45 @@
 						"subpatcher_template" : "",
 						"boxes" : [ 							{
 								"box" : 								{
-									"id" : "obj-819",
-									"linecount" : 5,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 20.0, 24550.0, 100.0, 0.0 ],
-									"style" : "",
-									"text" : "vr-box @text sausage @position 0 1.7 0 @name sausage",
-									"varname" : "sausage"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-820",
+									"id" : "obj-1",
 									"linecount" : 4,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 20.0, 24580.0, 100.0, 0.0 ],
+									"patching_rect" : [ 20.0, 10.0, 100.0, 0.0 ],
 									"style" : "",
-									"text" : "vr-box @text haggis @position 0 1.3 0 @name haggis",
-									"varname" : "haggis"
+									"text" : "vr-box @text apple @position 0 1.3 0 @varname apple",
+									"varname" : "apple"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-2",
+									"linecount" : 5,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 20.0, 40.0, 100.0, 0.0 ],
+									"style" : "",
+									"text" : "vr-box @text orange @position 0 1 0 @varname orange",
+									"varname" : "orange"
 								}
 
 							}
  ],
-						"lines" : [  ]
+						"lines" : [ 							{
+								"patchline" : 								{
+									"destination" : [ "obj-2", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-1", 0 ]
+								}
+
+							}
+ ]
 					}
 ,
 					"patching_rect" : [ 445.0, 24.0, 97.0, 36.0 ],
@@ -1326,6 +1334,20 @@
 				}
 
 			}
+, 			{
+				"box" : 				{
+					"attr" : "port",
+					"id" : "obj-20",
+					"maxclass" : "attrui",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 676.5, 231.375, 90.0, 22.0 ],
+					"style" : "",
+					"text_width" : 44.5
+				}
+
+			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
@@ -1396,6 +1418,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-20", 0 ]
 				}
 
 			}

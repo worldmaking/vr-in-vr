@@ -1,6 +1,11 @@
+const express = require('express');
 const http = require('http');
+const url = require('url');
 const fs = require("fs");
-const wss = require('websocket').server;
+const WebSocket = require('ws');
+
+
+//const wss = require('websocket').server;
 
 
 // utility function to uniquely name variables
@@ -113,84 +118,101 @@ let client_connections = [];
 // send a (string) message to all connected clients:
 function send_all_clients(msg) {
 	for (let i in client_connections) {
-		client_connections[i].sendUTF(msg);
+		client_connections[i].send(msg);
 	}
 }
 
-// create an HTTP server:
-const server = http.createServer(function(request, response) {
-	//console.log("received http");
-	// TODO:
-	// there's lots of scope here to add a HTML interface to the editor...
+// create an HTTP server
+// using express to serve html files easily
+const app = express();
+app.use(function (req, res) {
+	res.send({ msg: "hello" });
 });
-server.listen(8080, function() {});
+const server = http.createServer(app);
+
 
 // add a websocket service to the http server:
-ws_server = new wss({ httpServer: server });
+const wss = new WebSocket.Server({ server });
 
 // whenever a client connects to this websocket:
-ws_server.on('request', function(request) {
-	let connection = request.accept(null, request.origin);
-	console.log("server received a connection");
+wss.on('connection', function(ws, req) {
 	
+	console.log("server received a connection");
 	// add to list of all connections
-	client_connections.push(connection);
+	client_connections.push(ws);
+	
+	const location = url.parse(req.url, true);
+	// You might use location.query.access_token to authenticate or share sessions
+	// or req.headers.cookie (see http://stackoverflow.com/a/16395220/151312)
 	
 	// send the current editor state as a JSON-wrapped message:
 	// this gets used a few different places, worth wrapping into a function:
 	function send_patcher() {
-		connection.sendUTF(patcher_to_message());
+		ws.send(patcher_to_message());
 	}
 
 	// respond to any messages from the client:
-	connection.on('message', function(message) {
+	ws.on('message', function(message) {
+		console.log("message", message, typeof message);
+		let text = "";
 		if (message.type === 'utf8') {
-			let text = message.utf8Data;
-			console.log("received utf8 message", text);
-			
-			// was it a JSON message?
-			if (text[0] == "{") {
-				let packet = JSON.parse(text);
-				console.log("message: "+packet.msg);
-						
-				switch(packet.msg) {
-					case "addobject": {
-						patcher_add_object(packet.name, packet.position);
-					}
-					break;
-					case "removeobject": {
-						patcher_remove_object(packet.name);
-					}
-					break;
-					case "updateobject": {
-						patcher_update_object(packet.name, packet.args);
-					}
-					break;
-					default: {
-						console.log("unrecognized command"+packet.msg);
-					}
-				}
-			} 
-			// was it a simple command?
-			else if (text == "loadpatcher") {
-				connection.sendUTF(patcher_to_message());
-			}
-			
+			text = message.utf8Data;
+		} else if (typeof message === "string") {
+			text = message;
 		} else {
-			console.log("received non-utf8 message, don't know what to do");
+			console.log("received message of type ("+message.type+"/"+typeof(message)+"), don't know what to do");
+			return;
 		}
+		
+		// was it a JSON message?
+		if (text[0] == "{") {
+			let packet = JSON.parse(text);
+			console.log("message: "+packet.msg);
+					
+			switch(packet.msg) {
+				case "addobject": {
+					patcher_add_object(packet.name, packet.position);
+				}
+				break;
+				case "removeobject": {
+					patcher_remove_object(packet.name);
+				}
+				break;
+				case "updateobject": {
+					patcher_update_object(packet.name, packet.args);
+				}
+				break;
+				default: {
+					console.log("unrecognized command"+packet.msg);
+				}
+			}
+		} 
+		// was it a simple command?
+		else if (text == "loadpatcher") {
+			ws.send(patcher_to_message());
+		} else {
+			console.log("received message ("+text+"), don't know what to do", message);
+		}
+	});
+	
+	ws.on('error', function (e) {
+		console.error("error", e.message);
 	});
 
 	// what to do if client disconnects?
-	connection.on('close', function(connection) {
+	ws.on('close', function(connection) {
 		console.log("server connection closed");
 
 		// tell git-in-vr to push the atomic commits?
 	});
 	
 	// reply with current patcher:
-	connection.sendUTF(patcher_to_message());
+	ws.send(patcher_to_message());
 	
+});
+
+server.listen(8080, function() {
+  console.log('server listening on %d', server.address().port);
 });
 
 // report status:
