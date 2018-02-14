@@ -203,7 +203,7 @@ wss.on('connection', function(ws, req) {
 
 	// what to do if client disconnects?
 	ws.on('close', function(connection) {
-		console.log("server connection closed");
+		console.log("client connection closed");
 
 		// tell git-in-vr to push the atomic commits?
 	});
