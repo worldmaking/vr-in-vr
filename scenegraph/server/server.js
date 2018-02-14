@@ -5,10 +5,6 @@ const fs = require("fs");
 const path = require("path");
 const WebSocket = require('ws');
 
-
-//const wss = require('websocket').server;
-
-
 // utility function to uniquely name variables
 // (important for jitter objects that must be uniquely named)
 let uid = (function() {
@@ -23,25 +19,25 @@ let uid = (function() {
 
 let patcher_state = {
 	"objects" : {
-		"knave" : {
+		"osc1" : {
 			"args" : [ 
-				"vr-box", "@text", "the", "knave", "of", "hearts", 
+				"vr-box", "@text", "cycle", 100, 
 				"@position", 0.0, 1.7, 0.0, 
-				"@name", "knave" ]
+				"@name", "osc1" ]
 		},
-		"stole" : {
+		"out1" : {
 			"args" : [ 
 				"vr-box", 
-				"@text", "stole", "some", "tarts", 
+				"@text", "out", 1, 
 				"@position", 0.0, 1.3, 0.0, 
-				"@name", "stole" ]
+				"@name", "out1" ]
 		}
 	},
 	"lines" : [ 		
 		{
-			"src" : "knave",
+			"src" : "osc1",
 			"srcidx" : 0,
-			"dst" : "stole",
+			"dst" : "out1",
 			"dstidx" : 0
 		}
 	]
