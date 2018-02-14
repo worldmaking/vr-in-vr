@@ -14,4 +14,9 @@ nodemon.on('start', function () {
 	process.exit();
 }).on('restart', function (files) {
 	console.log(app + ' restarted due to: ', files);
+}).on('crash', function() {
+	nodemon.restart();
+	nodemon({
+		script: app
+	});
 });

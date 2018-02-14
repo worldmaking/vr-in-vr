@@ -2,6 +2,7 @@ const express = require('express');
 const http = require('http');
 const url = require('url');
 const fs = require("fs");
+const path = require("path");
 const WebSocket = require('ws');
 
 
@@ -112,34 +113,31 @@ function patcher_update_all_clients() {
 
 /////////////////////////////////////////////////////////////
 
-// list of connected clients:
-let client_connections = [];
-
-// send a (string) message to all connected clients:
-function send_all_clients(msg) {
-	for (let i in client_connections) {
-		client_connections[i].send(msg);
-	}
-}
-
 // create an HTTP server
 // using express to serve html files easily
 const app = express();
-app.use(function (req, res) {
-	res.send({ msg: "hello" });
+//app.use(function (req, res) { res.send({ msg: "hello" }); });
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname + '/index.html'));
 });
-const server = http.createServer(app);
 
+const server = http.createServer(app);
 
 // add a websocket service to the http server:
 const wss = new WebSocket.Server({ server });
+
+// send a (string) message to all connected clients:
+function send_all_clients(msg) {
+	wss.clients.forEach(function each(client) {
+       client.send(msg);
+    });
+}
 
 // whenever a client connects to this websocket:
 wss.on('connection', function(ws, req) {
 	
 	console.log("server received a connection");
-	// add to list of all connections
-	client_connections.push(ws);
+	console.log("server has "+wss.clients.size+" connected clients");
 	
 	const location = url.parse(req.url, true);
 	// You might use location.query.access_token to authenticate or share sessions

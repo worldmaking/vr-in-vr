@@ -20,11 +20,14 @@
     <ul id="messages"></ul>
 
     <script>
+		var ws_url = "ws://" + window.location.host;
+		document.getElementById('server').value = ws_url;
+		
         var ws;
         function openSocket() {
             log('opening');
             var url = document.getElementById('server').value;
-            ws = new WebSocket(url);
+            ws = new WebSocket(ws_url);
             ws.binaryType = 'arraybuffer'; // default is 'blob'
             ws.onopen = function() {
                 log('open');
@@ -54,6 +57,12 @@
             log('closing');
             ws.close();
         }
+		
+		// keep checking socket status, re-open if closed:
+		setInterval(function(){
+			 if (!ws || ws.readyState === WebSocket.CLOSED) openSocket();
+		}, 2000);
+		
         function sendText() {
             var message = document.getElementById('message').value;
             log('sending: ' + message);
@@ -98,6 +107,8 @@
         if (sessionStorage.echoServer) {
             document.getElementById('server').value = sessionStorage.echoServer;
         }
+		
+		openSocket();
     </script>
 </body>
 </html>
