@@ -1,7 +1,123 @@
 const http = require('http');
 const fs = require("fs");
-const WebSocketServer = require('websocket').server;
+const wss = require('websocket').server;
 
+
+// utility function to uniquely name variables
+// (important for jitter objects that must be uniquely named)
+let uid = (function() {
+	let unique_id = 0;
+	return function (prefix) {
+		prefix = prefix || "var";
+		return prefix + "_" + unique_id++;
+	}
+})();
+
+/////////////////////////////////////////////////////////////
+
+let patcher_state = {
+	"objects" : {
+		"knave" : {
+			"args" : [ 
+				"vr-box", "@text", "the", "knave", "of", "hearts", 
+				"@position", 0.0, 1.7, 0.0, 
+				"@name", "knave" ]
+		},
+		"stole" : {
+			"args" : [ 
+				"vr-box", 
+				"@text", "stole", "some", "tarts", 
+				"@position", 0.0, 1.3, 0.0, 
+				"@name", "stole" ]
+		}
+	},
+	"lines" : [ 		
+		{
+			"src" : "knave",
+			"srcidx" : 0,
+			"dst" : "stole",
+			"dstidx" : 0
+		}
+	]
+}
+
+function patcher_remove_object(name) {
+	let obj = patcher_state.objects[name];
+	if (obj) {
+		delete patcher_state.objects[name];
+		
+		// notify all clients of this change
+		patcher_update_all_clients();
+	
+	} else {
+		console.log("warning, attempt to remove object "+name+" which did not exist");
+	}
+}
+
+function patcher_update_object(name, args) {
+	// TODO verify arguments
+	
+	// assert that 'name' exists
+	let obj = patcher_state.objects[name];
+	if (!obj) {
+		throw new Error("attempt to update object "+name+" which did not exist");
+	}
+	
+	// TODO: should this be a merge rather than a replace?
+	// TODO: should this validate the fields (e.g. matching name)?
+	obj.args = args;
+	
+	// notify all clients of this change
+	patcher_update_all_clients();
+}
+
+function patcher_add_object(name, position) {
+	// TODO verify arguments
+	
+	// assert that 'name' does not already exist
+	if (patcher_state.objects[name]) {
+		throw new Error("object "+name+" already exists");
+	}
+	
+	patcher_state.objects[name] = {
+		args: [
+			"vr-box", 
+			"@text", name,
+			"@position", position[0], position[1], position[2], 
+			"@name", name
+		]
+	}
+	
+	// notify all clients of this change
+	patcher_update_all_clients();
+}
+
+// convert current patcher to a stringified message packet:
+function patcher_to_message() {
+	return JSON.stringify({
+		msg:"json", 
+		args:patcher_state
+	});
+}
+
+function patcher_update_all_clients() {
+	send_all_clients(patcher_to_message());
+}
+
+
+/////////////////////////////////////////////////////////////
+
+// list of connected clients:
+let client_connections = [];
+
+// send a (string) message to all connected clients:
+function send_all_clients(msg) {
+	for (let i in client_connections) {
+		client_connections[i].sendUTF(msg);
+	}
+}
+
+// create an HTTP server:
 const server = http.createServer(function(request, response) {
 	//console.log("received http");
 	// TODO:
@@ -9,80 +125,55 @@ const server = http.createServer(function(request, response) {
 });
 server.listen(8080, function() {});
 
-ws_server = new WebSocketServer({
-	httpServer: server
-});
-
-var patcher_state = {
-	"objects" : 	{
-		"sausage" : 		{
-			"args" : [ "vr-box", "@text", "sausage", "@position", 0.0, 1.7, 0.0, "@name", "sausage" ]
-		}
-,
-		"haggis" : 		{
-			"args" : [ "vr-box", "@text", "haggis", "@position", 0.0, 1.3, 0.0, "@name", "haggis" ]
-		}
-
-	}
-,
-	"lines" : [ 		{
-			"src" : "apple",
-			"srcidx" : 0,
-			"dst" : "orange",
-			"dstidx" : 0
-		}
- ]
-}
-
-unique_id = 0;
-
-// utility function to uniquely name variables
-// (important for jitter objects that must be uniquely named)
-function uid(prefix) {
-	prefix = prefix || "var";
-	return prefix + "_" + unique_id++;
-}
+// add a websocket service to the http server:
+ws_server = new wss({ httpServer: server });
 
 // whenever a client connects to this websocket:
 ws_server.on('request', function(request) {
 	let connection = request.accept(null, request.origin);
 	console.log("server received a connection");
 	
+	// add to list of all connections
+	client_connections.push(connection);
+	
 	// send the current editor state as a JSON-wrapped message:
 	// this gets used a few different places, worth wrapping into a function:
 	function send_patcher() {
-		connection.sendUTF(JSON.stringify({msg:"json", args:patcher_state}));
+		connection.sendUTF(patcher_to_message());
 	}
 
 	// respond to any messages from the client:
 	connection.on('message', function(message) {
 		if (message.type === 'utf8') {
-			var text = message.utf8Data;
+			let text = message.utf8Data;
 			console.log("received utf8 message", text);
 			
 			// was it a JSON message?
 			if (text[0] == "{") {
-				var packet = JSON.parse(text);
-				if (packet.msg == "addobject") {
-					console.log("message: addobject");
-					
-					var name = packet.name;
-					patcher_state.objects[name] = {
-						args: [
-							"vr-box", 
-							"@text", name,
-							"@position", packet.position[0], packet.position[1], packet.position[2], 
-							"@name", name
-						]
+				let packet = JSON.parse(text);
+				console.log("message: "+packet.msg);
+						
+				switch(packet.msg) {
+					case "addobject": {
+						patcher_add_object(packet.name, packet.position);
 					}
-					send_patcher();
+					break;
+					case "removeobject": {
+						patcher_remove_object(packet.name);
+					}
+					break;
+					case "updateobject": {
+						patcher_update_object(packet.name, packet.args);
+					}
+					break;
+					default: {
+						console.log("unrecognized command"+packet.msg);
+					}
 				}
-				
-				
 			} 
 			// was it a simple command?
 			else if (text == "loadpatcher") {
-				send_patcher();
+				connection.sendUTF(patcher_to_message());
 			}
 			
 		} else {
@@ -98,23 +189,10 @@ ws_server.on('request', function(request) {
 	});
 	
 	// reply with current patcher:
-	send_patcher();
+	connection.sendUTF(patcher_to_message());
 	
 });
 
-process.on("exit", function(m) {
-	console.log("server closing");
-});
-
-
-/*
-// watch for change events to the 'cmd' file,
-// which should trigger the process to exit (and thus relaunch):
-fs.watch(cmd, (e, name) => {
-	console.log(name + " file triggered event " + e + ", exiting");
-	if (proc) proc.kill();
-});
-console.log("watching server.js");
-*/
-
+// report status:
+process.on("exit", function(m) { console.log("server closing"); });
 console.log("server running");
