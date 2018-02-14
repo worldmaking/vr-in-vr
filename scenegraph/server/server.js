@@ -196,7 +196,11 @@ wss.on('connection', function(ws, req) {
 	});
 	
 	ws.on('error', function (e) {
-		console.error("error", e.message);
+		if (e.message === "read ECONNRESET") {
+			// ignore this, client will still emit close event
+		} else {
+			console.error("websocket error: ", e.message);
+		}
 	});
 
 	// what to do if client disconnects?

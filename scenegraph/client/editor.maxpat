@@ -319,7 +319,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 618.5, 201.875, 86.0, 22.0 ],
+					"patching_rect" : [ 618.5, 200.875, 86.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -679,41 +679,41 @@
 						"subpatcher_template" : "",
 						"boxes" : [ 							{
 								"box" : 								{
-									"id" : "obj-1",
+									"id" : "obj-3",
 									"linecount" : 4,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 20.0, 10.0, 100.0, 0.0 ],
+									"patching_rect" : [ 20.0, 70.0, 100.0, 0.0 ],
 									"style" : "",
-									"text" : "vr-box @text apple @position 0 1.3 0 @varname apple",
-									"varname" : "apple"
+									"text" : "vr-box @text the knave of hearts @position 0 1.7 0 @name knave",
+									"varname" : "knave"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-2",
-									"linecount" : 5,
+									"id" : "obj-4",
+									"linecount" : 4,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 20.0, 40.0, 100.0, 0.0 ],
+									"patching_rect" : [ 20.0, 100.0, 100.0, 0.0 ],
 									"style" : "",
-									"text" : "vr-box @text orange @position 0 1 0 @varname orange",
-									"varname" : "orange"
+									"text" : "vr-box @text stole some tarts @position 0 1.3 0 @name stole",
+									"varname" : "stole"
 								}
 
 							}
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
-									"destination" : [ "obj-2", 0 ],
+									"destination" : [ "obj-4", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"source" : [ "obj-1", 0 ]
+									"source" : [ "obj-3", 0 ]
 								}
 
 							}
@@ -1348,6 +1348,19 @@
 				}
 
 			}
+, 			{
+				"box" : 				{
+					"id" : "obj-21",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 618.5, 109.0, 50.0, 22.0 ],
+					"style" : "",
+					"text" : "close"
+				}
+
+			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
@@ -1427,6 +1440,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-20", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-21", 0 ]
 				}
 
 			}
