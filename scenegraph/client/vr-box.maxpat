@@ -5,11 +5,11 @@
 			"major" : 7,
 			"minor" : 3,
 			"revision" : 4,
-			"architecture" : "x64",
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 614.0, 85.0, 615.0, 895.0 ],
+		"rect" : [ 935.0, 97.0, 921.0, 895.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -37,6 +37,19 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-29",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 319.0, 184.0, 123.0, 22.0 ],
+					"style" : "",
+					"text" : "sprintf name %s_box"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-18",
 					"maxclass" : "newobj",
@@ -71,7 +84,6 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
 					"patching_rect" : [ 720.0, 214.0, 77.0, 22.0 ],
-					"presentation_linecount" : 2,
 					"presentation_rect" : [ 720.0, 214.0, 73.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
@@ -202,7 +214,7 @@
 					"patching_rect" : [ 11.0, 262.0, 508.0, 22.0 ],
 					"style" : "",
 					"text" : "jit.phys.body vr-phys @shape cube @scale 1 0.2 0.2 @kinematic 1 @mass 0 @send_scale 0",
-					"varname" : "sausage"
+					"varname" : "osc1"
 				}
 
 			}
@@ -380,7 +392,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
 					"patching_rect" : [ 144.0, 540.0, 359.0, 22.0 ],
-					"presentation_rect" : [ 144.0, 540.0, 359.0, 22.0 ],
 					"style" : "",
 					"text" : "jit.gl.gridshape editor-world @shape cube @material box-material"
 				}
@@ -456,6 +467,19 @@
 				}
 
 			}
+, 			{
+				"box" : 				{
+					"attr" : "drawbounds",
+					"id" : "obj-19",
+					"maxclass" : "attrui",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 294.0, 323.0, 150.0, 22.0 ],
+					"style" : ""
+				}
+
+			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
@@ -496,6 +520,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-21", 0 ],
 					"source" : [ "obj-18", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
+					"source" : [ "obj-19", 0 ]
 				}
 
 			}
@@ -592,8 +623,24 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-31", 0 ],
+					"destination" : [ "obj-29", 0 ],
+					"order" : 0,
 					"source" : [ "obj-28", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-31", 0 ],
+					"order" : 1,
+					"source" : [ "obj-28", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
+					"source" : [ "obj-29", 0 ]
 				}
 
 			}
