@@ -1235,13 +1235,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "patcher2genexpr.js",
-				"bootpath" : "E:/GitHub/vr-in-vr/scenegraph/client",
-				"patcherrelativepath" : ".",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "ws.client.mxe",
 				"type" : "iLaF"
 			}
