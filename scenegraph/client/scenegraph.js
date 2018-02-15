@@ -33,6 +33,35 @@ function scene_box_find() {
 	
 		error("need to create a scene subpatcher\n");
 	}
+	
+	
+}
+
+function gen_test() {
+	
+	gen_box = this.patcher.getnamed("gen");
+	if (gen_box && gen_box.subpatcher()) {
+		gen_patcher = gen_box.subpatcher();
+		
+	
+		gen_patcher.apply(function(b) {
+			//post(" " + b.patcher.name + " " + b.maxclass + " " + b.varname + " " + b.rect + "\n");
+			gen_patcher.remove(b);
+		});
+	
+		var noise_box = gen_patcher.newdefault.apply(gen_patcher, [20, 20, "noise"]);
+		var out1_box = gen_patcher.newdefault.apply(gen_patcher, [20, 120, "out", 1]);
+		
+		gen_patcher.connect(
+			noise_box,
+			0,
+			out1_box,
+			0
+		);
+		
+		post("gen_patcher scripted!\n");
+	
+	}
 }
 
 // empty out all objects from the [p scene] patcher

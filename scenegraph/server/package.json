@@ -11,9 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2",
-    "ws": "^4.0.0"
-  },
-  "devDependencies": {
-    "nodemon": "^1.14.12"
+    "ws": "^4.0.0",
+    "nodemon": "^1.14.12",
+    "gl-matrix": "2.4.0"
   }
 }

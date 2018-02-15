@@ -9,7 +9,11 @@
 			"modernui" : 1
 		}
 ,
+<<<<<<< HEAD
 		"rect" : [ 969.0, 85.0, 812.0, 930.0 ],
+=======
+		"rect" : [ 206.0, 299.0, 778.0, 549.0 ],
+>>>>>>> gen testing
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,6 +42,7 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+<<<<<<< HEAD
 					"id" : "obj-42",
 					"linecount" : 3,
 					"maxclass" : "message",
@@ -106,11 +111,22 @@
 ,
 					"style" : "",
 					"text" : "js patcher2genexpr.js"
+=======
+					"id" : "obj-38",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 616.0, 14.0, 150.0, 47.0 ],
+					"style" : "",
+					"text" : "<< I didn't know, but yes you can patcher-script a gen patcher! "
+>>>>>>> gen testing
 				}
 
 			}
 , 			{
 				"box" : 				{
+<<<<<<< HEAD
 					"attr" : "host",
 					"id" : "obj-27",
 					"maxclass" : "attrui",
@@ -133,15 +149,28 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 557.0, 212.0, 30.0, 30.0 ],
+=======
+					"id" : "obj-27",
+					"maxclass" : "ezdac~",
+					"numinlets" : 2,
+					"numoutlets" : 0,
+					"patching_rect" : [ 557.0, 37.5, 45.0, 45.0 ],
+>>>>>>> gen testing
 					"style" : ""
 				}
 
 			}
 , 			{
 				"box" : 				{
+<<<<<<< HEAD
 					"id" : "obj-46",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
+=======
+					"id" : "obj-26",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+>>>>>>> gen testing
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
 					"patcher" : 					{
@@ -154,7 +183,11 @@
 							"modernui" : 1
 						}
 ,
+<<<<<<< HEAD
 						"rect" : [ 106.0, 245.0, 600.0, 450.0 ],
+=======
+						"rect" : [ 203.0, 153.0, 615.0, 488.0 ],
+>>>>>>> gen testing
 						"editing_bgcolor" : [ 0.9, 0.9, 0.9, 1.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
@@ -184,6 +217,7 @@
 						"subpatcher_template" : "",
 						"boxes" : [ 							{
 								"box" : 								{
+<<<<<<< HEAD
 									"id" : "obj-4",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
@@ -213,18 +247,28 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-3",
+=======
+									"id" : "obj-17",
+>>>>>>> gen testing
 									"maxclass" : "newobj",
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
+<<<<<<< HEAD
 									"patching_rect" : [ 50.0, 14.0, 30.0, 22.0 ],
 									"style" : "",
 									"text" : "in 1"
+=======
+									"patching_rect" : [ 20.0, 20.0, 100.0, 0.0 ],
+									"style" : "",
+									"text" : "noise"
+>>>>>>> gen testing
 								}
 
 							}
 , 							{
 								"box" : 								{
+<<<<<<< HEAD
 									"id" : "obj-5",
 									"maxclass" : "newobj",
 									"numinlets" : 0,
@@ -233,12 +277,22 @@
 									"patching_rect" : [ 130.0, 14.0, 30.0, 22.0 ],
 									"style" : "",
 									"text" : "in 2"
+=======
+									"id" : "obj-18",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 20.0, 120.0, 100.0, 0.0 ],
+									"style" : "",
+									"text" : "out 1"
+>>>>>>> gen testing
 								}
 
 							}
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
+<<<<<<< HEAD
 									"destination" : [ "obj-4", 0 ],
 									"source" : [ "obj-2", 0 ]
 								}
@@ -255,20 +309,32 @@
 								"patchline" : 								{
 									"destination" : [ "obj-2", 1 ],
 									"source" : [ "obj-5", 0 ]
+=======
+									"destination" : [ "obj-18", 0 ],
+									"source" : [ "obj-17", 0 ]
+>>>>>>> gen testing
 								}
 
 							}
  ]
 					}
 ,
+<<<<<<< HEAD
 					"patching_rect" : [ 303.0, 651.0, 38.0, 22.0 ],
 					"style" : "",
 					"text" : "gen~"
+=======
+					"patching_rect" : [ 557.0, 10.0, 38.0, 22.0 ],
+					"style" : "",
+					"text" : "gen~",
+					"varname" : "gen"
+>>>>>>> gen testing
 				}
 
 			}
 , 			{
 				"box" : 				{
+<<<<<<< HEAD
 					"id" : "obj-45",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -287,6 +353,16 @@
 					"numinlets" : 2,
 					"numoutlets" : 0,
 					"patching_rect" : [ 290.0, 740.0, 45.0, 45.0 ],
+=======
+					"comment" : "",
+					"id" : "obj-22",
+					"index" : 0,
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 550.5, 140.0, 30.0, 30.0 ],
+>>>>>>> gen testing
 					"style" : ""
 				}
 
@@ -922,46 +998,61 @@
 						"subpatcher_template" : "",
 						"boxes" : [ 							{
 								"box" : 								{
-									"id" : "obj-3",
+									"id" : "obj-29",
 									"linecount" : 4,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 20.0, 70.0, 100.0, 0.0 ],
+									"patching_rect" : [ 20.0, 10.0, 100.0, 0.0 ],
 									"style" : "",
+<<<<<<< HEAD
 									"text" : "vr-box @text cycle 100 @position 0 1.7 0 @name osc1",
 									"varname" : "osc1"
+=======
+									"text" : "vr-box @text apple @position 0 1.3 0 @varname apple",
+									"varname" : "apple"
+>>>>>>> gen testing
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-4",
-									"linecount" : 4,
+									"id" : "obj-30",
+									"linecount" : 5,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 20.0, 100.0, 100.0, 0.0 ],
+									"patching_rect" : [ 20.0, 40.0, 100.0, 0.0 ],
 									"style" : "",
+<<<<<<< HEAD
 									"text" : "vr-box @text out 1 @position 0 1.3 0 @name out1",
 									"varname" : "out1"
+=======
+									"text" : "vr-box @text orange @position 0 1 0 @varname orange",
+									"varname" : "orange"
+>>>>>>> gen testing
 								}
 
 							}
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
+<<<<<<< HEAD
 									"destination" : [ "obj-4", 0 ],
 									"source" : [ "obj-3", 0 ]
+=======
+									"destination" : [ "obj-30", 0 ],
+									"source" : [ "obj-29", 0 ]
+>>>>>>> gen testing
 								}
 
 							}
  ]
 					}
 ,
-					"patching_rect" : [ 445.0, 24.0, 97.0, 36.0 ],
+					"patching_rect" : [ 445.0, 24.0, 97.0, 35.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -1010,7 +1101,7 @@
 					"numinlets" : 8,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 119.5, 42.5, 265.0, 36.0 ],
+					"patching_rect" : [ 119.5, 42.5, 265.0, 35.0 ],
 					"presentation_linecount" : 2,
 					"presentation_rect" : [ 18.5, 573.0, 265.0, 36.0 ],
 					"style" : "",
@@ -1671,8 +1762,13 @@
 			}
 , 			{
 				"patchline" : 				{
+<<<<<<< HEAD
 					"destination" : [ "obj-7", 0 ],
 					"source" : [ "obj-27", 0 ]
+=======
+					"destination" : [ "obj-27", 0 ],
+					"source" : [ "obj-26", 0 ]
+>>>>>>> gen testing
 				}
 
 			}
@@ -1872,7 +1968,27 @@
 				}
 
 			}
- ]
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "vr-box.maxpat",
+				"bootpath" : "~/code/vr-in-vr/scenegraph/client",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "scenegraph.js",
+				"bootpath" : "~/code/vr-in-vr/scenegraph/client",
+				"patcherrelativepath" : ".",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "ws.client.mxo",
+				"type" : "iLaX"
+			}
+ ],
+		"autosave" : 0
 	}
 
 }
