@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 512.0, 79.0, 894.0, 787.0 ],
+		"rect" : [ 512.0, 85.0, 894.0, 787.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -55,7 +55,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 713.75, 651.0, 208.0, 33.0 ],
+					"patching_rect" : [ 713.75, 651.0, 208.0, 34.0 ],
 					"style" : "",
 					"text" : "path is initialized with two points (start and end)"
 				}
@@ -68,7 +68,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 483.0, 560.0, 208.0, 47.0 ],
+					"patching_rect" : [ 483.0, 560.0, 208.0, 48.0 ],
 					"style" : "",
 					"text" : "scale up vector by distance to define the start & end 'control handles' of the curved path"
 				}
@@ -93,7 +93,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 483.0, 470.0, 202.0, 33.0 ],
+					"patching_rect" : [ 483.0, 470.0, 202.0, 34.0 ],
 					"style" : "",
 					"text" : "use position to set start & end point of a curved path"
 				}
@@ -142,7 +142,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 483.0, 200.0, 179.0, 33.0 ],
+					"patching_rect" : [ 483.0, 200.0, 179.0, 34.0 ],
 					"style" : "",
 					"text" : "get their respective jit.anim.node objects"
 				}
@@ -155,7 +155,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 483.0, 120.0, 179.0, 33.0 ],
+					"patching_rect" : [ 483.0, 120.0, 179.0, 34.0 ],
 					"style" : "",
 					"text" : "find the target inlet & outlet objects by their @name"
 				}
@@ -247,9 +247,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 18.0, 723.0, 720.0, 35.0 ],
+					"patching_rect" : [ 18.0, 723.0, 826.0, 36.0 ],
 					"style" : "",
-					"text" : "jit.gl.path editor-world @interpmode spline @pathstyle tube @extrudescale 0.01 @segments 20 @lighting_enable 1 @autohandles 0 @material material_outlet @blend_enable 1 @blend add @depth_write 0 @filterclass pickable"
+					"text" : "jit.gl.path world @interpmode spline @pathstyle tube @extrudescale 0.01 @segments 20 @lighting_enable 1 @autohandles 0 @material material_outlet @blend_enable 1 @blend add @depth_write 0 @filterclass pickable"
 				}
 
 			}
@@ -859,7 +859,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 713.75, 546.5, 226.0, 74.0 ],
+					"patching_rect" : [ 713.75, 546.5, 226.0, 75.0 ],
 					"style" : "",
 					"text" : "The edithandle data is the \"up\" vector of the socket, scaled by something to control how tighly it bends. Using the length of the line itself seems to feel good."
 				}
@@ -1316,7 +1316,9 @@
 				}
 
 			}
- ]
+ ],
+		"dependency_cache" : [  ],
+		"autosave" : 0
 	}
 
 }
