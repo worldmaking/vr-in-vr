@@ -20,22 +20,30 @@ let uid = (function() {
 let patcher_state = {
 	"objects" : {
 		"osc1" : {
-			"args" : [ 
-				"vr-box", "@text", "cycle", 100, 
-				"@position", 0.0, 1.7, 0.0, 
-				"@name", "osc1" ]
+			"pos": [-0.4, 1.7, 0.0], 
+			"op": "cycle",
+			"args" : [ 100 ]
+		},
+		"osc2" : {
+			"pos": [0.5, 1.7, 0.0],
+			"op": "noise", 
+			"args" : []
 		},
 		"out1" : {
-			"args" : [ 
-				"vr-box", 
-				"@text", "out", 1, 
-				"@position", 0.0, 1.3, 0.0, 
-				"@name", "out1" ]
+			"pos": [0.0, 1.3, 0.0], 
+			"op": "out",
+			"args" : [ 1 ]
 		}
 	},
 	"lines" : [ 		
 		{
 			"src" : "osc1",
+			"srcidx" : 0,
+			"dst" : "out1",
+			"dstidx" : 0
+		},
+		{
+			"src" : "osc2",
 			"srcidx" : 0,
 			"dst" : "out1",
 			"dstidx" : 0

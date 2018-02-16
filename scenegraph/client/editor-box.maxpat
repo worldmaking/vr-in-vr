@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 669.0, 186.0, 1150.0, 816.0 ],
+		"rect" : [ 256.0, 79.0, 1150.0, 704.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -43,7 +43,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 86.0, 561.600037, 81.0, 22.0 ],
+					"patching_rect" : [ 90.800003, 566.600037, 81.0, 22.0 ],
 					"style" : "",
 					"text" : "r update_box"
 				}
@@ -84,7 +84,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 516.0, 571.0, 145.0, 22.0 ],
 					"style" : "",
-					"text" : "sprintf name box_%s_in1"
+					"text" : "sprintf name box_%s_in0"
 				}
 
 			}
@@ -97,7 +97,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 509.5, 509.0, 145.0, 22.0 ],
 					"style" : "",
-					"text" : "sprintf name box_%s_in2"
+					"text" : "sprintf name box_%s_in1"
 				}
 
 			}
@@ -110,7 +110,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 651.5, 382.0, 153.0, 22.0 ],
 					"style" : "",
-					"text" : "sprintf name box_%s_out1"
+					"text" : "sprintf name box_%s_out0"
 				}
 
 			}

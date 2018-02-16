@@ -43,7 +43,7 @@ function scene_patcher_clean() {
 	});
 }
 
-function scene_patcher_add_object(name, args) {
+function scene_patcher_add_object(name, position, args) {
 	if (!name) name = uid("box");
 	
 	/*
@@ -55,29 +55,18 @@ function scene_patcher_add_object(name, args) {
 	
 	// generate the arguments for patcher.newdefault
 	// as an array containing x, y, text:
-	var args = ([20, scene_patcher_nextobject_y]).concat(args) ;
-	scene_patcher_nextobject_y += 30;
-	
+	var args = [20, scene_patcher_nextobject_y, "editor-box", "@name", name, "@position", position, "@text", args];
 	// call patcher.newdefault to create a new max object
 	// (using apply() so we can pass arguments as an array):
 	var new_box = scene_patcher.newdefault.apply(scene_patcher, args);
 	// set the "scripting name" of the max object
 	// (useful if we want to address it directly later)
 	new_box.varname = name;
+	
+	// move cursor down for next object
+	scene_patcher_nextobject_y += 30;
+	
 	// TODO store in lookup table if needed
-	
-	// TODO: only do this if the object is a vr-box:
-	
-	// find the embedded body, rename it, and hook it up:
-	var box_patcher = new_box.subpatcher();
-	box_patcher.apply(function(e) {
-		if (e.maxclass == "jit.phys.body") {
-			e.varname = name;// + "_body";
-			//objects_add(e.varname, e);
-			//scene_bodies[e.varname] = box_name;
-			body = e;
-		}
-	});
 	
 	return new_box;
 }
@@ -85,17 +74,52 @@ function scene_patcher_add_object(name, args) {
 function scene_patcher_from_data(scene_data) {
 	for (var name in scene_data.objects) {
 		var obj = scene_data.objects[name];
-		scene_patcher_add_object(name, obj.args);
+		
+		/*
+		if (findobject(name)) {
+			error(name + " name already in use\n");
+		}
+		*/
+	
+		// generate the arguments for patcher.newdefault
+		// as an array containing x, y, text:
+		var args = [20, scene_patcher_nextobject_y, "editor-box", "@name", name, "@position", obj.pos, "@text", obj.op, obj.args];
+		// call patcher.newdefault to create a new max object
+		// (using apply() so we can pass arguments as an array):
+		var new_box = scene_patcher.newdefault.apply(scene_patcher, args);
+		// set the "scripting name" of the max object
+		// (useful if we want to address it directly later)
+		new_box.varname = name;
+	
+		// move cursor down for next object
+		scene_patcher_nextobject_y += 30;
 	}
 	
 	for (var i in scene_data.lines) {
 		var line = scene_data.lines[i];
+		
+		/*
 		scene_patcher.connect(
 			scene_patcher.getnamed(line.src),
 			line.srcidx,
 			scene_patcher.getnamed(line.dst),
 			line.dstidx
-		);
+		);*/
+		
+		// generate the arguments for patcher.newdefault
+		// as an array containing x, y, text:
+		var args = [20, scene_patcher_nextobject_y, "editor-line", "@src", line.src, "@srcidx", line.srcidx, "@dst", line.dst, "@dstidx", line.dstidx];
+		// call patcher.newdefault to create a new max object
+		// (using apply() so we can pass arguments as an array):
+		var new_box = scene_patcher.newdefault.apply(scene_patcher, args);
+		// set the "scripting name" of the max object
+		// (useful if we want to address it directly later)
+		new_box.varname = "line_" + i;
+	
+		// move cursor down for next object
+		scene_patcher_nextobject_y += 30;
+	
+		// TODO store in lookup table if needed
 	}
 }
 

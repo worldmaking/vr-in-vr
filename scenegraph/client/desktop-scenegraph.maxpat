@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 1087.0, 179.0, 738.0, 721.0 ],
+		"rect" : [ 668.0, 179.0, 738.0, 721.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -250,7 +250,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 361.0, 613.0, 269.0, 22.0 ],
 					"style" : "",
-					"text" : "1.627228 1.139205 0.799252"
+					"text" : "1.268596 1.456241 0.173597"
 				}
 
 			}
@@ -700,7 +700,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 208.0, 406.0, 62.0, 22.0 ],
 					"style" : "",
-					"text" : "out1_box"
+					"text" : "box_osc1"
 				}
 
 			}
@@ -713,7 +713,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 118.0, 658.0, 178.0, 22.0 ],
 					"style" : "",
-					"text" : "worldpos 0.4 1.3 0."
+					"text" : "worldpos -0.4 1.7 0."
 				}
 
 			}
@@ -725,7 +725,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 118.0, 576.0, 75.0, 22.0 ],
-					"presentation_rect" : [ 384.0, 535.0, 0.0, 0.0 ],
 					"style" : "",
 					"text" : "getworldpos"
 				}
@@ -752,7 +751,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 129.0, 613.0, 52.0, 22.0 ],
-					"presentation_rect" : [ 517.0, 608.0, 0.0, 0.0 ],
 					"style" : "",
 					"text" : "jit.proxy"
 				}
@@ -1904,7 +1902,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 27.0, 8.0, 302.0, 62.0 ],
+					"patching_rect" : [ 27.0, 8.0, 302.0, 60.0 ],
 					"style" : "",
 					"text" : "This patcher spoofs having a VR headset, so that you can test without a VR hmd attached.\nUse WASD to walk, mouse/arrows to look left/right.\nThe simulated controller will follow the mouse."
 				}
@@ -1917,7 +1915,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 441.000031, 61.5, 150.0, 64.0 ],
+					"patching_rect" : [ 441.000031, 61.5, 150.0, 62.0 ],
 					"style" : "",
 					"text" : "editor"
 				}
@@ -2223,28 +2221,35 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "editor.maxpat",
-				"bootpath" : "E:/GitHub/vr-in-vr/scenegraph/client",
+				"bootpath" : "~/code/vr-in-vr/scenegraph/client",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "vr-box.maxpat",
-				"bootpath" : "E:/GitHub/vr-in-vr/scenegraph/client",
+				"name" : "editor-line.maxpat",
+				"bootpath" : "~/code/vr-in-vr/scenegraph/client",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "editor-box.maxpat",
+				"bootpath" : "~/code/vr-in-vr/scenegraph/client",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "scenegraph.js",
-				"bootpath" : "E:/GitHub/vr-in-vr/scenegraph/client",
+				"bootpath" : "~/code/vr-in-vr/scenegraph/client",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "ws.client.mxe",
-				"type" : "iLaF"
+				"name" : "ws.client.mxo",
+				"type" : "iLaX"
 			}
  ],
 		"autosave" : 0
