@@ -1,4 +1,4 @@
-
+outlets = 2;
 
 ///////////
 
@@ -146,13 +146,21 @@ function json(data) {
 
 function fromserver(str) {
 	var obj = JSON.parse(str);
-	post("fromserver", obj.msg, obj.args);
-	if (obj.msg == "json") {
+	
+	switch(obj.msg) {
+	case "json": {
 		// clear it up:
 		scene_patcher_clean();
 		
 		// now fill it:
 		scene_patcher_from_data(obj.args);
+	} break;
+	case "selected": {
+		outlet(1, "selected", obj.args.hand, obj.args.target);
+		break;
+	} break;
+	default: 
+		post("fromserver", obj.msg, obj.args, "\n");
 	}
 }
 

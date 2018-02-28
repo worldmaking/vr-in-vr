@@ -249,7 +249,7 @@
 					"outlettype" : [ "jit_matrix", "" ],
 					"patching_rect" : [ 18.0, 723.0, 826.0, 36.0 ],
 					"style" : "",
-					"text" : "jit.gl.path world @interpmode spline @pathstyle tube @extrudescale 0.01 @segments 20 @lighting_enable 1 @autohandles 0 @material material_outlet @blend_enable 1 @blend add @depth_write 0 @filterclass pickable"
+					"text" : "jit.gl.path world @interpmode spline @pathstyle tube @extrudescale 0.01 @segments 20 @lighting_enable 1 @autohandles 0 @material material_outlet @blend_enable 1 @blend add"
 				}
 
 			}
@@ -1316,9 +1316,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [  ],
-		"autosave" : 0
+ ]
 	}
 
 }

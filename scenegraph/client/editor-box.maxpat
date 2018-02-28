@@ -301,9 +301,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 269.5, 600.0, 860.0, 22.0 ],
+					"patching_rect" : [ 269.5, 600.0, 773.0, 22.0 ],
 					"style" : "",
-					"text" : "jit.gl.gridshape world @shape cube @material material_outlet @depth_enable 1 @layer 10 @blend_enable 1 @blend add @depth_write 0 @filterclass pickable"
+					"text" : "jit.gl.gridshape world @shape cube @material material_outlet @depth_enable 1 @layer 10 @blend_enable 1 @blend add @filterclass pickable"
 				}
 
 			}
@@ -314,9 +314,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 190.5, 539.0, 860.0, 22.0 ],
+					"patching_rect" : [ 190.5, 539.0, 773.0, 22.0 ],
 					"style" : "",
-					"text" : "jit.gl.gridshape world @shape cube @material material_outlet @depth_enable 1 @layer 10 @blend_enable 1 @blend add @depth_write 0 @filterclass pickable"
+					"text" : "jit.gl.gridshape world @shape cube @material material_outlet @depth_enable 1 @layer 10 @blend_enable 1 @blend add @filterclass pickable"
 				}
 
 			}
@@ -327,9 +327,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 283.5, 413.0, 860.0, 22.0 ],
+					"patching_rect" : [ 283.5, 413.0, 773.0, 22.0 ],
 					"style" : "",
-					"text" : "jit.gl.gridshape world @shape cube @material material_outlet @depth_enable 1 @layer 10 @blend_enable 1 @blend add @depth_write 0 @filterclass pickable"
+					"text" : "jit.gl.gridshape world @shape cube @material material_outlet @depth_enable 1 @layer 10 @blend_enable 1 @blend add @filterclass pickable"
 				}
 
 			}
@@ -366,9 +366,9 @@
 					"numinlets" : 9,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 50.0, 665.599976, 876.0, 22.0 ],
+					"patching_rect" : [ 50.0, 665.599976, 789.0, 22.0 ],
 					"style" : "",
-					"text" : "jit.gl.mesh world @draw_mode triangles @material material_box @depth_enable 1 @layer 10 @blend_enable 1 @blend add @depth_write 0 @filterclass pickable"
+					"text" : "jit.gl.mesh world @draw_mode triangles @material material_box @depth_enable 1 @layer 10 @blend_enable 1 @blend add @filterclass pickable"
 				}
 
 			}
@@ -392,9 +392,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 306.5, 282.0, 836.0, 22.0 ],
+					"patching_rect" : [ 306.5, 282.0, 748.0, 22.0 ],
 					"style" : "",
-					"text" : "jit.gl.text world @line_length 8 @mode 3d @depth 0.05 @color 0.5 0.5 0.5 0.5 @depth_enable 1 @layer 10 @blend_enable 1 @blend add @depth_write 0"
+					"text" : "jit.gl.text world @line_length 8 @mode 3d @depth 0.05 @color 0.5 0.5 0.5 0.5 @depth_enable 1 @layer 10 @blend_enable 1 @blend add"
 				}
 
 			}
@@ -679,9 +679,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [  ],
-		"autosave" : 0
+ ]
 	}
 
 }

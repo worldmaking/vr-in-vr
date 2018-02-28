@@ -5,6 +5,11 @@ const fs = require("fs");
 const path = require("path");
 const WebSocket = require('ws');
 
+const glmatrix = require("gl-matrix");
+const { mat4, quat, vec2, vec3, vec4 } = glmatrix;
+
+console.log("----------------------------------------------------------------------")
+
 // utility function to uniquely name variables
 // (important for jitter objects that must be uniquely named)
 let uid = (function() {
@@ -21,16 +26,31 @@ let patcher_state = {
 	"objects" : {
 		"osc1" : {
 			"pos": [-0.4, 1.7, 0.0], 
+			"orient": [0., 0., 0., 1.],
+			"scale": 0.05,
+			"tolocal": mat4.create(),
+			"fromlocal": mat4.create(),
+			"extent": 8,
 			"op": "cycle",
 			"args" : [ 100 ]
 		},
 		"osc2" : {
 			"pos": [0.5, 1.7, 0.0],
+			"orient": [0., 0., 0., 1.],
+			"scale": 0.05,
+			"tolocal": mat4.create(),
+			"fromlocal": mat4.create(),
+			"extent": 8,
 			"op": "noise", 
 			"args" : []
 		},
 		"out1" : {
 			"pos": [0.0, 1.3, 0.0], 
+			"orient": [0., 0., 0., 1.],
+			"scale": 0.05,
+			"tolocal": mat4.create(),
+			"fromlocal": mat4.create(),
+			"extent": 8,
 			"op": "out",
 			"args" : [ 1 ]
 		}
@@ -49,6 +69,20 @@ let patcher_state = {
 			"dstidx" : 0
 		}
 	]
+}
+
+function patcher_init(patcher) {
+	for (let name in patcher.objects) {
+		let box = patcher.objects[name];
+		patcher_box_update_mats(box);
+	}
+}
+
+function patcher_box_update_mats(box) {
+	// fromlocal converts points in the object-space of the box to the space of its' parent (e.g. the world)
+	mat4.fromRotationTranslationScale(box.fromlocal, box.orient, box.pos, vec3.fromValues(box.scale, box.scale, box.scale));
+	// tolocal does the opposite
+	mat4.invert(box.tolocal, box.fromlocal);
 }
 
 function patcher_remove_object(name) {
@@ -102,6 +136,53 @@ function patcher_add_object(name, position) {
 	patcher_update_all_clients();
 }
 
+function patcher_pick(name, x, y, z, qx, qy, qz, qw) {
+	let patcher = patcher_state;
+	
+	let p = vec3.fromValues(x, y, z);
+	let q = quat.fromValues(qx, qy, qz, qw);
+	
+	// get unit forward vector (-z) from the quaternion
+	let uf = vec3.fromValues(0, 0, -1);
+	vec3.transformQuat(uf, uf, q);
+	
+	// get an end-point from the -Z axis of the quat
+	let p1 = vec3.clone(p);
+	vec3.add(p1, p1, uf);
+	
+	// dimensions of box.obj
+	const x0 = 0;
+	const x1 = 8;
+	const y0 = 0;
+	const y1 = 1;
+	const z0 = -0.1;
+	const z1 = 0.1;
+	
+	let selected = "nothing";
+	let pb = vec3.create();
+	for (let name in patcher.objects) {
+		const box = patcher.objects[name];
+		
+		vec3.transformMat4(pb, p, box.tolocal);
+		
+		//if (name == "out1") console.log(name, pb[0]);
+		
+		// bounding box collision test:
+		if (pb[0] > x0 && pb[0] < x1	
+		 && pb[1] > y0 && pb[1] < y1
+		 && pb[2] > z0 && pb[2] < z1) {
+			 selected = name;
+			 break;
+		 }
+		
+	}
+	
+	send_all_clients(JSON.stringify({
+		msg:"selected", 
+		args:{ hand: name, target: selected }
+	}));
+}
+
 // convert current patcher to a stringified message packet:
 function patcher_to_message() {
 	return JSON.stringify({
@@ -114,6 +195,7 @@ function patcher_update_all_clients() {
 	send_all_clients(patcher_to_message());
 }
 
+patcher_init(patcher_state);
 
 /////////////////////////////////////////////////////////////
 
@@ -155,7 +237,7 @@ wss.on('connection', function(ws, req) {
 
 	// respond to any messages from the client:
 	ws.on('message', function(message) {
-		console.log("message", message, typeof message);
+		//console.log("message", message, typeof message);
 		let text = "";
 		if (message.type === 'utf8') {
 			text = message.utf8Data;
@@ -169,7 +251,7 @@ wss.on('connection', function(ws, req) {
 		// was it a JSON message?
 		if (text[0] == "{") {
 			let packet = JSON.parse(text);
-			console.log("message: "+packet.msg);
+			//console.log("message: "+packet.msg);
 					
 			switch(packet.msg) {
 				case "addobject": {
@@ -188,12 +270,21 @@ wss.on('connection', function(ws, req) {
 					console.log("unrecognized command"+packet.msg);
 				}
 			}
-		} 
-		// was it a simple command?
-		else if (text == "loadpatcher") {
-			ws.send(patcher_to_message());
 		} else {
-			console.log("received message ("+text+"), don't know what to do", message);
+			// assume a Max-like space delimited list
+			let args = message.split(" ");
+			let cmd = args.shift()
+		
+			switch(cmd) {
+			case "loadpatcher":
+				ws.send(patcher_to_message());
+				break;
+			case "pick":
+				patcher_pick.apply(null, args);
+				break;
+			default:
+				console.log("received message ("+text+"), don't know what to do", message);
+			}
 		}
 	});
 	
