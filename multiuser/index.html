@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>websocket client example</title>
+</head>
+<body>
+<input id="test" type="range" min="0" max="10"></input>
+<script>
+function connect(conn) {
+    //assert(conn, "missing connection object as argument to connect()");
+
+    const transport = conn.transport || "ws";
+    const hostname = conn.hostname || window.location.hostname;
+    const port = conn.port || window.location.port;
+    const addr = `${transport}://${hostname}:${port}`;
+    const protocols = conn.protocols || [];
+    let is_connected = false;
+    let has_ever_connected = false;
+    let socket = null;
+    
+    const onopen = function() {
+        console.log('websocket opened:', addr);
+        has_ever_connected = true;
+        is_connected = true;
+        if (conn.onopen) conn.onopen();
+    }
+    const onmessage = function(e) { 
+        if (e.data instanceof ArrayBuffer) {
+            //console.log("ws received arraybuffer of " + e.data.byteLength + " bytes");
+            if (conn.onbuffer) conn.onbuffer(e.data);
+        } else if (conn.onmessage) {
+            conn.onmessage(JSON.parse(e.data));
+        } 
+    }
+    const onclose = function(e) {
+        socket = null;
+        is_connected = false;
+        console.log('websocket closed', addr, e.code); 
+        if (conn.onclose) conn.onclose(e.code);
+        // try to reconnect?
+        if (has_ever_connected) {
+            setTimeout(function(){
+                console.log("websocket reconnecting...");
+                connect();
+            }, 2000);		
+        } else {
+            // fallback to alternate solution?
+            if (conn.fallback) conn.fallback();
+        }
+    }
+    const connect = function() {
+        socket = new WebSocket(addr, protocols);
+        socket.binaryType = 'arraybuffer';
+        socket.onopen = onopen;
+        socket.onclose = onclose;
+        socket.onmessage = onmessage;
+    }
+    connect();
+
+    conn.send = function(obj) {
+        if (!socket || !is_connected) {
+            console.warn("socket not connected; message not sent")
+            return;
+        }
+        socket.send(JSON.stringify(obj));
+        return conn;
+    }
+    conn.sendBinary = function(typedarray) {
+        if (!socket || !is_connected) {
+            console.warn("socket not connected; message not sent")
+            return;
+        }
+        socket.send(typedarray);
+        return conn;
+    }
+    return conn;
+}
+
+let testinput = document.getElementById("test");
+
+let conn = connect({
+    //hostname: "130.63.108.65",
+    onopen(conn) {
+        this.send("hello");
+    },
+    onmessage(msg) {
+        console.log("received", msg);
+        if (msg.value) {
+            testinput.value = msg.value;
+        }
+    },
+});
+
+testinput.addEventListener("input", function(e) {
+    conn.send({ value: e.target.valueAsNumber })
+});
+
+
+</script>
+</body>
+</html>
